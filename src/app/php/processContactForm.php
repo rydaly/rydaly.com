@@ -14,7 +14,7 @@
     if ( ! empty($errors)) {
         $data['success'] = false;
         $data['errors'] = $errors;
-        $data['messageError'] = "Uh oh, something's wrong. Please check the fields in red, mang.";
+        $data['messageError'] = "Uh oh, something's wrong. Please check the fields in red.";
     } else {
         $data['success'] = true;
         $data['messageSuccess'] = "Hey, thanks for reaching out! I'll get back to you soon.";

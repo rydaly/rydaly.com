@@ -27,7 +27,7 @@ function ContactController($scope, $http) {
 	contactCtrl.sendMessage = function() {
 		$http({
 				method: 'POST',
-				url: 'http://rydaly.com/devbox/app/php/processContactForm.php',
+				url: 'http://rydaly.com/app/php/processContactForm.php',
 				data: param(contactCtrl.formData),
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
