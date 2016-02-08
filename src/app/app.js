@@ -49,20 +49,26 @@
       });  
   })
 
-  .run(function($rootScope, $route, $templateCache, $http) {
+  .run(function($window, $rootScope, $route, $templateCache, $http, $location) {
+    var initialLoad = true;
+
     FastClick.attach(document.body);
     $rootScope.isAutomaticScroll = false;
 
-    $rootScope.$on('$routeChangeStart', function() {
-      // console.log($route.current.$$route.state);
-      if($route.current && $route.current.$$route.state === "overlay") {
-        $rootScope.$emit( 'modals.close' );
+    // redirect to root if loaded on overlay
+    if(initialLoad) {
+      if($location.url() === '/overlay') {
+        $location.path( "/" );
       }
-    });
+      initialLoad = false;
+    }
 
-    // update page class on ng-view for animation
+    // set active tab and track
     $rootScope.$on('$routeChangeSuccess', function() {
-      $rootScope.activeTab = $route.current.$$route.activeTab;
+      $rootScope.activeTab = $location.url().replace(/^\//, '');
+
+      // send pageview to analytics
+      $window.ga('send', 'pageview', { page: $location.url() });
     });
 
     // cache templates
@@ -74,6 +80,14 @@
         }
       }
     }
+
+    // Google Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-25348228-1', 'auto');
+    ga('send', 'pageview');
 
   });
 
@@ -87,11 +101,11 @@
       setTimeout(function() {
         cover = angular.element(document.getElementById('cover'));
         cover.addClass('hide-cover');
-      }, 500);
+      }, 250);
 
       setTimeout(function() {
-        // cover.remove();
-      }, 3000);
+        cover.remove();
+      }, 1250);
 
     });
   })();
