@@ -1,0 +1,305 @@
+{
+  "items": [
+
+    { 
+      "title": "Hey, Rhino Logo Animation",
+      "description": "The animated version of my 'hey, rhino' logo.",
+      "video": {
+        "hi": "assets/images/lab/vid/hr.mp4",
+        "low": "assets/images/lab/vid/hr.webm"
+      },
+      "imgHi": "assets/images/lab/img/hr_final_lrg.jpg",
+      "imgLow": "assets/images/lab/img/hr_final.jpg",
+      "tag": [
+        "After Effects",
+        "Motion Graphics",
+        "Logo Animation"
+      ],
+      "role": [
+        "Concept", 
+        "Design",
+        "Motion Design"
+      ]
+    },
+
+    { 
+      "title": "Dabble Logo - Textures",
+      "description": "Dabble.co is a community-based learning platform that offers classes for people who want to try something new. From brewing beer to making soap to throwing knives, there's something for everyone. This version of the logo aims to highlight the multitude of classes available on the platform.",
+      "video": {
+        "hi": "assets/images/lab/vid/dabble_textures.mp4",
+        "low": "assets/images/lab/vid/dabble_textures.webm"
+      },
+      "imgHi": "assets/images/lab/img/dabble_textures_lrg.jpg",
+      "imgLow": "assets/images/lab/img/dabble_textures.jpg",
+      "tag": [
+        "After Effects",
+        "Motion Graphics",
+        "Logo Animation"
+      ],
+      "role": [
+        "Concept",
+        "Design",
+        "Motion Design"
+      ]
+    },
+
+    { 
+      "title": "Falco Rusticolus",
+      "description": "Also known as the gyrfalcon. I claim no scientific accuracy here, but I really like how bad-ass 'gyrfalcon' sounds.",
+      "imgHi": "assets/images/lab/img/falco_lrg.jpg",
+      "imgLow": "assets/images/lab/img/falco.jpg",
+      "tag": [
+        "Illustrator",
+        "Photoshop",
+        "Logo"
+      ],
+      "role": [
+        "Concept", 
+        "Design"
+      ]
+    },
+
+    { 
+      "title": "RD Logo SVG Animation",
+      "description": "Logo animation using SVG and GSAP with parallax.",
+      "link": "assets/demos/rd_logo_svg/index.html",
+      "linkText": "Launch",
+      "imgHi": "assets/images/lab/img/rd_logo_svg_lrg.jpg",
+      "imgLow": "assets/images/lab/img/rd_logo_svg.jpg",
+      "tag": [
+        "Motion Graphics",
+        "Javascript",
+        "SVG",
+        "Logo Animation"
+      ],
+      "role": [
+        "Design",
+        "Motion Design",
+        "Development"
+      ]
+    },
+
+    { 
+      "title": "Pureland",
+      "description": "Design concepts for Silverbird's recent album, 'Pureland.' Alas, the band didn't opt for any of my designs but it was fun nonetheless.",
+      "video": {
+        "hi": "assets/images/lab/vid/silverbird.mp4",
+        "low": "assets/images/lab/vid/silverbird.webm"
+      },
+      "imgHi": "assets/images/lab/img/silverbird_lrg.jpg",
+      "imgLow": "assets/images/lab/img/silverbird.jpg",
+      "tag": [
+        "Photoshop",
+        "Illustrator"
+      ],
+      "role": [
+        "Concept", 
+        "Design"
+      ]
+    },
+
+    { 
+      "title": "Grand Poobis",
+      "description": "An illustration of my dog, Kimchi. AKA Poobis, Tank 7, Big Booty Judy, Tiny Paws, Cheeser",
+      "imgHi": "assets/images/lab/img/poobis_lrg.jpg",
+      "imgLow": "assets/images/lab/img/poobis.jpg",
+      "tag": [
+        "Illustrator"
+      ],
+      "role": [
+        "Concept", 
+        "Design"
+      ]
+    },
+
+    { 
+      "title": "La Calavera",
+      "description": "Skull illustration with hair that even Donald Trump would envy.",
+      "imgHi": "assets/images/lab/img/calavera_lrg.jpg",
+      "imgLow": "assets/images/lab/img/calavera.jpg",
+      "tag": [
+        "Illustrator",
+        "Photoshop"
+      ],
+      "role": [
+        "Concept", 
+        "Design"
+      ]
+    },
+
+    { 
+      "title": "Dabble Logo - Bouncy",
+      "description": "Dabble.co is a community-based learning platform that offers classes for people who want to try something new. From brewing beer to making soap to throwing knives, there's something for everyone. This version of the logo aims to highlight the friendliness of the brand with some bouncy style.",
+      "video": {
+        "hi": "assets/images/lab/vid/dabble.mp4",
+        "low": "assets/images/lab/vid/dabble.webm"
+      },
+      "imgHi": "assets/images/lab/img/dabble_lrg.jpg",
+      "imgLow": "assets/images/lab/img/dabble.jpg",
+      "tag": [
+        "After Effects",
+        "Motion Graphics",
+        "Logo Animation"
+      ],
+      "role": [
+        "Concept", 
+        "Motion Design"
+      ]
+    },
+
+    { 
+      "title": "Animated Print: Skate Butt",
+      "description": "I walk past this print hanging in my hallway and hear Slayer. Naturally, I decided to animate it. 'Skate Butt' by Ryan Duggan of Drug Factory Press.",
+      "link": "http://drugfactorypress.bigcartel.com/",
+      "linkText": "Drug Factory Press",
+      "video": {
+        "hi": "assets/images/lab/vid/skatebutt.mp4",
+        "low": "assets/images/lab/vid/skatebutt.webm"
+      },
+      "imgHi": "assets/images/lab/img/skatebutt_lrg.jpg",
+      "imgLow": "assets/images/lab/img/skatebutt.jpg",
+      "tag": [
+        "Photoshop",
+        "After Effects",
+        "Motion Graphics"
+      ],
+      "role": [
+        "Motion Design",
+        "Sound Design"
+      ]
+    },
+
+    { 
+      "title": "RD Logo Animation",
+      "description": "It's embarrasing how much time I spent on this considering the basic nature of it, but sometimes it takes a lot of work to arrive at that simple conclusion.",
+      "video": {
+        "hi": "assets/images/lab/vid/rd.mp4",
+        "low": "assets/images/lab/vid/rd.webm"
+      },
+      "imgHi": "assets/images/lab/img/rd_lrg.jpg",
+      "imgLow": "assets/images/lab/img/rd.jpg",
+      "tag": [
+        "Illustrator",
+        "After Effects",
+        "Motion Graphics",
+        "Logo Animation"
+      ],
+      "role": [
+        "Design", 
+        "Concept",
+        "Motion Design"
+      ]
+    },
+
+    { 
+      "title": "Hey, Rhino Initial Animation",
+      "description": "Initial animation work on the pet rhino.",
+      "video": {
+        "hi": "assets/images/lab/vid/hr_initial.mp4",
+        "low": "assets/images/lab/vid/hr_initial.webm"
+      },
+      "imgHi": "assets/images/lab/img/hr_initial_lrg.jpg",
+      "imgLow": "assets/images/lab/img/hr_initial.jpg",
+      "tag": [
+        "Process",
+        "Illustrator",
+        "After Effects",
+        "Motion Graphics",
+        "Work-in-progress"
+      ],
+      "role": [
+        "Design",
+        "Concept",
+        "Motion Design"
+      ]
+    },
+
+    { 
+      "title": "Hey, Rhino Process",
+      "description": "Design process for Hey, Rhino text. Circles and lines keep things clean and simple.",
+      "video": {
+        "hi": "assets/images/lab/vid/hr_process.mp4",
+        "low": "assets/images/lab/vid/hr_process.webm"
+      },
+      "imgHi": "assets/images/lab/img/hr_process_lrg.jpg",
+      "imgLow": "assets/images/lab/img/hr_process.jpg",
+      "tag": [
+        "Process",
+        "Illustrator",
+        "Photoshop"
+      ],
+      "role": [
+        "Design",
+        "Concept"
+      ]
+    },
+
+    { 
+      "title": "Hey, Rhino Logo",
+      "description": "Logo concept for a company which only kind-of exists.",
+      "imgHi": "assets/images/lab/img/hey_rhino_lrg.jpg",
+      "imgLow": "assets/images/lab/img/hey_rhino.jpg",
+      "tag": [
+        "Illustrator",
+        "Photoshop",
+        "Logo", 
+        "Work-in-progress"
+      ],
+      "role": [
+        "Design", 
+        "Concept"
+      ]
+    },
+
+    { 
+      "title": "SVG Text Loop",
+      "description": "Text animation using SVG and GSAP.",
+      "link": "assets/demos/svg_text/index.html",
+      "linkText": "Launch",
+      "imgHi": "assets/images/lab/img/bi_lrg.jpg",
+      "imgLow": "assets/images/lab/img/bi.jpg",
+      "tag": [
+        "Motion Graphics",
+        "Javascript",
+        "SVG"
+      ],
+      "role": [
+        "Design",
+        "Motion Design",
+        "Development"
+      ]
+    },
+
+    { 
+      "title": "Great Lakes Colorado",
+      "description": "I'm originally from Michigan and spent a decade in Chicago before moving to Denver. My favorite places in one design!",
+      "imgHi": "assets/images/lab/img/coloradoLakes_lrg.jpg",
+      "imgLow": "assets/images/lab/img/coloradoLakes.jpg",
+      "tag": [
+        "Photoshop",
+        "Illustrator"
+      ],
+      "role": [
+        "Concept", 
+        "Design"
+      ]
+    },
+
+    { 
+      "title": "RW",
+      "description": "A mark I designed for printed goods at my wedding.",
+      "imgHi": "assets/images/lab/img/rw_lrg.jpg",
+      "imgLow": "assets/images/lab/img/rw.jpg",
+      "tag": [
+        "Photoshop",
+        "Illustrator",
+        "Logo"
+      ],
+      "role": [
+        "Concept", 
+        "Design"
+      ]
+    }
+
+  ]
+}

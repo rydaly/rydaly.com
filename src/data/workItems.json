@@ -1,0 +1,267 @@
+{
+  "items": [
+
+    {
+      "title": "Fogged Clarity",
+      "description": "I co-founded the arts review Fogged Clarity in 2009 and it's become a mainstay in both my creative and technical development. As a venue for visual art, music, interviews, fiction and poetry it has provided me with a way to continually improve my chops across the board. Design, development, audio & video editing, podcasting and brand development are just a few of the things I handle on a regular basis. It has been the unmoving rock that I use to learn new things, test new technologies and keep myself honest. Fogged Clarity is built on Wordpress using a custom theme that turns the CMS into an issue-based publication and allows editors to do as much as possible without my help.",
+      "link": "http://foggedclarity.com",
+      "linkText": "Launch",
+      "imgLogo": "assets/images/work/img/logos/fc.png",
+      "imgLow": "assets/images/work/img/fc.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/fc/fc_01.png",
+        "assets/images/projects/fc/fc_book.jpg",
+        "assets/images/projects/fc/fc_cards.jpg",
+        "assets/images/projects/fc/fc_logo.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/fc/fc_01_lrg.png",
+        "assets/images/projects/fc/fc_book_lrg.jpg",
+        "assets/images/projects/fc/fc_cards_lrg.jpg",
+        "assets/images/projects/fc/fc_logo_lrg.jpg"
+      ],
+      "role": [
+        "Co-founder",
+        "Concept", 
+        "Design", 
+        "Development"
+      ]
+    },
+
+    { 
+      "title": "Acura",
+      "description": "I spent six months in 2015 working on the Acura account building rich media. Much of this time was spent working on the full-screen mobile experience found below. The unit touts the safety of Acura vehicles and was launched as a single piece of a larger campaign.",
+      "link": "assets/demos/acura_rich/index.html",
+      "linkText": "Launch",
+      "imgLogo": "assets/images/work/img/logos/acura.png",
+      "imgLow": "assets/images/work/img/acura.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/acura/acura_dummy.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/acura/acura_dummy_lrg.jpg"
+      ],
+      "role": [
+        "Development", 
+        "Motion Design",
+        "Interaction"
+      ]
+    },
+
+    {
+      "title": "Motorola",
+      "description": "",
+      "imgLogo": "assets/images/work/img/logos/moto.png",
+      "imgLow": "assets/images/work/img/moto.jpg",
+      "ytid": "qE22MbP_fyI",
+      "role": [
+        "Development",
+        "Motion Design", 
+        "Interaction"
+      ],
+      "subItems": {
+        "sub1": {
+          "title": "MotoX Color Picker",
+          "description": "With Motorola's launch of the Moto X, we were tasked with creating rich media that would mimic the functionality of the 'MotoMaker' website. One of the main selling points of the Moto X was the vast array of colors with which users could customize the device. I was able to condense that functionality into rich media units that were featured on YouTube and elsewhere.",
+          "imgsLow": [
+            "assets/images/projects/moto/motox_ypys_02.jpg",
+            "assets/images/projects/moto/motox_yt_masthead.jpg" 
+          ],
+          "imgsHi": [
+            "assets/images/projects/moto/motox_ypys_02_lrg.jpg",
+            "assets/images/projects/moto/motox_yt_masthead_lrg.jpg" 
+          ],
+          "link": "https://www.google.com/doubleclick/studio/externalpreview/#/M7zBO7wTT-6KnE2zg208Ag?creativeId=26157709",
+          "linkText": "Launch Flash Preview"
+        },
+        "sub2": {
+          "title": "MotoX Mood Skin",
+          "description": "This 'Mood Skin' consisted of full-page background imagery that synced with an in-page banner.",
+          "imgsLow": [
+            "assets/images/projects/moto/motox_mood_skin.jpg" 
+          ],
+          "imgsHi": [
+            "assets/images/projects/moto/motox_mood_skin_lrg.jpg" 
+          ],
+          "link": "https://www.google.com/doubleclick/studio/externalpreview/#/NRn-eYVDTQiBGU4e1cUqkg?creativeId=25178456",
+          "linkText": "Launch Flash Preview"
+        },
+        "sub3": {
+          "title": "MotoX All-in-One Media",
+          "description": "This is one example of the many rich media units I built while on the Moto account.",
+          "imgsLow": [
+            "assets/images/projects/moto/moto_all_in_one.jpg" 
+          ],
+          "imgsHi": [
+            "assets/images/projects/moto/moto_all_in_one_lrg.jpg" 
+          ],
+          "link": "https://www.google.com/doubleclick/studio/externalpreview/#/OLS05U1BQXi_uGvV3TaAoA?creativeId=24662711",
+          "linkText": "Launch Flash Preview"
+        }
+      }
+    },
+
+    {
+      "title": "Divvy Bike Share Data Viz",
+      "description": "Divvy is Chicago's bike sharing service. While at Razorfish, we put together a team to create an entry for the 'Divvy Data Challenge.' I ended up swamped with client work and was unable to continue with oficcial submission, but afterwards I continued building my idea. This demo shows incoming and outgoing data from Divvy stations over a period of 24 hours. I've narrowed down the data set to a single day (July 4th, 2013) for the purposes of demonstration and performance. Clear patterns emerge showing that some stations have disproportionate incoming or outgoing traffic.",
+      "link": "assets/demos/divvy/index.html",
+      "linkText": "Launch",
+      "imgLogo": "assets/images/work/img/logos/divvy.png",
+      "imgLow": "assets/images/work/img/divvy.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/divvy/divvy_01.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/divvy/divvy_01_lrg.jpg"
+      ],
+      "role": [
+        "Concept",
+        "Design", 
+        "Motion Design", 
+        "Development"
+      ]
+    },
+
+    {
+      "title": "rydaly.com v1",
+      "description": "Version one of my site, recently retired. I wanted to keep it ultra-fast and simple, so much of the work I did here is under the hood, hand-coded and lean.",
+      "link": "assets/demos/rydaly_v1/index.html",
+      "linkText": "Launch",
+      "imgLogo": "assets/images/work/img/logos/rd.png",
+      "imgLow": "assets/images/work/img/rd.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/rd/rd_1.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/rd/rd_1_lrg.jpg"
+      ],
+      "role": [
+        "Concept",
+        "Design", 
+        "Development",
+        "Motion Design"
+      ]
+    },
+
+    {
+      "title": "Samsung",
+      "description": "Upon launch of the Galaxy S4, we created a blitz of ads and interactive experiences.",
+      "imgLogo": "assets/images/work/img/logos/samsung.png",
+      "imgLow": "assets/images/work/img/samsung.jpg",
+      "ytid": "gr0WyVrH7uk",
+      "role": [
+        "Development",
+        "Motion Design", 
+        "Interaction"
+      ],
+      "subItems": {
+        "sub1": {
+          "title": "Galaxy S4 YouTube Masthead",
+          "description": "Three different versions of this ad ran on YouTube over the period of a week. Other versions were then adapted for a litany of other sites.",
+          "imgsLow": [
+            "assets/images/projects/samsung/samsung_yt_masthead_01.jpg",
+            "assets/images/projects/samsung/samsung_yt_masthead_02.jpg" 
+          ],
+          "imgsHi": [
+            "assets/images/projects/samsung/samsung_yt_masthead_01_lrg.jpg",
+            "assets/images/projects/samsung/samsung_yt_masthead_02_lrg.jpg" 
+          ],
+          "link": "https://www.google.com/doubleclick/studio/externalpreview/#/Ui0FAWD4Qp-hh1q0Fgq0Uw?creativeId=23655379",
+          "linkText": "Launch Flash Preview"
+        },
+        "sub2": {
+          "title": "Galaxy S4 Eraser Race",
+          "description": "Loads of fun working on this one. It's an in-banner mini game highlighting the cutting edge technologies of the Galaxy S4.",
+          "imgsLow": [
+            "assets/images/projects/samsung/samsung_eraserRace.jpg" 
+          ],
+          "imgsHi": [
+            "assets/images/projects/samsung/samsung_eraserRace_lrg.jpg" 
+          ],
+          "link": "https://www.google.com/doubleclick/studio/externalpreview/#/Ui0FAWD4Qp-hh1q0Fgq0Uw?creativeId=24040352",
+          "linkText": "Launch Flash Preview"
+        }
+      }
+    },
+
+    {
+      "title": "Blackberry",
+      "description": "Blackberry was my first long-term project as a professinal. Looking back, it's clear now that the work I did here fortified my passion for interactive media.",
+      "imgLogo": "assets/images/work/img/logos/bb.png",
+      "imgLow": "assets/images/work/img/bb.jpg",
+      "ytid": "7OCOnKL6Rcw",
+      "role": [
+        "Development",
+        "Motion Design", 
+        "Interaction"
+      ],
+      "subItems": {
+        "sub1": {
+          "title": "New York Times 'Blackout' Takeover",
+          "description": "This ad required custom components that didn't even exist before the project. I worked closely with developers at DoubleClick to make it work. It took some doing, but eventually launched and caused quite a controversy. Though, I think the controversy had more to do with Blackberry's claim that 'Amateur Hour is Over.'",
+          "imgsLow": [
+            "assets/images/projects/bb/bb_blackout_01.jpg",
+            "assets/images/projects/bb/bb_blackout_02.jpg", 
+            "assets/images/projects/bb/bb_blackout_03.jpg" 
+          ],
+          "imgsHi": [
+            "assets/images/projects/bb/bb_blackout_01_lrg.jpg",
+            "assets/images/projects/bb/bb_blackout_02_lrg.jpg", 
+            "assets/images/projects/bb/bb_blackout_03_lrg.jpg" 
+          ]
+        },
+        "sub2": {
+          "title": "Blackberry Brand Botiques",
+          "description": "Hosted on sites like Best Buy and Walmart, these units were in constant need of updating and maintenance. A good example of why building something right the first time really helps in the long run.",
+          "imgsLow": [
+            "assets/images/projects/bb/bb_botique_01.jpg",
+            "assets/images/projects/bb/bb_botique_02.jpg"
+          ],
+          "imgsHi": [
+            "assets/images/projects/bb/bb_botique_01_lrg.jpg",
+            "assets/images/projects/bb/bb_botique_02_lrg.jpg"
+          ]
+        },
+        "sub3": {
+          "title": "Heart & Head Rich Media",
+          "description": "An expample of the typical drama and elegance we were striving for.",
+          "imgsLow": [
+            "assets/images/projects/bb/bb_bold_02.jpg",
+            "assets/images/projects/bb/bb_heart_head.jpg"
+          ],
+          "imgsHi": [
+            "assets/images/projects/bb/bb_bold_02_lrg.jpg",
+            "assets/images/projects/bb/bb_heart_head_lrg.jpg"
+          ]
+        }
+      }
+    },
+
+    { 
+      "title": "Cambodia Law & Policy Journal",
+      "description": "CLPJ is a niche law journal targeted at those interested in the prosecution of Khmer Rouge war criminals in Cambodia. I was honored to have been asked to create a venue for them to share progress on these on-going issues in Cambodia. They needed a venue where they could publish their quarterly journal and publish a blog with absolutely no help from me. The journal is built on WordPress with a custom theme.",
+      "link": "http://cambodialpj.org/",
+      "linkText": "Launch",
+      "imgLogo": "assets/images/work/img/logos/clpj.png",
+      "imgLow": "assets/images/work/img/clpj.jpg",
+      "imgsLow": [
+        "assets/images/projects/clpj/clpj_01.png",
+        "assets/images/projects/clpj/clpj_02.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/clpj/clpj_01_lrg.png",
+        "assets/images/projects/clpj/clpj_02_lrg.jpg"
+      ],
+      "role": [
+        "Concept", 
+        "Design", 
+        "Development"
+      ]
+    }
+
+  ]
+}

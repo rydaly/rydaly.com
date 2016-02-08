@@ -1,0 +1,387 @@
+/* Work Items Hover Effect */
+@mixin work-hover-effect () {
+  @include transition(all 0.3s $ease-in-out-quart);
+  
+  .lines {
+    @include transition(all 0.5s $ease-in-out-quart);
+  }
+
+  &:after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($rd-medium-blue, 0.9);
+    @include transition(opacity 0.6s $ease-out-sine);
+  }
+  &:hover {
+    &:after {
+      content: '';
+      opacity: 1;
+    }
+  }
+}
+
+/* Border Lines Hover Effect */
+@mixin border-hover-effect (
+  $include-symbol: true,
+  $color: $rd-medium-blue, 
+  $bgcolor: $rd-gold, 
+  $color-hover: $rd-green, 
+  $bgcolor-hover: $rd-red, 
+  $border-size: 1px) {
+
+  font-family: $sans-serif-2;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 10px 20px;
+  outline: none;
+  cursor: pointer;
+  color: $color;
+  background: white;
+  border: none;
+  @include transition(all 0.3s $ease-in-quart);
+
+  .lines {
+    position: absolute;
+    background: $color-hover;
+    box-sizing: content-box;
+
+    @include transition(all 0.3s $ease-in-out-quart);
+
+    &.top {
+      top: -$border-size;
+      left: -$border-size;
+      height: $border-size;
+      width: 0;
+    }
+
+    &.bottom {
+      bottom: -$border-size;
+      right: -$border-size;
+      height: $border-size;
+      width: 0;
+    }
+
+    &.left {
+      bottom: -$border-size;
+      left: -$border-size;
+      height: 0;
+      width: $border-size;
+    }
+
+    &.right {
+      top: -$border-size;
+      right: -$border-size;
+      height: 0;
+      width: $border-size;
+    }
+  }
+  // include arrow if true
+  @if $include-symbol == true {
+    &:before {
+      font-family: FontAwesome;
+      content: '\f135';
+      color: $color;
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: -5px;
+
+      @include transition(all 0.3s $ease-in-out-quart);
+    }
+  }
+
+  &:hover {
+    color: $color-hover;
+
+    .top {
+      width: 100%;
+      padding-right: $border-size;
+    }
+    .bottom {
+      width: 100%;
+      padding-right: $border-size;
+    }
+    .left {
+      height: 100%;
+      padding-top: $border-size;
+    }
+    .right {
+      height: 100%;
+      padding-top: $border-size;
+    }
+
+    &:before {
+      color: $color-hover;
+      @include transform(translateX(3px));
+    }
+  }
+
+  @include media($large-screen) {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+/* Close Button */
+@mixin close-btn (
+  $is-fixed: true) {
+
+  @if $is-fixed == true {
+    @include position(fixed, 2em 2em null null);
+  } @else {
+    @include position(absolute, 1em 1em null null);
+  }
+
+  outline: none;
+  width: 40px;
+  height: 40px;
+  // top: 20px;
+  // right: 20px;
+  
+  background: $light-gray;
+  cursor: pointer;
+  z-index: 999999;
+  // @include size(2em);
+  @include transition(all, 0.25s ease-in-out);
+
+  &:after, &:before {
+    @include position(absolute, 0 0 0 50%);
+    @include transform(rotate(45deg));
+    @include size(0.15em 2em);
+    background: $rd-gold;
+    content: '';
+    display: block;
+    margin: 0 0 0 -1px;
+    @include transition(all, 0.25s ease-in-out);
+  }
+
+  &:hover:after, &:hover:before {
+    background: $rd-red;
+    @include transition(all, 0.25s ease-in-out);
+  }
+
+  &:hover:after {
+    @include transform(rotate(135deg));
+    @include transition(all, 0.25s ease-in-out);
+  }
+
+  &:hover:before {
+    @include transform(rotate(-135deg));
+    @include transition(all, 0.25s ease-in-out);
+  }
+
+  &:before {
+    @include transform(rotate(-45deg));
+    @include transition(all, 0.25s ease-in-out);
+  }
+
+  @include media($medium-screen) {
+    background: transparent;
+  }
+}
+
+/* Inset Border Lines Hover Effect */
+@mixin inset-border-hover-effect (
+  $color-hover: $rd-medium-blue, 
+  $color-outer-hover: $rd-medium-blue, 
+  $border-size: 1px) {
+
+  border: none;
+
+  @include transition(all 0.3s $ease-in-quart);
+
+  .lines {
+    position: absolute;
+    background: $color-hover;
+    box-sizing: content-box;
+    z-index: 1;
+
+    @include transition(all 0.3s $ease-in-out-quart);
+
+    // inner
+    &.top {
+      top: $border-size;
+      left: $border-size;
+      height: $border-size * 4;
+      width: 0;
+      opacity: 0;
+    }
+
+    &.bottom {
+      bottom: $border-size;
+      right: $border-size;
+      height: $border-size * 4;
+      width: 0;
+      opacity: 0;
+    }
+
+    &.left {
+      bottom: $border-size;
+      left: $border-size;
+      height: 0;
+      width: $border-size * 4;
+      opacity: 0;
+    }
+
+    &.right {
+      top: $border-size;
+      right: $border-size;
+      height: 0;
+      width: $border-size * 4;
+      opacity: 0;
+    }
+
+    // outer
+    &.outer-top {
+      top: 0;
+      left: 0;
+      height: $border-size;
+      width: 0;
+      opacity: 0;
+    }
+
+    &.outer-bottom {
+      bottom: 0;
+      right: 0;
+      height: $border-size;
+      width: 0;
+      opacity: 0;
+    }
+
+    &.outer-left {
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: $border-size;
+      opacity: 0;
+    }
+
+    &.outer-right {
+      top: 0;
+      right: 0;
+      height: 0;
+      width: $border-size;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    color: $color-hover;
+
+    @include transition(all 0.3s $ease-in-out-quart);
+
+    // inner
+    .top {
+      width: calc(100% - #{$border-size} * 4); 
+      padding-right: $border-size;
+      opacity: 1;
+    }
+    .bottom {
+      width: calc(100% - #{$border-size} * 4);
+      padding-right: $border-size;
+      opacity: 1;
+    }
+    .left {
+      height: calc(100% - #{$border-size} * 4);
+      padding-top: $border-size;
+      opacity: 1;
+    }
+    .right {
+      height: calc(100% - #{$border-size} * 4);
+      padding-top: $border-size;
+      opacity: 1;
+    }
+
+    // outer
+    .outer-top {
+      background-color: $color-outer-hover;
+      width: 100%;
+      padding-right: 0;
+      z-index: 2;
+      opacity: 1;
+    }
+    .outer-bottom {
+      background-color: $color-outer-hover;
+      width: 100%;
+      padding-right: 0;
+      z-index: 2;
+      opacity: 1;
+    }
+    .outer-left {
+      background-color: $color-outer-hover;
+      height: 100%;
+      padding-top: 0;
+      z-index: 2;
+      opacity: 1;
+    }
+    .outer-right {
+      background-color: $color-outer-hover;
+      height: 100%;
+      padding-top: 0;
+      z-index: 2;
+      opacity: 1;
+    }
+
+    &:before {
+      @include transform(translateX(3px));
+    }
+  }
+
+  @include media($large-screen) {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+/* Typography */
+@mixin small-caps($color) {
+  color: $color;
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+@mixin symbol-surround($sym-before, $sym-after) {
+  &:before, &:after {
+    content: '';
+    font-family: FontAwesome;
+    display: inline-block;
+    position: absolute;
+    font-size: 1.1em;
+    color: $rd-gold;
+  }
+  
+  @include media($medium-screen) {
+    &:before {
+      content: $sym-before;
+      @include transform(translateX(-1.48em));
+    }
+    &:after {
+      content: $sym-after;
+      @include transform(translateX(1em));
+    }
+  }
+}
+
+@mixin badge($color: $rd-sandy) {
+  background-color: lighten($base-background-color, 2%);
+  border-top: 1px solid lighten($color, 50%);
+  display: inline-block;
+  line-height: 1em; 
+  padding: 0.6em 1.2em;
+  color: darken($color, 0%);
+  font-size: 0.9em;
+
+  a {
+    color: darken($color, 0%);
+  }
+}

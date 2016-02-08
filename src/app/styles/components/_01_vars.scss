@@ -1,0 +1,26 @@
+/* Colors */
+$rd-light-blue:                 #729aad;
+$rd-medium-blue:                #4a5b63;
+$rd-dark-blue:                  #2d3537;
+$rd-ultra-dark-blue:            darken(saturate($rd-dark-blue, 10), 30);
+$rd-green:                      #6b8f38;
+$rd-dark-brown:                 #52493E;
+$rd-alt-blue:                   #688C9E;
+
+$rd-orange:                     #AF7938;
+$rd-deep-red:                   #783221;
+$rd-red:                        #CC675B;
+$rd-reddish:                    #6b4242;
+$rd-deep-green:                 #186F7C;
+$rd-gold:                       #d1a42c;
+$rd-drab:                       #959362;
+$rd-sandy:                      #F2F1ED;
+
+$dark-gray:                     #333;
+$light-gray:                    #DDD;
+
+$base-background-color:         $rd-sandy;
+
+$small-screen:                  em(520);
+$medium-screen:                 em(750);
+$large-screen:                  em(950);

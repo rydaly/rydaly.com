@@ -1,0 +1,430 @@
+.centered-navigation {
+  $large-screen: em(860) !default;
+  $navbar-padding: 1em;
+  $navbar-color: $rd-medium-blue;
+  $navbar-color-hover: $base-background-color;
+  $navbar-bg-color: transparent;
+  $navbar-bg-color-hover: $rd-medium-blue;
+  $navbar-height: 60px;
+  $horizontal-bar-mode: $large-screen;
+
+  position: fixed;
+  background-color: transparentize($base-background-color, 0.05);
+  min-height: $navbar-height;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid lighten($base-background-color, 5%);
+
+  @include transition(top 0.3s $ease-out-sine);
+
+  // hidden nav on scroll down
+  &.nav-up {
+    top: -$navbar-height - 5;
+  }
+
+  // visible nav on scroll up
+  &.nav-down {
+    top: 0;
+  }
+
+  // mostly opaque when over content
+  &.nav-opaque {
+    background-color: transparentize($base-background-color, 0.05);
+  }
+
+  // Mobile view
+  .mobile-logo {
+    display: inline;
+    float: left;
+    max-height: $navbar-height;
+    padding-left: $navbar-padding;
+
+    &:focus {
+      outline: none;
+    }
+
+    img {
+      width: 30px; height: 30px;
+      margin-top: 15px;
+      opacity: 1;
+    }
+
+    @include media($horizontal-bar-mode) {
+      display: none;
+    }
+  }
+
+  $button-width: 75px;                    // The width of the button area
+  $button-height: 30px;                   // The height of the button area
+  $bar-thickness: 2px;                    // The thickness of the button bars
+  $button-pad: 20px;                      // The left/right padding between button area and bars.
+  $button-bar-space: 8px;                 // The spacing between button bars
+  $button-transistion-duration: 0.3s;     // The transition duration
+
+  .hamburger {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: $button-width;
+    height: $button-height;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background $button-transistion-duration;
+    background-color: $base-background-color;
+    margin: 15px 0;
+    float: right;
+    padding-right: $navbar-padding;
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .hamburger span {
+    display: block;
+    position: absolute;
+    top: ($button-height / 2) - ($bar-thickness / 2);
+    left: $button-pad;
+    right: $button-pad;
+    height: $bar-thickness;
+    background: $rd-dark-blue;
+    transition: background 0s $button-transistion-duration;
+  }
+
+  .hamburger span::before,
+  .hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: $bar-thickness;
+    background-color: $rd-dark-blue;
+    content: "";
+    transition-duration: $button-transistion-duration, $button-transistion-duration;
+    transition-delay: $button-transistion-duration, 0s;
+  }
+
+  .hamburger span::before {
+    top: -$bar-thickness - $button-bar-space;
+    transition-property: top, transform;
+  }
+
+  .hamburger span::after {
+    bottom: -$bar-thickness - $button-bar-space;
+    transition-property: bottom, transform;
+  }
+
+  .hamburger.active {
+    background-color: $base-background-color;
+  }
+
+  .hamburger.active span {
+    background: none;
+  }
+
+  .hamburger.active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  .hamburger.active span::before,
+  .hamburger.active span::after {
+    transition-delay: 0s, $button-transistion-duration;
+  }
+
+  /* End Hamburger */
+
+  .centered-navigation-mobile-menu {
+    color: $navbar-color;
+    display: block;
+    float: right;
+    line-height: $navbar-height;
+    margin: 0;
+    padding-right: $navbar-padding;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+  }
+
+  // Nav menu
+  .centered-navigation-wrapper {
+    @include outer-container;
+    @include clearfix;
+    position: relative;
+    z-index: 999;
+
+    @include media($horizontal-bar-mode) {
+    }
+  }
+
+  // Mobile first
+  ul.centered-navigation-menu {
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    position: fixed;
+    top: -9999px;
+    // top: $navbar-height;
+    right: 0; bottom: 0; left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    background: transparent;
+    margin: 0;
+    padding: $navbar-height 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 2px solid $rd-gold;
+
+
+    // Mobile menu opened
+    &.show {
+      top: $navbar-height;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      background: transparentize($base-background-color, 0.05);
+      @include transition(opacity 0.3s $ease-out-sine, background 0.3s $ease-out-sine);
+
+      li.navbar-item {
+        opacity: 0;
+        @include animation(show_nav 0.5s $ease-out-quint forwards);
+        
+        @for $i from 1 through 6 {
+          &:nth-of-type(#{$i}) {
+            @include animation-delay(0.05s * $i);
+          }
+        }
+
+        @include keyframes(show_nav) {
+          from {
+            opacity: 0;
+            line-height: $navbar-height*1.5;
+          }
+          to {
+            opacity: 1;
+            line-height: $navbar-height;
+          }
+        }
+      }
+    }
+
+    /* Mobile nav social block */
+    & + ul {
+      // display: none;
+      display: block;
+      visibility: hidden;
+      position: fixed;
+      width: 100%;
+      bottom: $navbar-height;
+      text-align: center;
+      padding: 0; margin: 0;
+      list-style: none;
+      opacity: 0;
+      
+      @include transition(visibility 0s, opacity 0.3s 0.3s $ease-out-sine);
+
+      li {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 1.2em;
+        
+        a {
+          color: $rd-gold;
+
+          &:hover {
+            color: $rd-medium-blue;
+          }
+        }
+      }
+    }
+
+    &.show + ul {
+      visibility: visible;
+      opacity: 1;
+
+      @include media($large-screen) {
+        display: none;
+      }
+    }
+
+    // Mobile menu closed
+    &.hide {
+      @include transition(visibility 0s 0.3s, background 0.3s $ease-in-sine, opacity 0.3s $ease-in-sine);
+    }
+
+    // Mobile menu items 
+    li.navbar-item {
+      list-style: none;
+      display: block;
+      line-height: $navbar-height;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.1em;
+      
+      // Mobile menu links
+      a {
+        background: $navbar-bg-color;
+        color: $navbar-color;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        text-align: center;
+
+        @include fill-parent();
+        @include transition(none);  
+        @include transition(background 0.3s $ease-out-sine, color 0.3s $ease-out-sine);
+
+        &:focus,
+        &:hover {
+          color: $navbar-color-hover;
+          background-color: $navbar-bg-color-hover;
+        }
+      } // end mobile menu links 
+
+      // mobile menu active item
+      &.active {
+        a {
+          @include symbol-surround('\f0d9', '\f0da');
+          &:before, &:after {
+            @include transition(color 0.8s $ease-in-out-sine);
+          }
+          &:focus,
+          &:hover {
+            &:before, &:after {
+              color: $navbar-color-hover;
+            }
+          }
+        }
+      } // end active item
+    } // end mobile menu items 
+
+    // Full screen menu
+    @include media ($horizontal-bar-mode) {
+      visibility: visible;
+      opacity: 1;
+      position: relative;
+      top: 0;
+      display: block;
+      text-align: center;
+      background: transparent;
+      padding: 0;
+      border-top: none;
+      @include transition(opacity 0s, background 0s, visibility 0s 0s);
+      
+      // Full menu items
+      li.navbar-item {
+        display: inline;
+        line-height: $navbar-height;
+        float: left;
+        width: 20%;
+        font-size: 0.9em;
+
+        // Full menu links 
+        a {
+          height: $navbar-height;
+          &:focus,
+          &:hover {
+            color: $navbar-color-hover;
+            background-color: $navbar-bg-color-hover;
+          }
+        }
+
+        // Full menu active item
+        &.active {
+          a {
+            color: $navbar-color-hover;
+            background-color: $navbar-bg-color-hover;
+
+            &:before, &:after {
+              content: '';
+              display: none;
+            }
+          }
+        }
+      }
+
+      // Full menu 'show' overrides ( Full screen menu always visible )
+      &.show {
+        background: transparent;
+        @include transition(opacity 0s, background 0s, visibility 0s 0s);
+
+        li.navbar-item {
+          opacity: 1;
+          @include animation(none);
+          a {
+            background: $navbar-bg-color;
+            color: $navbar-color;
+
+            &:focus,
+            &:hover {
+              color: $navbar-color-hover;
+              background-color: $navbar-bg-color-hover;
+            }
+          }
+        }
+      } // end full menu overrides
+    } // end full screen menu
+  } // end outer <ul>
+
+  // nav logo
+  ul li.nav-logo.navbar-item {
+    display: none;
+  }
+  ul li.nav-logo.navbar-item, .mobile-logo-wrapper {
+    line-height: 0;
+
+    a { 
+      background-color: transparent;
+
+      img {
+        @include transform(scale(1));
+        @include transition(all 0.3s $ease-out-expo);
+      }
+    }
+
+    &.active, &:focus, &:hover {
+      a {
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+
+          img {
+            @include transform(scale(1.2));
+          }
+        }
+      }
+    }
+
+    @include media($large-screen) {
+      display: inline;
+    }
+  }
+
+  .nav-logo img {
+    width: 30px; height: 30px;
+    margin-top: 15px;
+    opacity: 1;
+  }
+} // end .centered-navigation

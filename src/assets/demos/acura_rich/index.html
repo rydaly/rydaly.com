@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+  <style type="text/css">
+    #container_dc, #disclaimer {
+      display: none;
+    }
+  </style>
+
+  <script language="javascript">
+	  function _politeLoad(urls, onComplete) {
+	    var l = urls.length,
+	      loaded = 0,
+	      checkProgress = function() {
+	        if (++loaded === l && onComplete) {
+	          onComplete();
+	        }
+	      },i;
+	    for (i = 0; i < l; i++) {
+	      _loadScript(urls[i], checkProgress);
+	    }
+	  }
+
+	  function _loadScript(url, callback){
+	    var script = document.createElement("script");
+	        script.type = "text/javascript";
+
+	    if (script.readyState){  // IE
+	      script.onreadystatechange = function(){
+	        if (script.readyState == "loaded" || script.readyState == "complete") {
+	          script.onreadystatechange = null;
+	          callback();
+	        }
+	      };
+	    } else {  // Others
+	      script.onload = function(){
+	        callback();
+	      };
+	    }
+
+	    script.src = url;
+	    document.getElementsByTagName("head")[0].appendChild(script);
+	  }
+
+	  function pageLoadedHandler() {
+	    //now you can just feed stuff into that one function and give it a callback...
+	    _politeLoad(['http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
+	                 'logic.js'
+	    ], function() {
+	        dcAd.preInit();
+	    });
+
+	    //Load in CSS
+	    var extCSS = document.createElement('link');
+	    extCSS.setAttribute("rel", "stylesheet");
+	    extCSS.setAttribute("type", "text/css");
+	    extCSS.setAttribute("href", "style.css");
+	    document.getElementsByTagName("head")[0].appendChild(extCSS);
+	  }
+  </script>
+
+</head>
+<body onload="pageLoadedHandler();"><!-- Call JS Initial Function when below has loaded in -->
+	<div id="disclaimer">
+		<p>This experience was built for large mobile devices. If you're on a desktop, you can click and drag to 'swipe' and use the button below to toggle device orientation.</p>
+
+		<a class="launch-btn" onclick="dcAd.manualOrientationChange()">
+      <button class="btn">
+        Toggle Orientation
+      </button>
+    </a>
+	</div>
+
+	<div id="container_dc">
+		<div id="content_dc">
+			<div id="portrait-container">
+				<!-- BLADES -->
+				<div id="blade-container">
+					<div id="blade1" class="blade">
+						<div id="headline1-wrap">	
+							<div id="headline1a" class="sprite"></div>
+							<div id="headline1b" class="sprite"></div>
+							<div id="headline1c" class="sprite"></div>
+						</div>
+						<div id="split-left" class="sprite"></div>
+						<div id="split-bar"></div>
+						<div id="split-right" class="sprite"></div>
+						<div id="blade1-img" class="sprite"></div>
+						<div id="instruct-wrap">
+							<div id="instruct-bg"></div>
+							<div id="instruct" class="sprite"></div>
+						</div>
+						<div id="legal" class="sprite"></div>
+					</div>
+					<div id="blade2" class="blade">
+						<div id="headline2-wrap">	
+							<div id="headline2a" class="sprite"></div>
+							<div id="headline2b" class="sprite"></div>
+						</div>
+						<div id="blade2-body" class="sprite"></div>
+						<div id="blade2-img" class="sprite"></div>
+					</div>
+					<div id="blade3" class="blade">
+						<div id="headline3-wrap">	
+							<div id="headline3a" class="sprite"></div>
+							<div id="headline3b" class="sprite"></div>
+						</div>
+						<div id="blade3-body" class="sprite"></div>
+						<!-- Head Images -->
+						<div id="blade3-img1" class="head-sprite sprite-dummy"></div>
+						<div id="blade3-flash1" class="head-sprite sprite-dummy_flash"></div>
+						<div id="blade3-img2" class="head-sprite sprite-blonde"></div>
+						<div id="blade3-flash2" class="head-sprite sprite-blonde_flash"></div>
+						<div id="blade3-img3" class="head-sprite sprite-guy"></div>
+						<div id="blade3-flash3" class="head-sprite sprite-guy_flash"></div>
+						<div id="blade3-img4" class="head-sprite sprite-brunette"></div>
+						<div id="blade3-flash4" class="head-sprite sprite-brunette_flash"></div>
+					</div>
+					<div id="blade4" class="blade">
+						<div id="blade4-body" class="sprite"></div>
+						<div id="cta" class="sprite"></div>
+						<div id="blade4-img" class="head-sprite sprite-blonde"></div>
+						<div id="blade4-flash" class="head-sprite sprite-blonde_flash"></div>
+					</div>
+				</div> <!-- END blade-container -->
+				<div id="invisible-exit"></div>
+				<div id="blade-nav" class="noselect">
+					<ul>
+						<li id="blade-li1" class="current"><a id="blade-nav1" href="javascript:void(0)" data-id="0"></a></li>
+						<li id="blade-li2" class=""><a id="blade-nav2" href="javascript:void(0)" data-id="1"></a></li>
+						<li id="blade-li3" class=""><a id="blade-nav3" href="javascript:void(0)" data-id="2"></a></li>
+						<li id="blade-li4" class=""><a id="blade-nav4" href="javascript:void(0)" data-id="3"></a></li>
+					</ul>
+				</div>
+				<div id="img-logo" class="sprite"></div>
+				<div id="img-rotate" class="sprite"></div>
+			</div> <!-- END portrait-container -->
+			<div id="landscape-container">
+				<!-- Video Player -->
+				<div id="video-container">
+          <div id="video-cover">
+						<div id="video-darken"></div>
+            <div id="big-play-btn" class="sprite"></div>
+            <div id="video-cta" class="sprite"></div>
+          </div>
+          <video id="video">
+            <!-- Sources will be added via JS using Enabler.getUrl calls. -->
+          </video>
+          <!-- <div id="vid-bottom-bar"></div> -->
+          <button id="play-btn-1" class="video-controls"></button>
+          <button id="pause-btn-1" class="video-controls"></button>
+          <button id="stop-btn-1" class="video-controls"></button>
+          <button id="replay-btn-1" class="video-controls"></button>
+          <button id="unmute-btn-1" class="video-controls"></button>
+          <button id="mute-btn-1" class="video-controls"></button>
+          <div id="progress-bar-1"></div>
+					<div id="img-rotate-end" class="sprite"></div>
+        </div> <!-- END video-container -->
+		
+				<button id="background_exit_landscape"></button>
+			</div> <!-- END landscape-container -->
+		</div> <!-- END content_dc -->
+	</div> <!-- END container_dc -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="logic.js" type="text/javascript"></script>	
+</body>
+</html>

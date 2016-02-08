@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RD SVG Logo Animation</title>
+    <meta name="description" content="SVG logo animation with GSAP">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        .logo, .logo2 { opacity: 0; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="mobile">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="content">
+      <div class="primary">
+        <div id="parallax-window" class="parallax-window">
+          <div id="parallax-content" class="parallax-content">
+            <div class="logo layer" data-depth="0.1">
+              <svg version="1.1" class="logo-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 146 180.4" enable-background="new 0 0 146 180.4" xml:space="preserve">
+                <path class="bl" fill="#4a5b63" d="M36.6,144.4v30.1c0,3.3-2.7,6-6,6H0"/>
+                <path class="ul" fill="#4a5b63" d="M0.4,72.4V42.4c0-3.3,2.7-6,6-6H37"/>
+                <path class="ur" fill="#4a5b63" d="M109.4,36.1V6c0-3.3,2.7-6,6-6H146"/>
+                <path class="br" fill="#4a5b63" d="M146,107.9V138c0,3.3-2.7,6-6,6h-30.6"/>
+                <!-- inner ul -->
+                <path class="p1" fill="none" stroke="#4a5b63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37,72.8V45.4 M64,45.4L37,72.8"/>
+                <!-- inner br -->
+                <path class="p2" fill="none" stroke="#4a5b63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M109,108.4l0,27.4 M109,108.4l-27,27.4"/>
+                <!-- inner bl -->
+                <path class="p3" fill="none" stroke="#4a5b63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37,108.4l0,27.4 M37,108.4l27,27.4"/>
+                <!-- inner ur -->
+                <path class="p4" fill="none" stroke="#4a5b63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M109,72.4V45 M109,72.4L82,45"/>
+                <!-- right -->
+                <path class="p5" fill="none" stroke="#4a5b63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M145,99.4v-90"/>
+                <!-- left -->
+                <path class="p6" fill="none" stroke="#4a5b63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1,81.4v90"/>
+                <path class="circ" fill="#4a5b63" stroke="#4a5b63" stroke-miterlimit="10" d="M63.8,90.2c0-4.9,4-8.9,8.9-8.9c4.9,0,8.9,4,8.9,8.9s-4,8.9-8.9,8.9C67.8,99.1,63.8,95.1,63.8,90.2z"/>
+              </svg>
+            </div> <!-- end logo -->
+            
+            <div class="logo2 layer" data-depth="0.2">
+              <svg version="1.1" class="logo-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 146 180.4" enable-background="new 0 0 146 180.4" xml:space="preserve">
+                <path class="bl" fill="#6b8f38" d="M36.6,144.4v30.1c0,3.3-2.7,6-6,6H0"/>
+                <path class="ul" fill="#6b8f38" d="M0.4,72.4V42.4c0-3.3,2.7-6,6-6H37"/>
+                <path class="ur" fill="#6b8f38" d="M109.4,36.1V6c0-3.3,2.7-6,6-6H146"/>
+                <path class="br" fill="#6b8f38" d="M146,107.9V138c0,3.3-2.7,6-6,6h-30.6"/>
+                <!-- inner ul -->
+                <path class="p1" fill="none" stroke="#6b8f38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37,72.8V45.4 M64,45.4L37,72.8"/>
+                <!-- inner br -->
+                <path class="p2" fill="none" stroke="#6b8f38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M109,108.4l0,27.4 M109,108.4l-27,27.4"/>
+                <!-- inner bl -->
+                <path class="p3" fill="none" stroke="#6b8f38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M37,108.4l0,27.4 M37,108.4l27,27.4"/>
+                <!-- inner ur -->
+                <path class="p4" fill="none" stroke="#6b8f38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M109,72.4V45 M109,72.4L82,45"/>
+                <!-- right -->
+                <path class="p5" fill="none" stroke="#6b8f38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M145,99.4v-90"/>
+                <!-- left -->
+                <path class="p6" fill="none" stroke="#6b8f38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1,81.4v90"/>
+                <path class="circ" fill="#6b8f38" stroke="#6b8f38" stroke-miterlimit="10" d="M63.8,90.2c0-4.9,4-8.9,8.9-8.9c4.9,0,8.9,4,8.9,8.9s-4,8.9-8.9,8.9C67.8,99.1,63.8,95.1,63.8,90.2z"/>
+              </svg>
+            </div> <!-- end logo2 -->
+
+          </div> <!-- end parallax-content -->
+          
+          <div id="js-parallax-background" class="parallax-background"></div>
+        
+        </div> <!-- end parallax-window -->
+      </div> <!-- end .primary -->
+    </div> <!-- end content -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script type="text/javascript">
+
+      function init() {
+        // get scripts
+        var element = document.createElement("script");
+        element.src = "main.js";
+        document.body.appendChild(element);
+      }
+
+      if (window.addEventListener) window.addEventListener("load", init, false);
+      else if (window.attachEvent) window.attachEvent("onload", init);
+      else window.onload = init;
+
+    </script>
+
+  </body>
+
+</html>

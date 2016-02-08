@@ -1,0 +1,580 @@
+@charset "UTF-8";
+
+/* Default style, feel free to remove if not needed. */
+body, body * {
+  font-size: 12px;
+	vertical-align: baseline;
+	border: 0; outline: 0;
+	padding: 0; margin: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: absolute;
+  width: 100%; height: 100%;
+  background-image: url(../svg_text/bg.png);
+  background-color: #fff;
+}
+
+#disclaimer {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 95%;
+  max-width: 750px;
+  text-align: center;
+  margin: 25px auto;
+}
+
+#disclaimer > p {
+  font-size: 1.5em;
+  color: #4a5b63;
+  line-height: 1.5em;
+}
+
+#disclaimer > a {
+  cursor: pointer;
+  display: inline-block;
+  margin: 25px;
+  padding: 15px;
+  border: 1px solid #4a5b63;
+  color: #F2F1ED;
+}
+
+#disclaimer .btn {  
+  cursor: pointer;
+  font-weight: 900;
+  background: #F2F1ED;
+  text-transform: uppercase;
+}
+
+/* IE9 img hack */
+img { text-decoration: none; border: 0; }
+
+/* Div layer for the entire banner. */
+#container_dc {
+  position: relative;
+	visibility: hidden;
+	width: 500px;
+	height: 750px;
+	/*top: 0px;
+	left: 0px;*/
+	margin: 0 auto 25px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+  box-shadow: 0 0 25px rgba(74, 91, 99, 0.15);
+}
+
+#content_dc {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #FFF;
+	z-index: 100;
+	overflow:visible;
+}
+
+/* Invisible buttons for background clickthrough. */
+#background_exit_landscape {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 300;
+}
+
+/*
+	PORTRAIT MODE
+*/
+
+#portrait-container {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+	#blade-container {
+		position: relative;
+		width: 100%; height: 100%;
+	}
+		#blade-nav {
+			position: absolute;
+			top: 279px;
+			right: 27px;
+			z-index: 400;
+		}
+			#blade-nav li {
+				position: relative;
+				display: block;
+				margin: 25px 5px;
+				width: 10px;
+				height: 10px;
+				cursor: pointer;
+				border-radius: 50%;
+			}
+			#blade-nav li a {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%; height: 100%;
+				outline: none;
+				border-radius: 50%;
+				background-color: rgba(153, 153, 153, 1);
+				cursor: pointer;
+				box-shadow: 0 0 0 0 #999;
+				transition: box-shadow 0.3s ease, background-color 0.3s ease;
+			}
+			#blade-nav li.current a {
+				background-color: rgba(0, 0, 0, 0);
+				box-shadow: 0 0 0 2px #293859;
+				transition: box-shadow 0.3s ease, background-color 0.3s ease;
+			}
+
+	.blade {
+		position: relative;
+		width: 500px;
+		height: 750px;
+		padding: 0;
+		background-color: #fefefe;
+		background-image: url("blade_bg.jpg");
+		background-repeat: no-repeat;
+		background-size: 500px 750px;
+		background-position: 50% 50%;
+	}
+		.blade .headline, .blade .body {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+		}
+		.blade .headline {
+			top: 125px;
+		}
+		.blade .body {
+			top: 250px;
+		}
+		#blade1 {
+			background-position: 50% 0px;
+		}
+		#blade2 {
+			background-position: 50% -175px;
+		}
+		#blade3 {
+			background-position: 50% -175px;
+			background: transparent;
+			z-index:1;
+		}
+		#blade4 {
+			position: absolute;
+			top: 1500px;
+			background-position: 50% -175px;
+			z-index:0;
+		}
+
+	/* IMAGES / SPRITE SHEET */
+	.sprite {
+		position: absolute;
+	  background-image: url(spritesheet.png);
+	  background-repeat: no-repeat;
+	  display: block;
+	  z-index: 400;
+	}
+		/* fixed images */
+		#img-logo {
+			top: 30px; left: 205px;
+      width: 92px;
+      height: 52px;
+      background-position: -2px -2px;
+		}
+    #img-rotate {
+      bottom: 21px; right: 28px;
+      width: 70px;
+      height: 80px;
+      background-position: -843px -83px;
+    }
+		#img-rotate-end {
+			bottom: 21px; right: 28px;
+      width: 61px;
+      height: 80px;
+      background-position: -779px -197px;
+      visibility: hidden;
+		}
+
+	/* BLADE 1 */
+	#headline1a {
+		top: 211px; left: 30px;
+    width: 307px;
+    height: 17px;
+    background-position: -466px -2px;
+	}
+	#headline1b {
+		top: 238px; left: 30px;
+    width: 381px;
+    height: 17px;
+    background-position: -466px -24px;
+	}
+	#headline1c{
+		top: 265px; left: 30px;
+    width: 395px;
+    height: 17px;
+    background-position: -466px -45px;
+	}
+	#split-left {
+		top: 338px; left: 27px;
+    width: 223px;
+    height: 31px;
+    background-position: -551px -180px;
+	}
+  #split-bar {
+  	position: absolute;
+  	top: 326px; left: 255px;
+    margin: 1px 9px 0 7px;
+    height: 54px;
+    border-left: 1px solid #293859;
+    z-index: 1;
+  }
+	#split-right {
+		top: 342px; left: 280px;
+    width: 139px;
+    height: 24px;
+    background-position: -797px -168px;
+	}
+	#blade1-img {
+		top: 357px; left:0;
+    width: 500px;
+    height: 205px;
+    background-position: -2px -205px;
+    z-index: 0;
+	}
+	#legal {
+		bottom: 20px; left: 28px;
+    width: 241px;
+    height: 16px;
+    background-position: -552px -160px;
+	}
+	#instruct-wrap {
+
+	}
+		#instruct-bg {
+			position: absolute;
+			width: 240px;
+			height: 50px;
+			bottom: 111px; left: 0;
+			background-color: #b9b9b9;
+			opacity: 0.25;
+		}
+		#instruct {
+			bottom: 123px; left: 30px;
+      width: 174px;
+      height: 25px;
+      background-position: -373px -160px;
+		}
+
+	/* BLADE 2 */
+	#headline2a {
+		top: 160px; left: 142px;
+    width: 214px;
+    height: 26px;
+    background-position: -564px -67px;
+	}
+	#headline2b {
+		top: 200px; left: 146px;
+    width: 206px;
+    height: 26px;
+    background-position: -564px -98px;
+	}
+	#blade2-body {
+		top: 250px; left: 65px;
+    width: 361px;
+    height: 73px;
+    background-position: -100px -3px;
+	}
+	#blade2-img {
+		top: 401px; left:0;
+    width: 500px;
+    height: 210px;
+    background-position: -3px -415px;
+    z-index: 0;
+	}
+
+	/* BLADE 3 */
+	#headline3a {
+		top: 159px; left: 116px;
+    width: 269px;
+    height: 26px;
+    background-position: -376px -129px;
+	}
+	#headline3b {
+		top: 199px; left: 155px;
+    width: 188px;
+    height: 26px;
+    background-position: -650px -129px;
+	}
+	#blade3-body {
+		top: 250px; left: 63px;
+    width: 369px;
+    height: 68px;
+    background-position: -3px -80px;
+	}
+  #blade3-img1 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 120px;
+  }
+  #blade3-flash1 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 120px;
+    opacity: 0;
+  }
+  #blade3-img2 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 113px;
+    opacity: 0;
+  }
+  #blade3-flash2 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 113px;
+    opacity: 0;
+  }
+  #blade3-img3 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 120px;
+    opacity: 0;
+  }
+  #blade3-flash3 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 120px;
+    opacity: 0;
+  }
+  #blade3-img4 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 113px;
+    opacity: 0;
+  }
+  #blade3-flash4 {
+    position: absolute;
+    display: block;
+    bottom: 0; left: 113px;
+    opacity: 0;
+  }
+
+	/* BLADE 4 */
+	#blade4-body {
+		top: 250px; left: 66px;
+    width: 365px;
+    height: 47px;
+    background-position: -3px -153px;
+	}
+	#cta {
+		top: 322px; left: 158px;
+    width: 184px;
+    height: 34px;
+    background-position: -376px -80px;
+	}
+  #invisible-exit {
+    position: absolute;
+    top: 322px; left: 158px;
+    width: 184px;
+    height: 34px;
+    visibility: hidden;
+    z-index: 999;
+    cursor: pointer;
+  }
+	#blade4-img {
+		position: absolute;
+	  display: block;
+    bottom: 0; left: 113px;
+	}
+	#blade4-flash {
+		position: absolute;
+	  display: block;
+    bottom: 0; left: 1135px;
+    opacity: 0;
+	}
+
+	/* HEAD SPRITE */
+	.head-sprite {
+    background-image: url(heads.png);
+    background-repeat: no-repeat;
+    display: block;
+	}
+	.sprite-dummy {width:260px; height:346px; background-position: -1602px -1px; z-index: 0;}
+	.sprite-dummy_flash {width:260px; height:346px; background-position: -1863px -1px; z-index:98;}
+  .sprite-blonde {width:261px; height:347px; background-position: -1078px -1px; z-index: 0;}
+  .sprite-blonde_flash {width:261px; height:347px; background-position: -1340px -2px; z-index:99;}
+
+  .sprite-brunette {width:274px; height:358px; background-position: -1px -1px; z-index: 0;}
+  .sprite-brunette_flash {width:274px; height:358px; background-position: -276px -1px; z-index:99;}
+  .sprite-guy {width:263px; height:353px; background-position: -551px -1px; z-index: 0;}
+  .sprite-guy_flash {width:263px; height:353px; background-position: -815px -1px; z-index:99;}
+
+/*
+	LANDSCAPE MODE
+*/
+
+#landscape-container {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	overflow: hidden;
+    /*background-image: url("blade5_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 750px 500px;
+    background-position: 50% 50%;*/
+}
+
+	/* VIDEO PLAYER */
+  #video-container {
+    visibility: hidden;
+    background: #000;
+    position: absolute;
+    width: 750px;
+    height: 422px;
+    top: 36px;
+    left: 0;
+    z-index: 500;
+  }
+  #video-darken {
+    position: absolute;
+    width: 750px; height: 422px;
+    top: 0; left: 0;
+    background-color: #000;
+    opacity: 0.2;
+  }
+  #video-cover {
+    position: absolute;
+    width: 750px;
+    height: 422px;
+    top: 0;
+    left: 0;
+    background-image: url(vid_cover.png);
+    background-repeat: no-repeat;
+    z-index: 8;
+    text-align: center;
+    cursor: pointer;
+  }
+    #big-play-btn {
+	    top: 183px; left: 345px;
+      width: 76px;
+      height: 76px;
+      background-position: -865px -2px;
+    }
+    #video-cta {
+      top: 195px; left: 294px;
+      width: 183px;
+      height: 34px;
+      background-position: -508px -217px;
+      visibility: hidden;
+    }
+  #video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    box-sizing: border-box;
+
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.65);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.65);
+  }
+    .video-controls {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      bottom: -34px;
+      background-color: #000;
+    }
+
+    /* VIDEO BUTTONS */
+    #play-btn-1 {
+      background-image:url(play.svg);
+      background-repeat:no-repeat;
+      background-size:cover;
+      left: 18px;
+    }
+    #progress-bar-1 {
+      position: absolute;
+      background-color: #8f8f8f;
+      bottom: 0;
+      height: 1px;
+    }
+    #pause-btn-1 {
+      background-image:url(pause.svg);
+      background-repeat:no-repeat;
+      background-size:cover;
+      left: 18px;
+      visibility: hidden;
+    }
+    #stop-btn-1 {
+      background-image:url(stop.svg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      left: 56px;
+    }
+    #unmute-btn-1 {
+      background-image:url(unmute.svg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      right: 22px;
+    }
+    #mute-btn-1 {
+      background-image:url(mute.svg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      right: 18px;
+      visibility: hidden;
+    }
+    #replay-btn-1 {
+      background-image:url(replay.svg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      left: 18px;
+      visibility: hidden;
+    }
+
+:focus { outline:none; }
+::-moz-focus-inner { border:0; }
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .blade {
+    background-image: url("blade_bg_2x.jpg");
+    background-size: 500px 750px;
+  }
+  .sprite {
+    background-image: url(spritesheet_2x.png);
+    background-size: 943px 627px;
+  }
+  .head-sprite {
+    background-image: url(heads_2x.png);
+    background-size: 2123px 360px;
+  }
+
+  #video-cover {
+    background-image: url(vid_cover_2x.png);
+    background-size: 750px 422px;
+  }
+}

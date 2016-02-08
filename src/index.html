@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ryan Daly - Designer / Developer</title>
+    <meta name="description" content="Web design and development in Denver, Colorado">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Typekit -->
+    <script type="text/javascript">
+      (function(d) {
+        var config = {
+          kitId: 'ohm7nzy',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+  </head>
+
+  <div id="cover">
+
+    <div class="spinner"></div>
+    <p>WORKIN'</p>
+    <!-- inlining this since it'll be removed from DOM after app loaded -->
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak] {
+        display: none;
+      }
+      #cover {
+        display: block;
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background: #d1a42c;
+        z-index: 99999;
+        overflow: hidden;
+      }
+      #cover p {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 0.1px;
+        font-size: 14px;
+        font-weight: 900;
+        margin-top: 10px;
+      }
+
+      .spinner {
+        min-width: 50px;
+        min-height: 50px;
+        position: relative;
+        margin-top: 100px;
+      }
+      .spinner:before {
+        content: 'Loading…';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        margin-left: -27px;
+      }
+      .spinner:not(:required):before {
+        content: '';
+        border-radius: 50%;
+        border: 5px solid #F2F1ED;
+        border-top-color: #4a5b63;
+        border-right-color: #F2F1ED;
+        border-bottom-color: #4a5b63;
+
+        animation: spinner .8s linear infinite;
+        -webkit-animation: spinner .8s linear infinite;
+        -moz-animation: spinner .8s linear infinite;
+        -o-animation: spinner .8s linear infinite;
+        -ms-animation: spinner .8s linear infinite;
+      }
+
+      @keyframes spinner {
+        to {transform: rotate(360deg);}
+      }
+      @-webkit-keyframes spinner {
+        to {-webkit-transform: rotate(360deg);}
+      }
+      @-moz-keyframes spinner {
+        to {-moz-transform: rotate(360deg);}
+      }
+      @-o-keyframes spinner {
+        to {-o-transform: rotate(360deg);}
+      }
+      @-ms-keyframes spinner {
+        to {-ms-transform: rotate(360deg);}
+      }
+
+      #cover.hide-cover {
+        animation: hideCover 0.8s ease forwards;
+        transform-origin: 50% 50%;
+
+        -webkit-animation: hideCover 0.8s ease forwards;
+        -webkit-transform-origin: 50% 50%;
+
+        -moz-animation: hideCover 0.8s ease forwards;
+        -moz-transform-origin: 50% 50%;
+
+        -o-animation: hideCover 0.8s ease forwards;
+        -o-transform-origin: 50% 50%;
+
+        -ms-animation: hideCover 0.8s ease forwards;
+        -ms-transform-origin: 50% 50%;
+      }
+
+      @keyframes hideCover {
+        0% {
+          opacity: 1;
+          transform: translate(0px, 0px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate(0px, -100%);
+        }
+      }
+      @-webkit-keyframes hideCover {
+        0% {
+          opacity: 1;
+          -webkit-transform: translate(0px, 0px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          -webkit-transform: translate(0px, -100%);
+        }
+      }
+      @-moz-keyframes hideCover{
+        0% {
+          opacity: 1;
+          -moz-transform: translate(0px, 0px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          -moz-transform: translate(0px, -100%);
+        }
+      }
+      @-o-keyframes hideCover {
+        0% {
+          opacity: 1;
+          -o-transform: translate(0px, 0px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          -o-transform: translate(0px, -100%);
+        }
+      }
+      @-ms-keyframes hideCover {
+        0% {
+          opacity: 1;
+          -ms-transform: translate(0px, 0px);
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          -ms-transform: translate(0px, -100%);
+        }
+      }
+    </style>
+  </div>
+
+  <body rd-nav-scroll>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-cloak id="main" class="container main-container" ng-include="'app/views/partials/body.html'"></div>
+    
+    <div class="overlay-container" ng-include="'app/views/partials/overlay.html'"></div>
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    
+    
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+/* styles for the Hi page */
+
+.portrait-container {
+  width: 200px;
+  height: 252px;
+  margin: 3.5em auto 2.5em;
+
+  svg {
+    @include transform( translateX(-10px) );
+    path {
+      stroke-width: 2px;
+      fill-opacity: 0;
+      stroke: $rd-gold;
+      fill: $rd-gold;
+    }
+  }
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 0 auto 5em;
+  p {
+    padding: 0 1em;
+
+    span {
+      font-size: inherit;
+      text-transform: inherit;
+      text-decoration: line-through;
+    }
+  }
+  .cheers {
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}

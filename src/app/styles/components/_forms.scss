@@ -1,0 +1,100 @@
+$small-spacing: 1em;
+$base-form-font-size: 1em;
+$base-form-border: 1px solid $light-gray;
+$base-form-border-color: $base-background-color;
+$base-form-border-radius: 0;
+$base-form-bg-color: lighten($base-background-color, 3%);
+$base-form-bg-color-focus: lighten($rd-gold, 20%);
+$base-duration: 0.3s;
+$base-timing: $ease-in-out-sine;
+
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: $small-spacing / 2;
+  padding: 0;
+}
+
+label {
+  @include small-caps($rd-medium-blue);
+  display: block;
+  font-size: 0.8em;
+  // text-transform: uppercase;
+  text-align: left;
+  margin-bottom: $small-spacing / 2;
+}
+
+input,
+select {
+  display: block;
+  font-family: $body-font;
+  font-size: $base-form-font-size;
+}
+
+#{$all-text-inputs},
+select[multiple] {
+  box-sizing: border-box;
+  background-color: $base-form-bg-color;
+  border: none;
+  border-top: 1px solid $light-gray;
+  // box-shadow: 0 0 10px transparentize($rd-medium-blue, 0.95);
+  color: $rd-medium-blue;
+  font-family: $body-font;
+  font-size: $base-form-font-size;
+  margin-bottom: $small-spacing;
+  padding: $base-spacing / 3;
+  @include transition(all $base-duration $base-timing);
+  width: 100%;
+
+  &:hover {
+    // border-color: shade($base-form-border-color, 20%);
+  }
+
+  &:focus {
+    background-color: $base-form-bg-color-focus;
+    border-top: 1px solid $rd-gold;
+    // border-color: $action-color;
+    // box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-form-border;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+[type="search"] {
+  appearance: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+
+[type="file"] {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-spacing;
+  max-width: 100%;
+  width: auto;
+}

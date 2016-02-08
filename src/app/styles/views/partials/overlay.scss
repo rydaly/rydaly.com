@@ -1,0 +1,192 @@
+body {
+
+  &.overlay-open {
+    header {
+      z-index: 0;
+    }
+
+    div.rd-overlay {
+      overflow-y: scroll;
+      z-index: 9;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+
+div.rd-overlay {
+  @include position( fixed, 0px 0px 0px 0px );
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  overflow: hidden;
+  background: $base-background-color;
+  @include transition(opacity 0.25s $ease-in-out-sine);
+
+  .ng-enter {
+    opacity: 0;
+    @include transition(opacity 0.25s $ease-in-out-sine);
+  }
+  .ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+  .ng-leave {
+    opacity: 1;
+    @include transition(opacity 0.25s $ease-in-out-sine);
+  }
+  .ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+}
+
+div.rd-overlay > .overlay {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background: $base-background-color;
+
+  .overlay-close {
+    @include close-btn(true);
+    width: 30px;
+    height: 32px;
+    border-radius: 3px;
+    -webkit-transform: translateZ(0);
+    background-color: $base-background-color;
+  }
+
+  .sub-item {
+    margin-top: 10em;
+
+    h4 {
+      @include small-caps($rd-medium-blue);
+      // font-weight: 900;
+      font-size: 1.5em;
+
+      @include media($medium-screen) {
+        // font-weight: 100;
+        font-size: 2em;
+      }
+    }
+
+    a.launch-btn {
+      display: none;
+
+      @include media($large-screen) {
+        display: block;
+      }
+
+      button {
+        background-color: lighten($base-background-color, 5%);
+      }
+    }
+  }
+
+  .item-logo-container {
+    opacity: 0.3;
+    img {
+      height: 100px;
+      width: auto;
+      margin: 25px 0;
+    }
+  }
+
+  .title-contain {
+    .page-title {
+      color: $rd-medium-blue;
+      display: inline-block;
+
+      @include media($medium-screen) {
+        @include symbol-surround('\f0d9', '\f0da');
+        &:before, &:after {
+          font-size: 0.8em;
+          margin-top: 0.23em;
+        }
+      }
+    }
+  }
+  
+  .project-details {
+    width: 100%;
+    max-width: 1000px;
+    margin: 2em auto 4em;
+    text-align: center;
+
+    p.label {
+      display: block;
+    }
+
+    ul.item-list {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0; 
+
+      li {
+        display: block;
+        margin: 0;
+        width: 100%;
+        @include badge($rd-medium-blue);
+        cursor: default;
+      }
+    }
+
+    p.description {
+      margin-bottom: 3em;
+    }
+
+    @include media($medium-screen) {
+      ul.item-list {
+        li {
+          display: inline-block;
+          width: 20%;
+          margin: 0 0.5em;
+        }
+      }
+    }
+  }
+
+  .project-img-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+
+    .project-img {
+      display: block;
+      margin: 2em auto;
+      width: 100%;
+      @include media($large-screen) {
+        min-height: 250px;
+      }
+    }
+  }
+
+  .video-wrapper {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3
+    position: relative;
+    box-shadow: 0px 0px 0px 2px white;
+
+    embed,
+    object,
+    iframe {      
+      @include position(absolute, 0px null null 0px);
+      @include size(100%);
+    }
+  }
+
+  .launch-container {
+    a.launch-btn {
+      button {
+        background-color: lighten($base-background-color, 5%);
+      }
+    }
+  }
+
+  .space {
+    height: 10em;
+  }
+}

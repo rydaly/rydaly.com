@@ -1,0 +1,28 @@
+@keyframes fadeIn {
+    from    { opacity: 0; }
+    to      { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from    { opacity: 1; }
+    to      { opacity: 0; }
+}
+
+.page.ng-enter { z-index: 888888; animation: fadeIn 0.5s 0.25s ease-out; }
+.page.ng-leave { z-index: 999999; animation: fadeOut 0.25s ease-out; }
+
+// .page-hi.ng-enter,
+// .page-toolkit.ng-enter,
+// .page-work.ng-enter,
+// .page-lab.ng-enter,
+// .page-contact.ng-enter {
+//   animation: fadeIn 0.5s;
+// }
+
+// .page-hi.ng-leave, {
+// .page-toolkit.ng-leave, {
+// .page-work.ng-leave, {
+// .page-lab.ng-leave, {
+// .page-contact.ng-leave {
+//   animation: fadeOut 0.5s;
+// }

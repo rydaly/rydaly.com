@@ -1,0 +1,107 @@
+.footer {
+  position: relative;
+  height: 24em;
+  color: $base-background-color;
+  text-align: center;
+  background: url("../../assets/images/rd_bg.png") repeat;
+  background-position: center;
+  background-size: 150px 150px;
+  background-color: black;
+
+  .cover {
+    @include position(absolute, 0px 0px 0px 0px);
+    height: 100%;
+    @include linear-gradient(0deg, transparentize(black, 0.5), transparentize($rd-dark-blue, 0.9));
+    z-index: 0;
+
+    &:after {
+      @include linear-gradient(90deg, transparentize($rd-dark-blue, 0.9), transparentize(black, 0.5));
+      @include position(absolute, 0px 0px 0px 0px);
+      content: '';
+      display: block;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0;
+      @include transition(all, 0.2s ease-in-out);
+    }
+  }
+
+  div.container {
+    position: absolute;
+    width: 100%;
+    padding-top: 3.5em;
+    z-index: 1;
+    
+    img.glco {
+      width: 250px;
+      height: auto;
+      margin-bottom: 1em;
+    }
+
+    div {
+      
+      p {
+        @include small-caps($base-background-color);
+        font-family: $sans-serif-2;
+        margin-bottom: 0.5em;
+        font-size: 0.8em;
+
+        &.top {
+          margin-top: 1em;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 1px;
+            background-color: $rd-gold;
+            opacity: 0.4;
+            margin: 0.5em auto 0;
+          }
+        }
+
+        span, img, i {
+          opacity: 0.3;
+        }
+      }
+
+      img.mountain-icon {
+        display: inline;
+        width: 18px;
+        height: auto;
+        vertical-align: text-bottom;
+        margin-right: 7px;
+        opacity: 0.2;
+
+        &.icon-right {
+          margin-right: 0;
+          margin-left: 4px;
+          @include transform(scaleX(-1));
+        }
+      }
+
+      i {
+        margin-right: 4px;
+
+        &.fa {
+          opacity: 0.2;
+        }
+
+        &.fa-right {
+          margin-right: 0;
+          margin-left: 4px;
+        }
+      }
+
+      .fine-print {
+        margin-top: 4em;
+        // font-weight: 100;
+        font-size: 0.5em;
+        opacity: 0.2;
+
+        a {
+          color: $light-gray;
+        }
+      }
+    }
+  }
+}

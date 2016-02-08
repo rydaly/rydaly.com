@@ -1,0 +1,104 @@
+/* Buttons */
+.lines-btn {
+  @include border-hover-effect();
+}
+
+/* Typography */
+
+.page-header h4, .insta-container h4 {
+  @include symbol-surround('\f0d9', '\f0da');
+  margin-right: 25px;
+  margin-left: 25px;
+  line-height: 1.5em;
+  font-size: 1.1em;
+
+  @include media($medium-screen) {
+    font-size: 1.3em;
+  }
+  
+  &:before, &:after {
+    font-size: 1.3em;
+  }
+}
+
+.small-caps {
+  @include small-caps($rd-medium-blue);
+}
+
+.label {
+  @include small-caps($rd-green);
+  font-size: 0.8em;
+}
+
+i.icon-head {
+  color: $rd-gold;
+  font-size: 2em;
+  opacity: 1;
+
+  @include media($large-screen) {
+    font-size: 2.5em;
+    margin-top: 1em;
+  }
+}
+
+/* Loading animation */
+
+div.loading {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  background-image: url('../../assets/images/loader.gif');
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -40px 0 0 -20px;
+}
+
+/* page instructions / notifications */
+.page-notifications {
+  opacity: 1;
+  margin: 0em 0 0.5em;
+  padding: 25px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background: lighten($base-background-color, 3%);
+
+  &.ng-hide-add, &.ng-hide-remove {
+    @include transition(all 0.5s $ease-in-out-sine);
+  }
+  &.ng-hide {
+    margin-top: -5em;
+    opacity: 0;
+  }
+  
+  p {
+    font-family: $body-font;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: darken($base-background-color, 25%);
+    text-align: center;
+    margin-bottom: 0.5em;
+
+    &:before {
+      font-family: FontAwesome;
+      content: '\f05a';
+      display: inline-block;
+      margin-right: 0.5em;
+    }
+
+    @include media($medium-screen) {
+      font-size: 1em;
+    }
+  }
+
+  a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+
+    &:hover {
+      color: $rd-red;
+    }
+  }
+}

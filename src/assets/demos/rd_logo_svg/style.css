@@ -1,0 +1,105 @@
+body { 
+  position: absolute;
+  width: 100%; height: 100%;
+  padding: 0; margin: 0;
+  background: #444;
+  overflow: hidden;
+  /*background-image: url(bg.png);*/
+  background-color: #6b8f38;
+}
+
+body:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #fff, #eee);
+  opacity: 0; 
+}
+
+.content {
+  width: 100%; 
+  height: 100%;
+  padding: 0; margin: 0;
+}
+
+.primary {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* parallax logo */
+
+.parallax-window {
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.parallax-content {
+  -webkit-transform: translateZ(0);
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.logo, .logo2 {
+  opacity: 0;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+  
+  .logo-sm {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+    .p1, .p2, .p3, .p4, .p5, .p6 {
+      opacity: 0;
+      stroke-width: 0.5;
+      stroke: #4a5b63;
+    }
+
+    .ul {
+      opacity: 0;
+    }
+
+    .ur {
+      opacity: 0;
+    }
+
+    .bl {
+      opacity: 0;
+    }
+
+    .br {
+      opacity: 0;
+    }
+
+.logo {
+  z-index: 11;
+}
+  .logo path {
+    stroke: #d1a42c;
+    fill: #d1a42c;
+  }
+
+.logo2 {
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+  .logo2 path {
+    stroke: #4a5b63;
+    fill: #4a5b63;
+  }
