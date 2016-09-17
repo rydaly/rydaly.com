@@ -1,9 +1,15 @@
 'use strict';
 
+/* global angular */
+
 angular.module('rydaly')
   .factory('SkillsDataService', function($http) {
     var url = 'data/skills.json';
-    return $http.get(url);
+    return $http({
+      method: 'GET',
+      url: url,
+      cache: true
+    });
   })
   .factory('SkillsEventService', function($rootScope) {
     var skillsEventService = {};

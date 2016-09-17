@@ -295,7 +295,6 @@
         @include transition(none);  
         @include transition(background 0.3s $ease-out-sine, color 0.3s $ease-out-sine);
 
-        &:focus,
         &:hover {
           color: $navbar-color-hover;
           background-color: $navbar-bg-color-hover;
@@ -343,7 +342,6 @@
         // Full menu links 
         a {
           height: $navbar-height;
-          &:focus,
           &:hover {
             color: $navbar-color-hover;
             background-color: $navbar-bg-color-hover;

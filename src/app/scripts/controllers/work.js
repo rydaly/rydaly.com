@@ -1,5 +1,5 @@
 'use strict';
-/* global angular */
+/* global angular, TweenMax */
 
 angular.module('rydaly')
   .controller('WorkController', WorkController)
@@ -203,7 +203,7 @@ function RdOverlay($rootScope, modals, $document, $timeout, $location) {
     $rootScope.$on("modals.open", handleModalOpenEvent);
     
     function handleModalOpenEvent( event, modalType ) {
-      // console.log(modalType);
+      TweenMax.set(element, { scrollTo:{ y:0 } });
       scope.subview = modalType;
       scope.container.addClass("overlay-open");
     }
@@ -212,6 +212,7 @@ function RdOverlay($rootScope, modals, $document, $timeout, $location) {
     $rootScope.$on("modals.close", handleModalCloseEvent);
 
     function handleModalCloseEvent() {
+      TweenMax.set(element, { scrollTo:{ y:0 }, delay:0.3 });
       scope.subview = null;
       $location.path('/work');
       $timeout( function() {  

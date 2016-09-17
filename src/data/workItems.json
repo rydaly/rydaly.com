@@ -31,7 +31,7 @@
 
     { 
       "title": "Acura",
-      "description": "I spent six months in 2015 working on the Acura account building rich media. Much of this time was spent working on the full-screen mobile experience found below. The unit touts the safety of Acura vehicles and was launched as a single piece of a larger campaign.",
+      "description": "I spent six months in 2015 working on the Acura account building rich media. Some of this time was spent working on the full-screen mobile experience found below. The unit touts the safety of Acura vehicles and was launched as a single piece of a larger campaign.",
       "link": "assets/demos/acura_rich/index.html",
       "linkText": "Launch",
       "imgLogo": "assets/images/work/img/logos/acura.png",
@@ -105,7 +105,7 @@
 
     {
       "title": "Divvy Bike Share Data Viz",
-      "description": "Divvy is Chicago's bike sharing service. While at Razorfish, we put together a team to create an entry for the 'Divvy Data Challenge.' I ended up swamped with client work and was unable to continue with oficcial submission, but afterwards I continued building my idea. This demo shows incoming and outgoing data from Divvy stations over a period of 24 hours. I've narrowed down the data set to a single day (July 4th, 2013) for the purposes of demonstration and performance. Clear patterns emerge showing that some stations have disproportionate incoming or outgoing traffic.",
+      "description": "Divvy is Chicago's bike sharing service. While at Razorfish, we put together a team to create an entry for the 'Divvy Data Challenge.' I ended up swamped with client work and was unable to continue with the official submission, but afterwards I continued building my idea. This demo shows incoming and outgoing data from Divvy stations over a period of 24 hours. I utilized Leaflet and d3.js for the data projection and GSAP for animation. I've narrowed down the data set to a single day (July 4th, 2013) for the purposes of demonstration and performance. Clear patterns emerge showing that some stations have disproportionate incoming or outgoing traffic.",
       "link": "assets/demos/divvy/index.html",
       "linkText": "Launch",
       "imgLogo": "assets/images/work/img/logos/divvy.png",

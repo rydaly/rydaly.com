@@ -1,0 +1,1113 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"getel",
+				"getElementById(id)	Element"
+			],
+			[
+				"itemIm",
+				"itemImagesLow"
+			],
+			[
+				"itemI",
+				"itemImagesLow"
+			],
+			[
+				"mar",
+				"margin-top: "
+			],
+			[
+				"toggle",
+				"toggleClass"
+			],
+			[
+				"explode",
+				"explodeBtn"
+			],
+			[
+				"getEl",
+				"getElementById(id)	Element"
+			],
+			[
+				"transform",
+				"transform-origin	compass"
+			],
+			[
+				"background",
+				"background-color: "
+			],
+			[
+				"inner",
+				"innerWidth	Window"
+			],
+			[
+				"border",
+				"border-size"
+			],
+			[
+				"offse",
+				"offsetHeight"
+			],
+			[
+				"cal",
+				"calcHeight"
+			],
+			[
+				"curE",
+				"curExpandedContent"
+			],
+			[
+				"prevE",
+				"prevExpanded"
+			],
+			[
+				"handle",
+				"handleEventBroadcast"
+			],
+			[
+				"hand",
+				"handleEventBroadcast"
+			],
+			[
+				"Skill",
+				"SkillsEventService"
+			],
+			[
+				"skills",
+				"skillsCtrl"
+			],
+			[
+				"skill",
+				"skillsEventService"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ease-in-out",
+				"ease-in-out-quart"
+			],
+			[
+				"font",
+				"font-style: "
+			],
+			[
+				"lin",
+				"line-through"
+			],
+			[
+				"text-",
+				"text-decoration: "
+			],
+			[
+				"margin",
+				"margin-bottom: "
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"backgroun",
+				"background: "
+			],
+			[
+				"elP",
+				"elParentNode"
+			],
+			[
+				"expand",
+				"expandCases"
+			],
+			[
+				"this",
+				"thisEl"
+			],
+			[
+				"cur",
+				"curExpanded"
+			],
+			[
+				"expandCa",
+				"expandCase"
+			],
+			[
+				"current",
+				"currentExpandCase"
+			],
+			[
+				"colla",
+				"collapseOnly"
+			],
+			[
+				"prevent",
+				"preventDefault()	Event"
+			],
+			[
+				"filter",
+				"filterByTag"
+			],
+			[
+				"out",
+				"outer-container	Bourbon-Neat"
+			],
+			[
+				"active",
+				"activeTab"
+			],
+			[
+				"insta-item",
+				"insta-item-size"
+			],
+			[
+				"fill",
+				"fill-parent	Bourbon-Neat"
+			],
+			[
+				"FILTER_VALIDATE",
+				"FILTER_VALIDATE_EMAIL〔constant〕"
+			],
+			[
+				"INPU",
+				"INPUT_POST〔constant〕"
+			],
+			[
+				"base-form-bg",
+				"base-form-bg-color-focus"
+			],
+			[
+				"submission",
+				"submissionMessage"
+			],
+			[
+				"contact",
+				"contactCtrl"
+			],
+			[
+				"translate",
+				"translate3d"
+			],
+			[
+				"getEle",
+				"getElementsByClassName"
+			],
+			[
+				"animation",
+				"animation-delay: 〔property〕"
+			],
+			[
+				"anim",
+				"animLoadedLoader"
+			],
+			[
+				"a",
+				"Helvetica Neue, Helvetica, Arial, sans-serif"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"numPaths",
+				"numPathsIn"
+			],
+			[
+				"getElem",
+				"getElementById(${0:id})	Element"
+			],
+			[
+				"link",
+				"linkText"
+			],
+			[
+				"pad",
+				"padding: "
+			],
+			[
+				"char",
+				"chargeDistance"
+			],
+			[
+				"bower",
+				"bower_components"
+			],
+			[
+				"sub",
+				"subItem"
+			],
+			[
+				"te",
+				"text-bottom"
+			],
+			[
+				"backgr",
+				"background-color: "
+			],
+			[
+				"padding",
+				"padding-bottom: "
+			],
+			[
+				"itemCt",
+				"itemCta"
+			],
+			[
+				"transtion",
+				"transition	Bourbon"
+			],
+			[
+				"overflow",
+				"overflow-y: "
+			],
+			[
+				"overlf",
+				"overflow-y: "
+			],
+			[
+				"getE",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"play",
+				"playBtn"
+			],
+			[
+				"itemCta",
+				"itemCtaText"
+			],
+			[
+				"item",
+				"itemImages"
+			],
+			[
+				"numI",
+				"numImgs"
+			],
+			[
+				"transition",
+				"transition-timing-function	Bourbon"
+			],
+			[
+				"animatoin",
+				"animation-delay	Bourbon"
+			],
+			[
+				"trans",
+				"transparentize	transparentize()"
+			],
+			[
+				"transpa",
+				"transparent"
+			],
+			[
+				"work",
+				"workCtrl"
+			],
+			[
+				"getEleme",
+				"getElementsByClassName"
+			],
+			[
+				"overlay",
+				"overlayMode"
+			],
+			[
+				"ng-swit",
+				"ng-switch	AngularJS"
+			],
+			[
+				"background-s",
+				"background-size: "
+			],
+			[
+				"background-si",
+				"background-position: "
+			],
+			[
+				"loading",
+				"loadingEl"
+			],
+			[
+				"tran",
+				"transition	Bourbon"
+			],
+			[
+				"isAuto",
+				"isAutomaticScroll"
+			],
+			[
+				"navbar",
+				"navbarHeight"
+			],
+			[
+				"rdNav",
+				"rdNavScroll"
+			],
+			[
+				"opac",
+				"opacity: "
+			],
+			[
+				"menu",
+				"menuIsOpen"
+			],
+			[
+				"men",
+				"menuIsOpen"
+			],
+			[
+				"mobile",
+				"mobileMenu"
+			],
+			[
+				"centere",
+				"centered-navigation-item-nudge"
+			],
+			[
+				"im",
+				"imgPath"
+			],
+			[
+				"show",
+				"showNav"
+			],
+			[
+				"transition-delay",
+				"transition-delay	Bourbon"
+			],
+			[
+				"remove",
+				"removeHide"
+			],
+			[
+				"isA",
+				"isAutoScroll"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"back",
+				"background-color: "
+			],
+			[
+				"centered-navigation-bg",
+				"centered-navigation-bg-color-hover"
+			],
+			[
+				"navBar",
+				"navbarHeight"
+			],
+			[
+				"navB",
+				"navbarHeight"
+			],
+			[
+				"getElements",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"sans-serif",
+				"sans-serif-2"
+			],
+			[
+				"opa",
+				"opacity: "
+			],
+			[
+				"prev",
+				"prevExpanded"
+			],
+			[
+				"transi",
+				"transition	Bourbon"
+			],
+			[
+				"backg",
+				"background: "
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"toString",
+				"toString()	String"
+			],
+			[
+				"expandedInner",
+				"expandedInnerY"
+			],
+			[
+				"om",
+				"omega	Bourbon-Neat"
+			],
+			[
+				"default",
+				"default"
+			],
+			[
+				"defaul",
+				"default"
+			],
+			[
+				"query",
+				"querySelector(${0:selectors})	Element"
+			],
+			[
+				"stroke",
+				"stroke-dasharray"
+			],
+			[
+				"ease-in",
+				"ease-in-out-quint"
+			],
+			[
+				"box-s",
+				"box-sizing: "
+			],
+			[
+				"star",
+				"startTouchY"
+			],
+			[
+				"startTouch",
+				"startTouchX"
+			],
+			[
+				"lab",
+				"labCtrl"
+			],
+			[
+				"rootS",
+				"rootSvgNode"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"min",
+				"min-height: "
+			],
+			[
+				"$routeCh",
+				"$routeChangeSuccess	AngularJS (E)"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"$route",
+				"$routeProvider	AngularJS"
+			],
+			[
+				"delta",
+				"deltaThreshold"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 338.0,
+		"last_filter": "wrap",
+		"selected_items":
+		[
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"auto",
+				"Autoprefix CSS"
+			],
+			[
+				"aut",
+				"Autoprefix CSS"
+			],
+			[
+				"format",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"forma",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"html",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"set syntax: angular",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"angular",
+				"AngularJS: Rebuild Search Index"
+			],
+			[
+				"insatll",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"syntax java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax json",
+				"Set Syntax: JSON"
+			],
+			[
+				"mini",
+				"Minify Javascript to file"
+			],
+			[
+				"minif",
+				"Minify Javascript to file"
+			],
+			[
+				"minify",
+				"Minify Javascript to file"
+			],
+			[
+				"minifi",
+				"Minify Javascript to file"
+			],
+			[
+				"min",
+				"Minify Javascript"
+			],
+			[
+				"prefix",
+				"Autoprefix CSS"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"compress",
+				"Build With: HTML Compressor"
+			],
+			[
+				"build",
+				"Build With: HTML Compressor"
+			],
+			[
+				"jshint",
+				"JSHint"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pakc",
+				"Package Control: Install Package"
+			],
+			[
+				"packe",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os;",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/rydaly/Studio/Rydaly/rd.sublime-project",
+		"/Users/rydaly/Studio/Rydaly/src/app/app.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/footer.html",
+		"/Users/rydaly/Studio/Rydaly/src/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/php/processContactForm.php",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/contact.js",
+		"/Users/rydaly/Studio/Rydaly/.tmp/serve/index.html",
+		"/Users/rydaly/Studio/Rydaly/node_modules/gulp-inject/src/transform/index.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/hi.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdSkillsPage.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/body.html",
+		"/Users/rydaly/Studio/Rydaly/src/data/labItems.json",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/hi.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/contact.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/partials/rdNav.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/work.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/ScrollToPlugin.min.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/lab.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/lab.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/work.html",
+		"/Users/rydaly/Studio/Rydaly/src/data/workItems.json",
+		"/Users/rydaly/Desktop/rd-graveyard-files/index_preloader.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/rd-expander.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_03_mixins.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/overlay.html",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/rd_logo_svg/main.js",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/rd_logo_svg/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/rd_logo_svg/style.css",
+		"/Users/rydaly/repos/rydaly/lib/assets/js/main.js",
+		"/Users/rydaly/repos/rydaly/lib/assets/sass/_content.scss",
+		"/Users/rydaly/repos/rydaly/lib/assets/sass/_header.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdDefer.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/contact.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_shared.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdnav.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/rdNav.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/hi.scss",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/svg_text/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/skills.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/skills.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/partials/overlay.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_01_vars.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdSocial.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/lab.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/services/rdSkillsService.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/skills.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdHiPage.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/rdInstaCtrl.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdVidPoster.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_02_typography.scss",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/divvy/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/divvy/js/main.js",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/svg_text/main.js",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/divvy/json/divvy_trips_sample.json",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/acura_rich/style.css",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/svg_text/style.css",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/work.scss",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Packages/Monokai JSON+ USER.tmTheme",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Packages/Tomorrow-Night-Bright-Angular.tmTheme",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Packages/zenburn.tmTheme",
+		"/Users/rydaly/Library/Application Support/Sublime Text 3/Packages/User/AngularJS-sublime-package.sublime-settings",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Packages/HTML/HTML_Angular.tmLanguage",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Packages/HTML/HTML.tmLanguage",
+		"/Users/rydaly/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Installed Packages/Seti_UX/Seti.tmTheme",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Installed Packages/Seti_UX.sublime-package",
+		"/Users/rydaly/Dropbox/Sync/sublime-text-3/Packages/Seti_UI/Seti.sublime-theme",
+		"/Users/rydaly/Library/Application Support/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/fonts/_path.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/fonts/_variables.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/index.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_forms.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/controllers/rdNavCtrl.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/rdSocial.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/fonts/_icons.scss",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/acura_rich/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/services/rdInstaService.js",
+		"/Users/rydaly/Studio/Rydaly/dist/app/php/processContactForm.php",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/php/processContactForm.php",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/rdLogo.html",
+		"/Users/rydaly/Studio/Rydaly/src/assets/demos/acura_rich/logic.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdFooter.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/partials/portrait.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/partials/footer.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/footer.html",
+		"/Users/rydaly/Desktop/me (1).svg",
+		"/Users/rydaly/Desktop/rd.svg",
+		"/Users/rydaly/Desktop/parallaxLogo.html",
+		"/Users/rydaly/Studio/Rydaly/bower.json",
+		"/Users/rydaly/Studio/Rydaly/gulp/icons.js",
+		"/Users/rydaly/Studio/Rydaly/gulp/build.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_a_mixins.scss",
+		"/Users/rydaly/Studio/Rydaly/gulp/styles.js",
+		"/Users/rydaly/Studio/Rydaly/gulp/fonts.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/partials/modal.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/modal.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/rdNav.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/views/footer.scss",
+		"/Users/rydaly/Desktop/Desktop/FC/summerMailer copy/DetroitSessionsMailer.html",
+		"/Users/rydaly/repos/rydaly/lib/assets/sass/_modal.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_buttons.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/modal.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/views/rdNav.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/vendor/fullslide.scss",
+		"/Users/rydaly/Studio/Rydaly/src/assets/svg/ball_triangle.svg",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdLabPage.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_a_vars.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/_typography.scss",
+		"/Users/rydaly/Studio/Rydaly/gulp/conf.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdExpandPreview.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdWorkPage.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/directives/rdContactPage.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/services/rdLabItemsService.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/grid.js",
+		"/Users/rydaly/Desktop/ThumbnailGridExpandingPreview/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/vendor/grid.js",
+		"/Users/rydaly/Desktop/ThumbnailGridExpandingPreview/js/grid.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/rd-fullslide.js",
+		"/Users/rydaly/Studio/Rydaly/src/data/skills.json",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/vars.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/vendor/fullpage.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/styles/components/animation.scss",
+		"/Users/rydaly/repos/rydaly/lib/assets/sass/base/_variables.scss",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/br-fullpage.js",
+		"/Users/rydaly/Studio/Rydaly/src/assets/svg/skillsRoot.svg",
+		"/Users/rydaly/repos/rydaly/index.html",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/d3.layout.js",
+		"/Users/rydaly/Studio/Rydaly/src/app/scripts/vendor/d3.geom.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/Users/rydaly/Studio/Rydaly",
+			"/Users/rydaly/Studio/Rydaly/src",
+			"/Users/rydaly/Desktop/rydaly",
+			"/Users/rydaly/repos/StayingSharpWithAngularSTB",
+			"/Users/rydaly/repos/rydaly",
+			"/Users/rydaly/repos/fogged-clarity",
+			"/Users/rydaly/repos/rydaly/",
+			"/Users/rydaly/repos/rydaly/lib",
+			"/Users/rydaly/repos/fogged-clarity",
+			"/Users/rydaly/Studio/FC_Dev_v4/wp-content/plugins/issuem",
+			"/Users/rydaly/repos/fogged-clarity",
+			"",
+			"/Users/rydaly/Studio/FC_Dev_v4/wp-content/themes/fogged-clarity",
+			"/Users/rydaly/Studio/FC_Dev_v4/wp-content",
+			"/Users/rydaly/Studio/FC_Dev_v4/wp-content/themes/fogged-clarity",
+			"/Users/rydaly/Studio/FC_Dev_v4",
+			"/Users/rydaly/Studio/FC_Dev_v4/wp-content/\n/Users/rydaly/Studio/FC_Dev_v4/wp-content/",
+			"/Users/rydaly/Studio/FC_Dev_v4/wp-content/themes/fogged-clarity"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"linear",
+			"fadeOut",
+			"100% {\n          opacity: 0;",
+			"fadeOut",
+			"ease 1s;",
+			"CC675B",
+			"6b8f38",
+			"6",
+			"25",
+			"10",
+			"16px",
+			"return '<script src=",
+			"var transform = function",
+			"previousDeferred",
+			"transform: translate(0px, -100%);",
+			"spin ease 2s infinite;",
+			"both",
+			"forwards",
+			"34px",
+			"spin ease 1s infinite;",
+			"{\n          0% {",
+			"0% {",
+			"100% {\n            opacity: 0;",
+			"0% {\n            opacity: 1;",
+			"transform: translate(0px, -100%);",
+			"transform: translate(0px, 0px);",
+			"\n          50% {\n            opacity: 1;\n          }",
+			"spin ease 1s;",
+			"fadeOut",
+			"assets",
+			"0% {\n            opacity: 1;",
+			"0% {",
+			"transform: translate(0px, 100%);",
+			"transform: translate(0px, -25px);",
+			"transform: translate(0px, 0px);",
+			"transform: translate(0px, -25px);",
+			"opacity:0;",
+			"opacity:1;",
+			"transform:  translate(0px,0px)  ;",
+			"transform:  translate(0px,-25px)  ;",
+			"0% {\n            opacity:0;",
+			"fadeIn",
+			"all",
+			"opacity",
+			"1s 0.5s",
+			"translateY(0px)",
+			"translateY",
+			"0s",
+			"1s",
+			"1s 0s",
+			"3s",
+			"1s 1s",
+			"1s",
+			"1s 1s",
+			"1s",
+			"min-height",
+			"scrollTo",
+			".img-lrg",
+			"scrollTo",
+			"scroll",
+			"\"imgs\":",
+			"item.imgs",
+			"itemImages",
+			"30",
+			"Graphics",
+			"Logo",
+			"scrollTo",
+			"is-active",
+			"this",
+			";\n",
+			"30px",
+			"mobile-logo",
+			"96px",
+			"$rd-medium-blue",
+			"active",
+			".c-hamburger--htx",
+			".c-hamburge",
+			".c-hamburger",
+			"video",
+			"exploded3",
+			"handleEventBroadcast",
+			"handleBroadcast",
+			"skillsRoot",
+			"r:",
+			"initial",
+			".img-expanded",
+			"bi",
+			"CC675B",
+			"4a5b63",
+			"783221",
+			"FBE3E4",
+			"d1a42c",
+			"4a5b63",
+			"d1a42c",
+			"#CC675B",
+			"#4a5b63",
+			"#CC675B",
+			"15em",
+			"$rd-red",
+			"$rd-medium-blue",
+			"$base-margin",
+			"$base-background-color",
+			"$parallax-window-height",
+			"no-js",
+			"$document[0]",
+			"TODO",
+			"launch",
+			"lines-btn",
+			"medium",
+			"log",
+			"winHeight",
+			"expanders",
+			"containers",
+			"duration",
+			"reject",
+			"logoParallax",
+			"$timeout",
+			"item.imgHi",
+			"height",
+			"imgPoster",
+			"imgLow",
+			"\"video\":",
+			"$red",
+			"$green",
+			"$dark-blue",
+			"gyrfalcon",
+			" * 8",
+			"$border-size * 3"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"foggedclarity"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "rd.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 342.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"!=="
+			]
+		],
+		"width": 719.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 215.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
