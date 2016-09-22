@@ -1,10 +1,8 @@
 /* styles for the Contact page */
 
-$insta-item-size: 14em;
-
 .contact-container {
   text-align: center;
-  
+
   .page-notifications {
     padding: 0;
     margin-bottom: 5em;
@@ -12,11 +10,11 @@ $insta-item-size: 14em;
 
   .social {
     margin: 1.2em 0;
-    padding: 0; 
+    padding: 0;
 
     @include media($medium-screen) {
     }
-    
+
     li {
       font-size: 1.8em;
       display: inline;
@@ -28,7 +26,7 @@ $insta-item-size: 14em;
         &:hover {
           color: $rd-gold;
         }
-        
+
         i {
             padding: 0 0.2em;
           }
@@ -36,7 +34,7 @@ $insta-item-size: 14em;
     }
   }
 
-  div.words, .contact-form-container, .insta-outer {
+  div.words, .contact-form-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
@@ -47,7 +45,7 @@ $insta-item-size: 14em;
 
     .lines-btn {
       background-color: lighten($base-background-color, 5%);
-      
+
       &:before {
         content: '';
         display: inline-block;
@@ -92,43 +90,6 @@ $insta-item-size: 14em;
           display: inline-block;
           margin-right: 0.5em;
         }
-      }
-    }
-  }
-
-  .insta-outer {
-    text-align: center;
-  }
-
-  .insta-container {
-    margin: 5em 0;
-    @include clearfix;
-    @include span-columns(12);
-
-    div.insta-item {
-      @include span-columns(6);
-      border: 1px solid $base-background-color;
-      height: $insta-item-size;
-      overflow: hidden;
-
-      @include media($medium-screen) {
-        @include span-columns(3);
-      }
-
-      .img-responsive {
-        height: $insta-item-size;
-        min-height: 100%;
-        width: auto;
-        outline: none;
-        text-align: center;
-        background-size: cover;
-      }
-      video {
-        min-height: 120% !important;
-        min-width: 120% !important;
-        margin-top: 50%;
-        margin-left: 50%;
-        @include transform(translate(-50%, -50%));
       }
     }
   }

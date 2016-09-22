@@ -1,5 +1,4 @@
 /* styles for the Hi page */
-
 .portrait-container {
   width: 200px;
   height: 252px;
@@ -7,6 +6,7 @@
 
   svg {
     @include transform( translateX(-10px) );
+
     path {
       stroke-width: 2px;
       fill-opacity: 0;
@@ -18,7 +18,8 @@
 
 .about-container {
   max-width: 700px;
-  margin: 0 auto 5em;
+  margin: 0 auto;
+
   p {
     padding: 0 1em;
 
@@ -28,10 +29,52 @@
       text-decoration: line-through;
     }
   }
+
   .cheers {
     img {
       width: 50px;
       height: auto;
+    }
+  }
+}
+$insta-item-size: 14em;
+
+.insta-outer {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.insta-container {
+  margin: 4em 0;
+  @include clearfix;
+  @include span-columns(12);
+
+  div.insta-item {
+    @include span-columns(6);
+    border: 1px solid $base-background-color;
+    height: $insta-item-size;
+    overflow: hidden;
+    @include media($medium-screen) {
+       @include span-columns(3);
+    }
+
+    .img-responsive {
+      height: $insta-item-size;
+      min-height: 100%;
+      width: auto;
+      outline: none;
+      text-align: center;
+      background-size: cover;
+    }
+
+    video {
+      min-height: 120% !important;
+      min-width: 120% !important;
+      margin-top: 50%;
+      margin-left: 50%;
+      @include transform(translate(-50%, -50%));
     }
   }
 }

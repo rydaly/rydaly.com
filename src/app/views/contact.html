@@ -1,5 +1,5 @@
 <section class="container contact-container">
-  
+
   <div class="page-header">
     <i class="fa fa-paper-plane icon-head"></i>
     <h4 class="small-caps">Holler at me</h4>
@@ -19,13 +19,13 @@
     <form>
       <label for="name"><i class="fa fa-user"></i> Name</label>
       <input type="text" name="name" ng-model="contactCtrl.formData.name" ng-class="{ 'error' : contactCtrl.errorName }">
-      
+
       <label for="email"><i class="fa fa-at"></i> E-mail</label>
       <input type="email" name="email" ng-model="contactCtrl.formData.email" ng-class="{ 'error' : contactCtrl.errorEmail }">
-      
+
       <label for="message"><i class="fa fa-pencil"></i> Message</label>
       <textarea name="message" ng-class="{ 'error' : contactCtrl.errorTextarea }" ng-model="contactCtrl.formData.message" cols="30" rows="10"></textarea>
-      
+
       <button class="lines-btn" ng-click="contactCtrl.sendMessage()">
         <i class="fa fa-paper-plane-o"></i> Send!
         <span class="lines top"></span>
@@ -39,21 +39,6 @@
       </div>
 
     </form>
-  </div>
-  
-  <!-- Instagram -->
-  <div class="insta-outer">
-    <div class="insta-container" ng-controller="InstaController as instaCtrl">
-      <h4 class="small-caps">Latest Grams</h4>
-      <div class="insta-item" ng-repeat="item in instaCtrl.items">
-          <a href="{{ item.link }}" target="_blank">
-            <div class="img-responsive" ng-if="item.isImage === true" ng-style="{'background-image': 'url({{ item.url }})'}"></div>
-            <video class="img-responsive" autoplay loop ng-if="item.isImage === false">
-              <source ng-src="{{ item.url | trusted }}" type="video/mp4" width="500px">
-            </video>
-          </a>
-      </div>
-    </div>
   </div>
 
 </section>

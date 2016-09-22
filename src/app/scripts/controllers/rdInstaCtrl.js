@@ -19,14 +19,15 @@ function InstaController(InstagramAPI) {
 
   InstagramAPI.allCached()
     .then(function(response) {
-      var i, 
-          data = response.data, 
+      console.log(response);
+      var i,
+          data = response.data,
           numImages = InstagramAPI.numImages;
 
       for(i = 0; i < numImages; i++) {
         if(data[i].hasOwnProperty('videos')) {
           instaCtrl.items.push( { url: data[i].videos.low_resolution.url, link:data[i].link, isImage: false } );
-        } else { 
+        } else {
           instaCtrl.items.push( { url: data[i].images.low_resolution.url, link:data[i].link, isImage: true } );
         }
       }

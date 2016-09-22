@@ -25,46 +25,48 @@
      "name": "CSS", "size": 1500,
      "children": [
         {
-          "name": "SASS", "size": 1500, 
+          "name": "SASS", "size": 1500,
           "children": [
+            {"name": "Compass", "size": 1500 },
             {"name": "Bourbon", "size": 1500 },
             {"name": "Neat", "size": 1500 }
-          ] 
+          ]
         },
         {"name": "Less", "size": 1500 },
         {"name": "Bootstrap", "size": 1500 }
-      ] 
+      ]
     },
     {
      "name": "Tools", "size": 1500,
      "children": [
-        {"name": "Sublime Text", "size": 1500},
-        {"name": "Homebrew", "size": 1500 },
-        {"name": "NPM", "size": 1500 }
-      ] 
+        {"name": "Atom", "size": 1500}
+      ]
     },
     {
      "name": "Javascript", "size": 1500,
      "children": [
-      { "name": "Tools", "size": 1500, 
+      { "name": "Tools", "size": 1500,
         "children": [
           {"name": "Gulp", "size": 1500 },
           {"name": "Grunt", "size": 1500 },
           {"name": "Yeoman", "size": 1500 },
-          {"name": "Bower", "size": 1500 }
-        ] 
+          {"name": "Bower", "size": 1500 },
+          {"name": "Node / npm", "size": 1500 }
+        ]
       },
-      { "name": "Libs", "size": 1500, 
+      { "name": "Libs", "size": 1500,
         "children": [
           {"name": "D3", "size": 1500 },
           {"name": "jQuery", "size": 1500 },
           {"name": "GSAP", "size": 1500 }
-        ] 
+        ]
       },
       { "name": "Frameworks", "size": 1500,
         "children": [
-          {"name": "Angular", "size": 1500 }
-        ] 
+          {"name": "React", "size": 1500 },
+          {"name": "Angular 1.x", "size": 1500 },
+          {"name": "Ext JS", "size": 1500 }
+        ]
       }
      ]
     }

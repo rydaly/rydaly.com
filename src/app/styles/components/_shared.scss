@@ -15,7 +15,7 @@
   @include media($medium-screen) {
     font-size: 1.3em;
   }
-  
+
   &:before, &:after {
     font-size: 1.3em;
   }
@@ -23,6 +23,20 @@
 
 .small-caps {
   @include small-caps($rd-medium-blue);
+}
+
+.small-caps-sub-title {
+  margin-top: -2em;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+  i, span {
+    display: inline-block;
+    vertical-align: sub;
+  }
+  span {
+    vertical-align: middle;
+  }
 }
 
 .label {
@@ -71,7 +85,7 @@ div.loading {
     margin-top: -5em;
     opacity: 0;
   }
-  
+
   p {
     font-family: $body-font;
     font-weight: 400;
