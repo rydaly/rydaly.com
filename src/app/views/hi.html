@@ -9,7 +9,7 @@
 
   <div class="about-container">
     <p>
-      I stand in a sweet spot between design and development. I use technology and logic to solve creative problems and creative processes to solve technical problems. I'm a builder - a creator. Choosing the best tools for the job, and learning them, is
+      I stand in a sweet spot between design and development. I use technology and logic to solve creative problems and creative processes to solve technical problems. I'm a builder - a creator. Choosing the best tools for the job, and learning them if need be, is
       part of the process.
     </p>
     <p>
@@ -26,7 +26,7 @@
   <div class="insta-outer">
     <div class="insta-container" ng-controller="InstaController as instaCtrl">
       <h4 class="small-caps">Latest Grams</h4>
-      <h5 class="small-caps-sub-title"><a href="https://www.instagram.com/ry.daly/" alt="@ry.daly on Instagram" title="@ry.daly on Instagram"><i class="fa fa-at" aria-hidden="true"></i><span>ry.daly</span></h5>
+      <h5 class="small-caps-sub-title"><a href="https://www.instagram.com/ry.daly/" alt="@ry.daly on Instagram" title="@ry.daly on Instagram"><i class="fa fa-at vert-align-alt" aria-hidden="true"></i><span>ry.daly</span></h5>
       <div class="insta-item" ng-repeat="item in instaCtrl.items">
         <a href="{{ item.link }}" target="_blank">
           <div class="img-responsive" ng-if="item.isImage === true" ng-style="{'background-image': 'url({{ item.url }})'}"></div>
