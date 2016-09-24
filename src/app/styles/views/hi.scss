@@ -51,6 +51,11 @@ $insta-item-size: 14em;
   @include clearfix;
   @include span-columns(12);
 
+  .launch-btn {
+    display: block;
+    margin-bottom: 2.5em;
+  }
+
   div.insta-item {
     @include span-columns(6);
     border: 1px solid $base-background-color;
