@@ -1,6 +1,37 @@
 {
   "items": [
     {
+      "title": "Insight",
+      "description": "AIMS (Advanced Intelligence Managment System) is a risk-analysis tool that allows companies to visualize threats to their assets in real time. Using data gathered about incidents all over the world - everything from armed robberies to earthquakes - users can easily visualize which of these events might cause problems. They are then able to make logisitcal adjustments in order to maximize efficiency of assets. AIMS is built on ExtJS, is fully customizable with an administrative tool and currently has 3 different themes.",
+      "link": "",
+      "linkText": "",
+      "imgLogo": "assets/images/work/img/logos/insight.png",
+      "imgLow": "assets/images/work/img/insight.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/insight/insight_01.jpg",
+        "assets/images/projects/insight/insight_02.jpg",
+        "assets/images/projects/insight/insight_03.jpg",
+        "assets/images/projects/insight/insight_04.jpg",
+        "assets/images/projects/insight/insight_05.jpg",
+        "assets/images/projects/insight/insight_06.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/insight/insight_01_lrg.jpg",
+        "assets/images/projects/insight/insight_02_lrg.jpg",
+        "assets/images/projects/insight/insight_03_lrg.jpg",
+        "assets/images/projects/insight/insight_04_lrg.jpg",
+        "assets/images/projects/insight/insight_05_lrg.jpg",
+        "assets/images/projects/insight/insight_06_lrg.jpg"
+      ],
+      "role": [
+        "Design",
+        "Front-End Development",
+        "Motion-Design",
+        "Interaction"
+      ]
+    },
+    {
       "title": "Baby Blu",
       "description": "E-commerce site build on Wordpress and Woocommerce",
       "link": "http://babybluorganics.com/",
