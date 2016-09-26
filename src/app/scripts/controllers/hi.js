@@ -1,9 +1,41 @@
-// 'use strict';
-// /* global angular */
+'use strict';
 
-// angular.module('rydaly')
-//   .controller('HiController', HiController);
+/* global angular */
 
-// function HiController($window, $document) {
-//   var hiCtrl = this;
-// }
+angular.module('rydaly')
+  .controller('HiController', HiController);
+
+function HiController($window, modals) {
+  var hiCtrl = this;
+
+  hiCtrl.modalContentObj = {
+    items: [{
+      name: 'Kimchi!',
+      img: 'assets/images/kimchi.png'
+    }, {
+      name: 'Pickle!',
+      img: 'assets/images/pickle.png'
+    }]
+  };
+
+  hiCtrl.showModal = function(item) {
+    // The .open() method returns a promise that will be either
+    // resolved or rejected when the modal window is closed.
+    var promise = modals.open(
+      "simple",
+      {
+        content: item
+      }
+      // add more modal types here...
+    );
+
+    promise.then(
+      function handleResolve( response ) {
+        console.log( "Modal resolved :: ", response );
+      },
+      function handleReject( error ) {
+        console.warn( "Modal rejected :: ", error );
+      }
+    );
+  }
+}

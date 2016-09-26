@@ -1,4 +1,4 @@
-<section class="container hi-container">
+<section class="container hi-container" ng-controller="HiController as hiCtrl">
 
   <div class="page-header">
     <h1 class="page-title">Hi, I'm Ryan</h1>
@@ -13,7 +13,7 @@
       part of the process.
     </p>
     <p>
-      I was made in Michigan, forged in Chicago and I'm now residing in Denver with my wife and our two fur-babies. I like riding boards, photography, looking at birds, camping, and road trips. Thanks for taking a look,
+      I was made in Michigan, forged in Chicago and I'm now residing in Denver with my wife and our two <a href="javascript:void(0)" ng-click="hiCtrl.showModal(hiCtrl.modalContentObj)">furbabies</a>. I like riding boards, photography, looking at birds, camping, and road trips. Thanks for taking a look,
       Cheers!
     </p>
     <div class="cheers">

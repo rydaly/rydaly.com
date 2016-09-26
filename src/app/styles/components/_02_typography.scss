@@ -25,7 +25,7 @@ body {
   @include clearfix;
   font-family: $body-font;
   text-align: left;
-  
+
   h1, h2, h3, p {
     margin: 0;
   }
@@ -64,8 +64,11 @@ body {
 
     a {
       color: darken($rd-medium-blue, 20%);
+      border-bottom: 1px solid darken($rd-medium-blue, 20%);
+
       &:hover {
         color: $rd-gold;
+        border-color: $rd-gold;
       }
     }
   }
@@ -73,11 +76,11 @@ body {
   a {
     color: $action-color;
     text-decoration: none;
-    @include transition(color, 0.1s);
+    @include transition(color 0.1s, border 0.1s);
 
     &:hover {
       color: $rd-green;
-      @include transition(color, 0.1s);
+      @include transition(color 0.1s, border 0.1s);
     }
   }
 
@@ -114,7 +117,7 @@ body {
       font-size: 1.4em;
     }
   }
-  
+
   h3 {
     font-size: 1.2em;
     font-weight: 400;
@@ -156,7 +159,7 @@ body {
       top: -1px;
     }
   }
-  
+
   hr {
     width: 3em;
   }

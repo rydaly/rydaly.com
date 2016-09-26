@@ -12,6 +12,9 @@
   },
   "rules": {
     "angular/document-service": 1,
-    "angular/controller-as-vm": [0]
+    "angular/controller-as-vm": [0],
+    "angular/controller-as": 0,
+    "no-console": 0,
+    "angular/log": 0
   }
 }

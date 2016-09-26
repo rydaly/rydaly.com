@@ -16,10 +16,9 @@ body {
 div.rd-overlay {
   @include position( fixed, 0px 0px 0px 0px );
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: $base-background-color;
   z-index: -1;
   overflow: hidden;
-  background: $base-background-color;
   @include transition(opacity 0.25s $ease-in-out-sine);
 
   .ng-enter {
@@ -35,6 +34,71 @@ div.rd-overlay {
   }
   .ng-leave.ng-leave-active {
     opacity: 0;
+  }
+
+  &.simple {
+    display: flex;
+    z-index: 9;
+    background: rgba($rd-dark-blue, 0.75);
+
+    .overlay-simple {
+      background: transparent;
+      width: 100%; height: 100%;
+    }
+
+    .overlay-simple-container {
+      background: $base-background-color;
+      padding: 50px;
+      border-radius: 20px;
+    }
+
+      .overlay-simple-item-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li {
+          font-family: $header-font;
+          color: $rd-red;
+          width: 300px;
+          height: 300px;
+          line-height: 150px;
+          text-align: center;
+          background-size: 300px 300px;
+          font-size: 100px;
+          text-shadow: 3px 3px 0 $rd-gold;
+          border: 3px solid $rd-gold;
+          text-transform: uppercase;
+          margin: 10px;
+          animation: 0.5s flash infinite;
+
+          @include keyframes(flash) {
+            0% {
+              color: $rd-red;
+              text-shadow: 3px 3px 0 $rd-gold;
+              border-color: $rd-gold;
+            }
+            50% {
+              color: $rd-gold;
+              text-shadow: 3px 3px 0 $rd-red;
+              border-color: $rd-red;
+            }
+            100% {
+              color: $rd-red;
+              text-shadow: 3px 3px 0 $rd-gold;
+              border-color: $rd-gold;
+            }
+          }
+
+          &:first-child {
+            line-height: 450px;
+          }
+        }
+      }
   }
 }
 
@@ -105,7 +169,7 @@ div.rd-overlay > .overlay {
       }
     }
   }
-  
+
   .project-details {
     width: 100%;
     max-width: 1000px;
@@ -120,7 +184,7 @@ div.rd-overlay > .overlay {
       display: block;
       width: 100%;
       margin: 0;
-      padding: 0; 
+      padding: 0;
 
       li {
         display: block;
@@ -172,7 +236,7 @@ div.rd-overlay > .overlay {
 
     embed,
     object,
-    iframe {      
+    iframe {
       @include position(absolute, 0px null null 0px);
       @include size(100%);
     }

@@ -4,11 +4,11 @@
 (function() {
   angular.module('rydaly', [
                  'ngTouch',
-                 'ngRoute', 
-                 'ngAnimate', 
-                 'ngCookies', 
-                 'ngSanitize', 
-                 'ngAria', 
+                 'ngRoute',
+                 'ngAnimate',
+                 'ngCookies',
+                 'ngSanitize',
+                 'ngAria',
                  'ngResource',
                  'rdExpander'])
 
@@ -18,19 +18,19 @@
       .when('/', {
         templateUrl: 'app/views/hi.html',
         preload: true
-      })   
+      })
       .when('/toolkit', {
         templateUrl: 'app/views/skills.html',
         preload: true
-      })   
+      })
       .when('/work', {
         templateUrl: 'app/views/work.html',
         preload: true
-      })  
+      })
       .when('/lab', {
         templateUrl: 'app/views/lab.html',
         preload: true
-      })  
+      })
       .when('/contact', {
         templateUrl: 'app/views/contact.html',
         preload: true
@@ -40,7 +40,7 @@
       })
       .otherwise({
         redirectTo: '/'
-      });  
+      });
   })
 
   .run(function($window, $rootScope, $route, $templateCache, $http, $location) {
@@ -97,7 +97,7 @@
     angular.element(document).ready(function() {
 
       angular.bootstrap(document, ['rydaly']);
-      
+
       var cover;
 
       setTimeout(function() {
