@@ -5,7 +5,7 @@
 angular.module('rydaly')
   .service('modals', ModalsService);
 
-function ModalsService($rootScope, $q, $location) {
+function ModalsService($rootScope, $q) {
   // currently active modal window instance.
   var modal = {
     deferred: null,
@@ -22,30 +22,29 @@ function ModalsService($rootScope, $q, $location) {
   function open(type, params) {
 
     params.type = type;
-
-    switch (type) {
-      case 'overlay':
-        showOverlayModal(params);
-        break;
-      case 'simple':
-        showSimpleModal(params);
-        break;
-      default:
-        break;
-    }
-
-    function showOverlayModal() {
-      $location.path('/overlay');
-    }
-
-    function showSimpleModal() {
-      $location.path('/modal');
-    }
-
     modal.deferred = $q.defer();
     modal.params = params;
     $rootScope.$emit("modals.open", type);
     return (modal.deferred.promise);
+
+    // switch (type) {
+    //   case 'overlay':
+    //     showOverlayModal(params);
+    //     break;
+    //   case 'simple':
+    //     showSimpleModal(params);
+    //     break;
+    //   default:
+    //     break;
+    // }
+    //
+    // function showOverlayModal() {
+    //   $location.path('/overlay');
+    // }
+    //
+    // function showSimpleModal() {
+    //   $location.path('/modal');
+    // }
   }
 
   // return the params associated with the current params.

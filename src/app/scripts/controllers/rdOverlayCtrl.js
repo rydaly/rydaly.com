@@ -6,8 +6,6 @@ angular.module('rydaly')
   .controller('OverlayController', OverlayController);
 
 function OverlayController($scope, $window, modals) {
-  // console.log("CTRL :: ", modals.params().type);
-
   if(modals.params().type === 'overlay') {
     // type: overlay
     $scope.title = modals.params().title;

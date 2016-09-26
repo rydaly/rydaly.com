@@ -1,4 +1,4 @@
-<div rd-overlay ng-show="subview" ng-switch="subview" class="rd-overlay {{subview}}">
+<div rd-overlay ng-show="subview" ng-switch="subview" class="rd-overlay {{modalClass}}">
   <div ng-switch-when="overlay" ng-controller="OverlayController" class="overlay">
     <span class="overlay-close close-btn" ng-click="close()"></span>
     <div class="item-logo-container">
@@ -74,10 +74,7 @@
     <span class="overlay-close close-btn" ng-click="close()"></span>
     <div class="overlay-simple-container">
       <ul class="overlay-simple-item-list">
-        <li ng-repeat="item in modalContentObj.items" style="background-image: url({{item.img}})">
-          <!-- <img class="overlay-simple-img" ng-src="{{ item.img }}" alt="{{ item.name }}" title="{{ item.name }}"> -->
-          {{ item.name }}
-        </li>
+        <li ng-repeat="item in modalContentObj.items" style="background-image: url({{item.img}})">{{ item.name }}</li>
       </ul>
     </div>
   </div> <!-- End .overlay-simple -->
