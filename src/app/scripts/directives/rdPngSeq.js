@@ -4,6 +4,7 @@
 angular.module('rydaly')
   .directive('rdPngSeq', function($timeout) {
     function pngSeq(scope, element, attrs) {
+      // console.log(scope.img.timeline);
       var loading = angular.element(element).parent().parent()[0].getElementsByClassName('loading')[0];
       var timer = null;
 
@@ -46,16 +47,10 @@ angular.module('rydaly')
       }
 
       var animFallback = function(img, timeline, domEl) {
-        // var fallbackEl = angular.element(domEl).parent()[0].getElementsByClassName('anim-png-fallback')[0];
-        // angular.element(fallbackEl).append(img);
-        // img.style.width = '500px';
-        // fallbackEl.style.height = '417px';
-        // fallbackEl.style.overflow = 'hidden';
         domEl.remove(); // remove canvas el
       }
 
       function setAnimation(imgUrl, timeline) {
-        timeline = angular.fromJson(timeline);
         var img = new Image();
         img.onload = function() {
           var canvas = element[0];
@@ -74,7 +69,7 @@ angular.module('rydaly')
         img.src = imgUrl;
       }
 
-      setAnimation(attrs.rdPngSeq, attrs.timelineSrc);
+      setAnimation(attrs.rdPngSeq, scope.img.timeline);
 
       scope.$on("$destroy", function() {
         $timeout.cancel( timer );

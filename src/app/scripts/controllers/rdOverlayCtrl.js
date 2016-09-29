@@ -14,7 +14,6 @@ function OverlayController($scope, $window, modals) {
     $scope.subItems = modals.params().subItems;
     $scope.pngSeq = modals.params().pngSeq;
     $scope.imgsSeq = modals.params().imgsSeq;
-    $scope.timeline = modals.params().timeline;
     $scope.itemImagesHi = modals.params().itemImagesHi;
     $scope.itemImagesLow = modals.params().itemImagesLow;
     $scope.hasVideo = modals.params().hasVideo;

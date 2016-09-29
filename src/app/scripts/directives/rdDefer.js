@@ -8,7 +8,7 @@ angular.module('rydaly')
 
       element[0].style.opacity = 0;
 
-      if(element[0].tagName === 'SOURCE') {
+      if(element[0].tagName === 'SOURCE' || element[0].className === 'anim-png-fallback') {
         loading = angular.element(element).parent().parent()[0].getElementsByClassName('loading')[0];
         element[0].setAttribute('src', attrs.rdDefer);
         fade();

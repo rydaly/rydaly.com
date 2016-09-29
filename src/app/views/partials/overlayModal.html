@@ -62,7 +62,6 @@
       <div ng-if="pngSeq">
         <h4 class="anim-png-title">{{ img.title }}</h4>
         <canvas rd-png-seq="{{ img.seqSrc }}"
-                timeline-src="{{ img.timeline }}"
                 timeline-delay="125"
                 class="anim-png"
                 width="{{ img.dimensions.width }}"
@@ -70,7 +69,6 @@
         </canvas>
         <p class="anim-png-caption">{{ img.caption }}</p>
         <img class="anim-png-fallback" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img.backup }}">
-        <!-- TODO :: put backup image right above in an img tag -->
       </div>
 
     </div>
