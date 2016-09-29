@@ -120,19 +120,19 @@ div.rd-overlay > .overlay {
     background-color: $base-background-color;
   }
 
+  h4 {
+    @include small-caps($rd-medium-blue);
+    // font-weight: 900;
+    font-size: 1.5em;
+
+    @include media($medium-screen) {
+      // font-weight: 100;
+      font-size: 2em;
+    }
+  }
+
   .sub-item {
     margin-top: 10em;
-
-    h4 {
-      @include small-caps($rd-medium-blue);
-      // font-weight: 900;
-      font-size: 1.5em;
-
-      @include media($medium-screen) {
-        // font-weight: 100;
-        font-size: 2em;
-      }
-    }
 
     a.launch-btn {
       display: none;
@@ -218,13 +218,44 @@ div.rd-overlay > .overlay {
     text-align: center;
     margin-bottom: 2em;
 
-    .project-img {
+    .project-img, .anim-png, .anim-png-fallback, .anim-png-caption {
       display: block;
       margin: 2em auto;
       width: 100%;
+    }
+
+    .project-img {
       @include media($large-screen) {
         min-height: 250px;
       }
+    }
+
+    .anim-png {
+      width: 1000px;
+      height: 835px;
+      // margin-bottom: 0;
+    }
+
+    .anim-png, .anim-png-fallback, .anim-png-caption {
+      width:300px;
+      height:auto;
+
+      @include media($small-screen) {
+        width: 400px;
+      }
+
+      @include media($medium-screen) {
+        width: 700px;
+      }
+    }
+
+    .anim-png-title {
+      margin: 3em auto 1em;
+    }
+
+    .anim-png-caption {
+      font-size: 0.9em;
+      margin: -1em auto 0;
     }
   }
 
