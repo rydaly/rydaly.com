@@ -39,7 +39,7 @@ angular.module('rydaly')
     return {
       replace: true,
       restrict: 'E',
-      templateUrl: 'app/views/partials/rdSocial.html',
+      templateUrl: 'app/views/partials/elements/rdSocial.html',
       link: rdSocial
     };
   }

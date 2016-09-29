@@ -1,4 +1,6 @@
 <div rd-overlay ng-show="subview" ng-switch="subview" class="rd-overlay {{modalClass}}">
+
+  <!-- WORK ITEM OVERLAY -->
   <div ng-switch-when="overlay" ng-controller="OverlayController" class="overlay">
     <span class="overlay-close close-btn" ng-click="close()"></span>
     <div class="item-logo-container">
@@ -50,10 +52,30 @@
 
     <!-- If we don't have sub-items -->
     <div class="project-img-container" ng-if="!subItems" ng-repeat="img in getSize()">
+
       <div class="loading"></div>
-      <img class="project-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img }}">
+
+      <!-- Normal images -->
+      <img ng-if="!pngSeq" class="project-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img }}">
+
+      <!-- Animated sequence -->
+      <div ng-if="pngSeq">
+        <h4 class="anim-png-title">{{ img.title }}</h4>
+        <canvas rd-png-seq="{{ img.seqSrc }}"
+                timeline-src="{{ img.timeline }}"
+                timeline-delay="125"
+                class="anim-png"
+                width="{{ img.dimensions.width }}"
+                height="{{ img.dimensions.height }}">
+        </canvas>
+        <p class="anim-png-caption">{{ img.caption }}</p>
+        <img class="anim-png-fallback" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img.backup }}">
+        <!-- TODO :: put backup image right above in an img tag -->
+      </div>
+
     </div>
 
+    <!-- Show a launch btn if we have one -->
     <div class="launch-container" ng-if="itemCta.length > 0">
       <a class="launch-btn" href="{{ itemCta }}" target="_blank">
         <button class="lines-btn">
@@ -70,6 +92,7 @@
 
   </div> <!-- End .overlay -->
 
+  <!-- SIMPLE OVERLAY ( content based on a simple object ) -->
   <div ng-switch-when="simple" ng-controller="OverlayController" class="overlay overlay-simple">
     <span class="overlay-close close-btn" ng-click="close()"></span>
     <div class="overlay-simple-container">

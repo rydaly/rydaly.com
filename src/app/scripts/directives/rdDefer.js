@@ -8,7 +8,7 @@ angular.module('rydaly')
 
       element[0].style.opacity = 0;
 
-      if(element[0].tagName === 'SOURCE') { 
+      if(element[0].tagName === 'SOURCE') {
         loading = angular.element(element).parent().parent()[0].getElementsByClassName('loading')[0];
         element[0].setAttribute('src', attrs.rdDefer);
         fade();
@@ -32,7 +32,7 @@ angular.module('rydaly')
 
       function fade() {
         TweenMax.to(element, 0.3, { alpha:1, delay:0.2 });
-        
+
         TweenMax.to(loading, 0.3, { autoAlpha:0, onComplete: function() {
           loading.remove();
         }});

@@ -40,6 +40,8 @@ function WorkController(WorkItemsService, modals, $sce) {
         subItems: item.subItems,
         itemImagesHi: item.imgsHi,
         itemImagesLow: item.imgsLow,
+        pngSeq: item.hasOwnProperty('imgsSeq'),
+        imgsSeq: item.imgsSeq,
         hasVideo: item.hasOwnProperty('ytid'),
         ytid: $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + item.ytid + ytQueryStr),
         itemRoles: item.role,

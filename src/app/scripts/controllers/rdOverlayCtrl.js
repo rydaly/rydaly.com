@@ -12,6 +12,9 @@ function OverlayController($scope, $window, modals) {
     $scope.description = modals.params().description;
     $scope.imgLogo = modals.params().imgLogo;
     $scope.subItems = modals.params().subItems;
+    $scope.pngSeq = modals.params().pngSeq;
+    $scope.imgsSeq = modals.params().imgsSeq;
+    $scope.timeline = modals.params().timeline;
     $scope.itemImagesHi = modals.params().itemImagesHi;
     $scope.itemImagesLow = modals.params().itemImagesLow;
     $scope.hasVideo = modals.params().hasVideo;
@@ -22,12 +25,14 @@ function OverlayController($scope, $window, modals) {
 
     // returns small images if small screen
     $scope.getSize = function(subItem) {
-      var ss = $window.innerWidth < 640;
+      // console.log($scope.imgsSeq);
+      var smallScreen = $window.innerWidth < 640;
+      if ($scope.pngSeq) return $scope.imgsSeq; // animation sequence objects
       if (subItem) {
-        if (ss) return subItem.imgsLow;
+        if (smallScreen) return subItem.imgsLow;
         return subItem.imgsHi;
       } else {
-        if (ss) return $scope.itemImagesLow;
+        if (smallScreen) return $scope.itemImagesLow;
         return $scope.itemImagesHi;
       }
     };

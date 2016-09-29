@@ -48,7 +48,7 @@ angular.module('rydaly')
     return {
       replace: true,
       restrict: 'E',
-      templateUrl: 'app/views/partials/rdNav.html',
+      templateUrl: 'app/views/partials/nav.html',
       link: rdNav
     };
   }
@@ -57,10 +57,10 @@ angular.module('rydaly')
   function RdNavScroll($window, $document, $interval, $timeout, $rootScope) {
     return function() {
 
-      var navEl, 
-          didScroll, 
-          lastScrollTop = 0, 
-          navbarHeight = 60, 
+      var navEl,
+          didScroll,
+          lastScrollTop = 0,
+          navbarHeight = 60,
           delta = 10;
 
       $timeout(initScroll, 250);
@@ -93,7 +93,7 @@ angular.module('rydaly')
         } else {
           navEl.removeClass('nav-opaque');
         }
-        
+
         // If they scrolled down and are past the navbar, add class .nav-up.
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastScrollTop && st > navbarHeight) {
@@ -106,7 +106,7 @@ angular.module('rydaly')
             navEl.addClass('nav-down').removeClass('nav-up');
           }
         }
-        
+
         lastScrollTop = st;
       }
     };
