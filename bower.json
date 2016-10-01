@@ -28,5 +28,8 @@
         "./fonts/*"
       ]
     }
+  },
+  "resolutions": {
+    "angular": "~1.4.2"
   }
 }

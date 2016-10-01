@@ -232,7 +232,9 @@ div.rd-overlay > .overlay {
 
     .anim-png {
       width: 1000px;
-      height: 835px;
+      height: auto;
+      border: 5px solid $rd-dark-blue;
+      // height: 835px;
       // margin-bottom: 0;
     }
 
