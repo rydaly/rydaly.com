@@ -3,10 +3,10 @@
 /* global angular */
 
 angular.module('rydaly')
-  .controller('OverlayController', OverlayController);
+  .controller('OverlayModalController', OverlayModalController);
 
-function OverlayController($scope, $window, modals) {
-  if(modals.params().type === 'overlay') {
+function OverlayModalController($scope, $window, modals) {
+  if (modals.params().type === 'overlay') {
     // type: overlay
     $scope.title = modals.params().title;
     $scope.description = modals.params().description;
@@ -24,7 +24,6 @@ function OverlayController($scope, $window, modals) {
 
     // returns small images if small screen
     $scope.getSize = function(subItem) {
-      // console.log($scope.imgsSeq);
       var smallScreen = $window.innerWidth < 640;
       if ($scope.pngSeq) return $scope.imgsSeq; // animation sequence objects
       if (subItem) {

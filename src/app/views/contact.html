@@ -9,36 +9,12 @@
     <rd-social></rd-social>
   </div>
 
-
   <div class="words">
     <p>There's nothing I enjoy more than starting in on a fresh new project. Got an idea or looking for some help? Holler at me and let's make something happen! In the meantime, feel free to <a href="assets/pdf/RyanDaly_Resume.pdf" name="resumé" alt="resumé" target="_blank">grab a copy of resumé</a>.</p>
   </div>
 
-  <!-- Contact Form -->
-  <div class="contact-form-container" ng-controller="ContactController as contactCtrl">
-    <form>
-      <label for="name"><i class="fa fa-user"></i> Name</label>
-      <input type="text" name="name" ng-model="contactCtrl.formData.name" ng-class="{ 'error' : contactCtrl.errorName }">
-
-      <label for="email"><i class="fa fa-at"></i> E-mail</label>
-      <input type="email" name="email" ng-model="contactCtrl.formData.email" ng-class="{ 'error' : contactCtrl.errorEmail }">
-
-      <label for="message"><i class="fa fa-pencil"></i> Message</label>
-      <textarea name="message" ng-class="{ 'error' : contactCtrl.errorTextarea }" ng-model="contactCtrl.formData.message" cols="30" rows="10"></textarea>
-
-      <button class="lines-btn" ng-click="contactCtrl.sendMessage()">
-        <i class="fa fa-paper-plane-o"></i> Send!
-        <span class="lines top"></span>
-        <span class="lines bottom"></span>
-        <span class="lines left"></span>
-        <span class="lines right"></span>
-      </button>
-
-      <div class="form-notifications" ng-class="{'submissionMessage' : contactCtrl.submission}">
-        <p ng-class="{ 'error' : contactCtrl.isError }" ng-bind="contactCtrl.submissionMessage"></p>
-      </div>
-
-    </form>
+  <div class="contact-form-container">
+    <contact-form></contact-form>
   </div>
 
 </section>
