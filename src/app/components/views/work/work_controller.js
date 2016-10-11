@@ -7,16 +7,16 @@ angular.module('rydaly')
 
 function WorkController(WorkItemsService, modals, $sce) {
   var workCtrl = this;
-      workCtrl.items = [];
-      workCtrl.filters = {};
+  workCtrl.items = [];
+  workCtrl.filters = {};
 
   var ytQueryStr = '?vq=hd1080&modestbranding=1&rel=0&showinfo=0&color=white';
 
   WorkItemsService.success(function(data) {
     var i = 0,
-        numItems = data.items.length;
+      numItems = data.items.length;
 
-    for(i; i < numItems; i++) {
+    for (i; i < numItems; i++) {
       data.items[i].loading = true;
       data.items[i].itemIdx = i;
       workCtrl.items.push(data.items[i]);
@@ -32,8 +32,7 @@ function WorkController(WorkItemsService, modals, $sce) {
     // The .open() method returns a promise that will be either
     // resolved or rejected when the modal window is closed.
     var promise = modals.open(
-      "overlay",
-      {
+      "overlay", {
         title: item.title,
         description: item.description,
         imgLogo: item.imgLogo,
@@ -52,10 +51,10 @@ function WorkController(WorkItemsService, modals, $sce) {
     );
 
     promise.then(
-      function handleResolve( response ) {
+      function handleResolve(response) {
         // console.log( "Alert resolved." );
       },
-      function handleReject( error ) {
+      function handleReject(error) {
         // console.warn( "Alert rejected!" );
       }
     );

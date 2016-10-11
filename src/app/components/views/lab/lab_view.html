@@ -1,0 +1,105 @@
+<div class="page-header">
+  <i class="fa fa-cogs icon-head"></i>
+  <h4 class="small-caps">One-off's, ideas, works-in-progress &amp; experiments</h4>
+  <a class="launch-btn" href="https://codepen.io/rydaly/" alt="rydaly on Codepen" title="rydaly on Codepen" target="_blank">
+    <button class="lines-btn lines-btn-codepen">
+      More on Codepen
+      <span class="lines top"></span>
+      <span class="lines bottom"></span>
+      <span class="lines left"></span>
+      <span class="lines right"></span>
+    </button>
+  </a>
+</div>
+
+<rd-expand-preview>
+
+  <div id="filters-display" class="page-notifications" ng-show="labCtrl.filtered">
+    <p>Showing
+      <span>{{ labCtrl.curFilter }}</span>
+    </p>
+    <a href="javascript:void(0)" ng-click="labCtrl.clearFilter()">
+      <i class="fa fa-times"></i>
+      clear filter</a>
+  </div>
+
+  <ul id="grid-container" class="grid-container">
+
+    <li class="grid-item" ng-repeat="item in labCtrl.items | filter:labCtrl.filters">
+
+      <a class="img-collapsed" href="javascript:void(0)" data-title="{{ item.title }}" data-description="{{ item.description }}" ng-click="handleItemTouch($event)">
+
+        <div class="loading"></div>
+        <img class="img-sm" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}">
+
+        <span class="lines top"></span>
+        <span class="lines bottom"></span>
+        <span class="lines left"></span>
+        <span class="lines right"></span>
+
+        <span class="lines outer-top"></span>
+        <span class="lines outer-bottom"></span>
+        <span class="lines outer-left"></span>
+        <span class="lines outer-right"></span>
+      </a>
+
+      <div class="img-expanded">
+        <div class="expanded-inner">
+
+          <span class="expand-close close-btn" ng-click="handleCloseBtnTouch($event)"></span>
+
+          <div class="expanded-img">
+
+            <video class="vid-lrg" ng-if="labCtrl.isVideo(item)" rd-vid-poster="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" controls loop>
+              <source ng-src="{{ item.video.hi }}" type="video/mp4">
+              <source ng-src="{{ item.video.low }}" type="video/webm">
+              Sorry, your browser doesn't support HTML5 video.
+            </video>
+
+            <div class="loading" ng-if="!labCtrl.isVideo(item)"></div>
+            <img class="img-lrg" ng-if="!labCtrl.isVideo(item)" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" alt="{{ item.title }}">
+
+          </div>
+          <div class="expanded-details">
+            <h2>{{ item.title }}</h2>
+            <p class="description">{{ item.description }}</p>
+
+            <div class="launch-container" ng-if="labCtrl.hasLink(item)">
+              <a class="launch-btn" href="{{ item.link }}" target="_blank" alt="{{ item.linkText }}">
+                <button class="lines-btn">
+                  {{ item.linkText }}
+                  <span class="lines top"></span>
+                  <span class="lines bottom"></span>
+                  <span class="lines left"></span>
+                  <span class="lines right"></span>
+                </button>
+              </a>
+            </div>
+
+            <div class="well">
+              <p class="label">Role:</p>
+              <ul class="item-list">
+                <li ng-repeat="role in item.role">
+                  <a class="filter-link" ng-click="labCtrl.handleRoleFilter(role); handleCloseBtnTouch($event)">{{ role }}</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="well">
+              <p class="label">Tags:</p>
+              <ul class="item-list">
+                <li ng-repeat="tag in item.tag">
+                  <a class="filter-link" ng-click="labCtrl.handleTagFilter(tag); handleCloseBtnTouch($event)">{{ tag }}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </li>
+
+  </ul>
+
+</rd-expand-preview>

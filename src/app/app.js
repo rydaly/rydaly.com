@@ -12,27 +12,26 @@
                  'ngResource',
                  'rdExpander'])
 
-  .config( function($routeProvider, $logProvider) {
-    $logProvider.debugEnabled(true);
+  .config( function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/views/hi.html',
-        preload: true
-      })
-      .when('/toolkit', {
-        templateUrl: 'app/views/skills.html',
-        preload: true
-      })
-      .when('/work', {
-        templateUrl: 'app/views/work.html',
-        preload: true
-      })
-      .when('/lab', {
-        templateUrl: 'app/views/lab.html',
+        templateUrl: 'app/components/views/hi/index.html',
         preload: true
       })
       .when('/contact', {
-        templateUrl: 'app/views/contact.html',
+        templateUrl: 'app/components/views/contact/index.html',
+        preload: true
+      })
+      .when('/lab', {
+        templateUrl: 'app/components/views/lab/index.html',
+        preload: true
+      })
+      .when('/toolkit', {
+        templateUrl: 'app/components/views/toolkit/index.html',
+        preload: true
+      })
+      .when('/work', {
+        templateUrl: 'app/components/views/work/index.html',
         preload: true
       })
       .when('/overlay', {

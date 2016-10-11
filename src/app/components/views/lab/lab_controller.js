@@ -26,7 +26,7 @@ function LabController(LabItemsService, $window) {
 
   labCtrl.getSize = function() {
     labCtrl.isLrg = $window.innerWidth < 640 ? false : true;
-  };
+  }(); // run immediately
 
   labCtrl.isVideo = function(item) {
     return item.hasOwnProperty('video');

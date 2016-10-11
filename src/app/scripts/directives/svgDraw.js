@@ -2,10 +2,10 @@
 /* global angular, TweenMax, Sine */
 
 angular.module('rydaly').directive('drawSvg', function($timeout) {
-  
+
   function drawSvgLink(scope, element) {
     var svgObj = angular.element(element),
-        paths = [], 
+        paths = [],
         i = 0,
         j = 12,
         len = 0;
@@ -21,12 +21,12 @@ angular.module('rydaly').directive('drawSvg', function($timeout) {
         paths[i].style.opacity = 0;
         paths[i].getBoundingClientRect();
         j--;
-        
-        TweenMax.to( paths[i], j / 1.5, { 
+
+        TweenMax.to( paths[i], j / 1.5, {
           css:{
-            strokeDashoffset: 0, 
+            strokeDashoffset: 0,
             opacity: 1
-          }, ease: Sine.easeOut, delay: 1 + (i / 5) 
+          }, ease: Sine.easeOut, delay: 1 + (i / 5)
         });
 
         TweenMax.to( paths[i], 2, {

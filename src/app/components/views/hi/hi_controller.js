@@ -1,5 +1,4 @@
 'use strict';
-
 /* global angular */
 
 angular.module('rydaly')
@@ -22,19 +21,18 @@ function HiController($window, modals) {
     // The .open() method returns a promise that will be either
     // resolved or rejected when the modal window is closed.
     var promise = modals.open(
-      "simple",
-      {
+      "simple", {
         content: item
       }
       // add more modal types here...
     );
 
     promise.then(
-      function handleResolve( response ) {
-        console.log( "Modal resolved :: ", response );
+      function handleResolve(response) {
+        console.log("Modal resolved :: ", response);
       },
-      function handleReject( error ) {
-        console.warn( "Modal rejected :: ", error );
+      function handleReject(error) {
+        console.warn("Modal rejected :: ", error);
       }
     );
   }
