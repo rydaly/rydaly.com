@@ -34,7 +34,8 @@ function WorkController(WorkItemsService, modals, $sce) {
     var promise = modals.open(
       "overlay", {
         title: item.title,
-        description: item.description,
+        description: $sce.trustAsHtml(item.description),
+        blockquote: item.blockquote,
         imgLogo: item.imgLogo,
         subItems: item.subItems,
         itemImagesHi: item.imgsHi,

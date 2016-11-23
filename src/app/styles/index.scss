@@ -26,6 +26,7 @@ $mobile: new-breakpoint(max-width 480px 4);
 }
 
 /* General */
+
 html {
   box-sizing: border-box;
 }
@@ -37,23 +38,23 @@ body {
   width: 100%; height: 100%;
   margin: 0; padding: 0;
   background-color: #F2F1ED;
-  
+
   &.overlay-open {
     overflow-y: hidden;
   }
-    
+
   .main-container {
     z-index: 0;
-    
+
     div.page {
       @include outer-container();
       text-align: center;
       min-height: 750px;
-      
+
       section.container {
         position: relative;
         min-height: 100%;
-        
+
         .page-header {
           margin-top: 120px;
         }

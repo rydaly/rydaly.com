@@ -10,6 +10,7 @@ function OverlayModalController($scope, $window, modals) {
     // type: overlay
     $scope.title = modals.params().title;
     $scope.description = modals.params().description;
+    $scope.blockquote = modals.params().blockquote;
     $scope.imgLogo = modals.params().imgLogo;
     $scope.subItems = modals.params().subItems;
     $scope.pngSeq = modals.params().pngSeq;
@@ -21,11 +22,14 @@ function OverlayModalController($scope, $window, modals) {
     $scope.itemRoles = modals.params().itemRoles;
     $scope.itemCta = modals.params().itemCta;
     $scope.itemCtaText = modals.params().itemCtaText;
+    $scope.smallScreen = $window.innerWidth < 640;
 
     // returns small images if small screen
     $scope.getSize = function(subItem) {
       var smallScreen = $window.innerWidth < 640;
+
       if ($scope.pngSeq) return $scope.imgsSeq; // animation sequence objects
+
       if (subItem) {
         if (smallScreen) return subItem.imgsLow;
         return subItem.imgsHi;

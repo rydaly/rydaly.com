@@ -43,13 +43,16 @@ div.rd-overlay {
 
     .overlay-simple {
       background: transparent;
-      // width: 100%;
       height: auto;
     }
 
     .overlay-simple-container {
       background: $base-background-color;
-      padding: 50px;
+      padding: 70px 0 15px;
+
+      @include media($medium-screen) {
+        padding: 50px;
+      }
       border-radius: 20px;
     }
 
@@ -65,7 +68,8 @@ div.rd-overlay {
         li {
           font-family: $header-font;
           color: $rd-red;
-          width: 300px;
+          width: 100%;
+          max-width: 300px;
           height: 300px;
           line-height: 150px;
           text-align: center;
@@ -287,4 +291,16 @@ div.rd-overlay > .overlay {
   .space {
     height: 10em;
   }
+}
+
+div.rd-overlay > .overlay-simple {
+    .overlay-close {
+      top: 3em;
+      right: 3em;
+
+      @include media($medium-screen) {
+        top: 2em;
+        right: 2em;
+      }
+    }
 }

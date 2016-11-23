@@ -9,7 +9,8 @@
 </div>
 
 <div class="project-details">
-  <p class="description">{{ description }}</p>
+  <blockquote ng-if="blockquote.length > 0" class="">{{ blockquote }}</blockquote>
+  <p class="description" ng-bind-html="description"></p>
   <p class="label">Role:</p>
 
   <ul class="item-list">
@@ -58,9 +59,9 @@
   <!-- Animated sequence -->
   <div ng-if="pngSeq">
     <h4 class="anim-png-title">{{ img.title }}</h4>
-    <canvas rd-png-seq="{{ img.seqSrc }}" timeline-delay="125" class="anim-png" width="{{ img.dimensions.width }}" height="{{ img.dimensions.height }}"></canvas>
-    <p class="anim-png-caption">{{ img.caption }}</p>
+    <canvas ng-if="!smallScreen" rd-png-seq="{{ img.seqSrc }}" timeline-delay="125" class="anim-png" width="{{ img.dimensions.width }}" height="{{ img.dimensions.height }}"></canvas>
     <img class="anim-png-fallback" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img.backup }}">
+    <p class="anim-png-caption">{{ img.caption }}</p>
   </div>
 
 </div>

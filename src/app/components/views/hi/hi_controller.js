@@ -10,10 +10,10 @@ function HiController($window, modals) {
   hiCtrl.modalContentObj = {
     items: [{
       name: 'Kimchi!',
-      img: 'assets/images/kimchi.png'
+      img: 'assets/images/kimchi.jpg'
     }, {
       name: 'Pickle!',
-      img: 'assets/images/pickle.png'
+      img: 'assets/images/pickle.jpg'
     }]
   };
 

@@ -16,6 +16,7 @@
   border-bottom: 1px solid lighten($base-background-color, 5%);
 
   @include transition(top 0.3s $ease-out-sine);
+  -webkit-backface-visibility: hidden;
 
   // hidden nav on scroll down
   &.nav-up {
@@ -81,6 +82,8 @@
     padding-right: $navbar-padding;
     @include appearance(none);
     @include transition(background 0s $button-transistion-duration);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
     @include media ($horizontal-bar-mode) {
       display: none;
     }
@@ -98,7 +101,9 @@
     right: $button-pad;
     height: $bar-thickness;
     background: $rd-dark-blue;
-    @include transition(background $button-transistion-duration $button-transistion-duration);
+    @include transition(background $button-transistion-duration);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
   }
 
   .hamburger span:before,
@@ -118,6 +123,8 @@
       top $button-transistion-duration $button-transistion-duration,
       transform $button-transistion-duration 0s
     );
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
   }
 
   .hamburger span:after {
@@ -126,6 +133,8 @@
       bottom, $button-transistion-duration $button-transistion-duration,
       transform $button-transistion-duration 0s
     );
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
   }
 
   .hamburger.active {

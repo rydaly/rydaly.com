@@ -18,9 +18,9 @@ function LabController(LabItemsService, $window) {
         numItems = data.items.length;
 
     for(i; i < numItems; i++) {
-      data.items[i].loading = true;
       data.items[i].itemIdx = i;
       labCtrl.items.push(data.items[i]);
+      console.log(typeof(data.items[i].imgHi));
     }
   });
 
@@ -30,6 +30,10 @@ function LabController(LabItemsService, $window) {
 
   labCtrl.isVideo = function(item) {
     return item.hasOwnProperty('video');
+  };
+
+  labCtrl.isGallery = function(item) {
+    return item.hasOwnProperty('gallery');
   };
 
   labCtrl.hasLink = function(item) {

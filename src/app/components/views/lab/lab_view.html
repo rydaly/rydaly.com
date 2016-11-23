@@ -50,14 +50,18 @@
 
           <div class="expanded-img">
 
-            <video class="vid-lrg" ng-if="labCtrl.isVideo(item)" rd-vid-poster="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" controls loop>
+            <video class="vid-lrg" ng-if="labCtrl.isVideo(item) && !labCtrl.isGallery(item)" rd-vid-poster="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" controls loop>
               <source ng-src="{{ item.video.hi }}" type="video/mp4">
               <source ng-src="{{ item.video.low }}" type="video/webm">
               Sorry, your browser doesn't support HTML5 video.
             </video>
 
-            <div class="loading" ng-if="!labCtrl.isVideo(item)"></div>
-            <img class="img-lrg" ng-if="!labCtrl.isVideo(item)" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" alt="{{ item.title }}">
+            <div class="loading" ng-if="!labCtrl.isVideo(item) && !labCtrl.isGallery(item)"></div>
+            <img class="img-lrg" ng-if="!labCtrl.isVideo(item) && !labCtrl.isGallery(item)" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" alt="{{ item.title }}">
+
+            <div class="lab-gallery" ng-if="labCtrl.isGallery(item)">
+              <img class="img-lrg lab-gallery-img" ng-repeat="img in item.gallery" ng-hide="!$first" src="{{ img }}" alt="{{ item.title }}">
+            </div>
 
           </div>
           <div class="expanded-details">
