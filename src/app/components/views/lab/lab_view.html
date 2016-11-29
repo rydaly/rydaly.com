@@ -1,15 +1,6 @@
 <div class="page-header">
   <i class="fa fa-cogs icon-head"></i>
   <h4 class="small-caps">One-off's, ideas, works-in-progress &amp; experiments</h4>
-  <a class="launch-btn" href="https://codepen.io/rydaly/" alt="rydaly on Codepen" title="rydaly on Codepen" target="_blank">
-    <button class="lines-btn lines-btn-codepen">
-      More on Codepen
-      <span class="lines top"></span>
-      <span class="lines bottom"></span>
-      <span class="lines left"></span>
-      <span class="lines right"></span>
-    </button>
-  </a>
 </div>
 
 <rd-expand-preview>
@@ -56,12 +47,14 @@
               Sorry, your browser doesn't support HTML5 video.
             </video>
 
-            <div class="loading" ng-if="!labCtrl.isVideo(item) && !labCtrl.isGallery(item)"></div>
-            <img class="img-lrg" ng-if="!labCtrl.isVideo(item) && !labCtrl.isGallery(item)" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" alt="{{ item.title }}">
+            <div class="loading" ng-if="!labCtrl.isVideo(item) && !labCtrl.isGallery(item) && !labCtrl.isEmbed(item)"></div>
+            <img class="img-lrg" ng-if="!labCtrl.isVideo(item) && !labCtrl.isGallery(item) && !labCtrl.isEmbed(item)" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ labCtrl.isLrg && item.imgHi || item.imgLow }}" alt="{{ item.title }}">
 
             <lab-gallery class="lab-gallery" ng-if="labCtrl.isGallery(item)">
               <img class="img-lrg lab-gallery-img" ng-repeat="img in item.gallery" ng-class="{'lab-gallery-img-hide': !$first}" src="{{ img }}" alt="{{ item.title }}">
             </lab-gallery>
+
+            <div class="lab-embed" ng-if="labCtrl.isEmbed(item)" ng-bind-html="labCtrl.getEmbed(item)"></div>
 
           </div>
           <div class="expanded-details">

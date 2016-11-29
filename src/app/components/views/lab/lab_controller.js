@@ -4,7 +4,7 @@
 angular.module('rydaly')
   .controller('LabController', LabController);
 
-function LabController(LabItemsService, $window, $scope) {
+function LabController(LabItemsService, $window, $sce) {
   var labCtrl = this;
       labCtrl.filters = {};
       labCtrl.items = [];
@@ -33,6 +33,14 @@ function LabController(LabItemsService, $window, $scope) {
 
   labCtrl.isGallery = function(item) {
     return item.hasOwnProperty('gallery');
+  };
+
+  labCtrl.isEmbed = function(item) {
+    return item.hasOwnProperty('embed');
+  };
+
+  labCtrl.getEmbed = function(item) {
+    return $sce.trustAsHtml(item.embed);
   };
 
   labCtrl.hasLink = function(item) {

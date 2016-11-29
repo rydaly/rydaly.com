@@ -5,10 +5,13 @@ angular.module('rydaly')
   .directive('rdPngSeq', function($timeout) {
     function pngSeq(scope, element, attrs) {
       // console.log(scope.img.timeline);
+      element[0].style.display = 'none';
       var loading = angular.element(element).parent().parent()[0].getElementsByClassName('loading')[0];
       var timer = null;
 
       var animate = function(img, timeline, domEl) {
+        element[0].style.display = 'block';
+        // console.log("ANIM :: show canvas here ::  ", element);
         var fallbackEl = angular.element(domEl).parent()[0].getElementsByClassName('anim-png-fallback')[0];
         fallbackEl.remove();
 

@@ -2,6 +2,40 @@
   "items": [
 
     {
+      "title": "Pulse Animation",
+      "description": "A configurable, variable intensity pulse animation which pairs color intensity with motion intensity. This creates an effect suitable for, say, alerts on a map that vary in severity.",
+      "imgHi": "assets/images/lab/img/pulse_anim_lrg.jpg",
+      "imgLow": "assets/images/lab/img/pulse_anim.jpg",
+      "embed": "<iframe height='600' scrolling='no' title='Variable Intensity Pulse Animation' src='//codepen.io/rydaly/embed/preview/PGpZaN/?height=600&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/rydaly/pen/PGpZaN/'>Variable Intensity Pulse Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "tag": [
+        "SASS",
+        "Animation"
+      ],
+      "role": [
+        "Concept",
+        "Design",
+        "Motion Design"
+      ]
+    },
+
+    {
+      "title": "Color Blend Loader Animation",
+      "description": "CSS gradients and blend-modes combined with some offset timing make for a nice loading spinner.",
+      "imgHi": "assets/images/lab/img/blend_loader_lrg.jpg",
+      "imgLow": "assets/images/lab/img/blend_loader.jpg",
+      "embed": "<iframe height='600' scrolling='no' title='Color Blend Loader Animation' src='//codepen.io/rydaly/embed/preview/PGpRzy/?height=600&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/rydaly/pen/PGpRzy/'>Color Blend Loader Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "tag": [
+        "LESS",
+        "Animation"
+      ],
+      "role": [
+        "Concept",
+        "Design",
+        "Motion Design"
+      ]
+    },
+
+    {
       "title": "AIN Logo",
       "description": "Logo for Adventures in Nourishment, a natural botanicals brand.",
       "imgHi": "assets/images/lab/img/ain/ain_01_lrg.jpg",
@@ -33,7 +67,7 @@
       "tag": [
         "After Effects",
         "Motion Graphics",
-        "Logo Animation"
+        "Animation"
       ],
       "role": [
         "Concept",
@@ -54,7 +88,7 @@
       "tag": [
         "After Effects",
         "Motion Graphics",
-        "Logo Animation"
+        "Animation"
       ],
       "role": [
         "Concept",
@@ -87,10 +121,9 @@
       "imgHi": "assets/images/lab/img/rd_logo_svg_lrg.jpg",
       "imgLow": "assets/images/lab/img/rd_logo_svg.jpg",
       "tag": [
-        "Motion Graphics",
         "Javascript",
         "SVG",
-        "Logo Animation"
+        "Animation"
       ],
       "role": [
         "Design",
@@ -159,7 +192,7 @@
       "tag": [
         "After Effects",
         "Motion Graphics",
-        "Logo Animation"
+        "Animation"
       ],
       "role": [
         "Concept",
@@ -202,7 +235,7 @@
         "Illustrator",
         "After Effects",
         "Motion Graphics",
-        "Logo Animation"
+        "Animation"
       ],
       "role": [
         "Design",
@@ -221,10 +254,10 @@
       "imgHi": "assets/images/lab/img/hr_initial_lrg.jpg",
       "imgLow": "assets/images/lab/img/hr_initial.jpg",
       "tag": [
-        "Process",
         "Illustrator",
         "After Effects",
         "Motion Graphics",
+        "Animation",
         "Work-in-progress"
       ],
       "role": [
@@ -279,7 +312,7 @@
       "imgHi": "assets/images/lab/img/bi_lrg.jpg",
       "imgLow": "assets/images/lab/img/bi.jpg",
       "tag": [
-        "Motion Graphics",
+        "Animation",
         "Javascript",
         "SVG"
       ],
