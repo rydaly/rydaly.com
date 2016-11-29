@@ -31,8 +31,9 @@
       ],
       "role": [
         "Front-End Development",
-        "Api Integration",
-        "User Account Flow"
+        "Django Api Integration",
+        "User Account Flow",
+        "Angular 1.x"
       ]
     },
     {
@@ -63,12 +64,14 @@
         "Design",
         "Front-End Development",
         "Motion-Design",
-        "Interaction"
+        "Interaction",
+        "ExtJS",
+        "SASS"
       ]
     },
     {
       "title": "Baby Blu",
-      "description": "E-commerce site build on Wordpress and Woocommerce",
+      "description": "E-commerce site build on WordPress and Woocommerce",
       "link": "http://babybluorganics.com/",
       "linkText": "Launch",
       "imgLogo": "assets/images/work/img/logos/babyblu.png",
@@ -82,12 +85,15 @@
       ],
       "role": [
         "Design",
-        "Development"
+        "Development",
+        "WordPress",
+        "PHP",
+        "Woocommerce"
       ]
     },
     {
       "title": "Fogged Clarity",
-      "description": "I co-founded the arts review Fogged Clarity in 2009 and it's become a mainstay in both my creative and technical development. As a venue for visual art, music, interviews, fiction and poetry it has provided me with a way to continually improve my chops across the board. Design, development, audio & video editing, podcasting and brand development are just a few of the things I handle on a regular basis. It has been the unmoving rock that I use to learn new things, test new technologies and keep myself honest. Fogged Clarity is built on Wordpress using a custom theme that turns the CMS into an issue-based publication and allows editors to do as much as possible without my help.",
+      "description": "I co-founded the arts review Fogged Clarity in 2009 and it's become a mainstay in both my creative and technical development. As a venue for visual art, music, interviews, fiction and poetry it has provided me with a way to continually improve my chops across the board. Design, development, audio & video editing, podcasting and brand development are just a few of the things I handle on a regular basis. It has been the unmoving rock that I use to learn new things, test new technologies and keep myself honest. Fogged Clarity is built on WordPress using a custom theme that turns the CMS into an issue-based publication and allows editors to do as much as possible without my help.",
       "link": "http://foggedclarity.com",
       "linkText": "Launch",
       "imgLogo": "assets/images/work/img/logos/fc.png",
@@ -109,7 +115,9 @@
         "Co-founder",
         "Concept",
         "Design",
-        "Development"
+        "Development",
+        "WordPress",
+        "PHP"
       ]
     },
 
@@ -130,7 +138,8 @@
       "role": [
         "Development",
         "Motion Design",
-        "Interaction"
+        "Interaction",
+        "JavaScript"
       ]
     },
 
@@ -143,7 +152,9 @@
       "role": [
         "Development",
         "Motion Design",
-        "Interaction"
+        "Interaction",
+        "ActionScript",
+        "Flash"
       ],
       "subItems": {
         "sub1": {
@@ -205,7 +216,10 @@
         "Concept",
         "Design",
         "Motion Design",
-        "Development"
+        "Development",
+        "JavaScript",
+        "D3.js",
+        "GSAP"
       ]
     },
 
@@ -227,7 +241,8 @@
         "Concept",
         "Design",
         "Development",
-        "Motion Design"
+        "Motion Design",
+        "JavaScript"
       ]
     },
 
@@ -240,7 +255,9 @@
       "role": [
         "Development",
         "Motion Design",
-        "Interaction"
+        "Interaction",
+        "ActionScript",
+        "Flash"
       ],
       "subItems": {
         "sub1": {
@@ -281,7 +298,9 @@
       "role": [
         "Development",
         "Motion Design",
-        "Interaction"
+        "Interaction",
+        "ActionScript",
+        "Flash"
       ],
       "subItems": {
         "sub1": {
@@ -343,7 +362,9 @@
       "role": [
         "Concept",
         "Design",
-        "Development"
+        "Development",
+        "WordPress",
+        "PHP"
       ]
     }
 

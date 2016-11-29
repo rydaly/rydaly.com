@@ -1,11 +1,11 @@
 $grid-item-background: white;
-$grid-item-border: 1px solid transparentize($rd-medium-blue, 0.8); 
+$grid-item-border: 1px solid transparentize($rd-medium-blue, 0.8);
 $grid-item-columns: 3;
 $grid-item-color: $rd-medium-blue;
 $collapse-item-height: 250px;
 $collapse-item-height-lrg: 350px;
 $transition-time: 0.5s;
-  
+
 ul.grid-container {
   list-style: none;
   padding: 20px 0;
@@ -30,9 +30,9 @@ ul.grid-container {
       }
     }
 
-    a.img-collapsed, 
-    a.img-collapsed-overlays, 
-    a.img-collapsed img, 
+    a.img-collapsed,
+    a.img-collapsed-overlays,
+    a.img-collapsed img,
     a.img-collapsed-overlays img {
       border: none;
       outline: none;
@@ -45,9 +45,9 @@ ul.grid-container {
     }
 
     &.is-expanded {
-      a.img-collapsed, 
-      a.img-collapsed-overlays, 
-      a.img-collapsed img, 
+      a.img-collapsed,
+      a.img-collapsed-overlays,
+      a.img-collapsed img,
       a.img-collapsed-overlays img {
         width: 0;
         height: 0;
@@ -105,7 +105,7 @@ ul.grid-container {
       top: auto;
       left: 0;
       width: 100%;
-      margin-top: 10px; 
+      margin-top: 10px;
       text-align: left;
       height: 0;
       overflow: hidden;
@@ -137,13 +137,13 @@ ul.grid-container {
         }
         .expanded-img {
           text-align: center;
-          width: 100%; 
+          width: 100%;
           height: auto;
           // height: 350px;
           margin: 0 auto;
 
           img, video {
-            // max-height: 100%; 
+            // max-height: 100%;
             width: 100%;
             height: auto;
             max-width: 100%;
@@ -152,12 +152,12 @@ ul.grid-container {
           @include media($medium-screen) {
             display: inline-block;
             width: 50%;
-            max-width: 600px; 
+            max-width: 600px;
             height: 100%;
           }
         }
         .expanded-details {
-          padding: 0 0.5em; 
+          padding: 0 0.5em;
           width: 100%;
           float: none;
           text-align: center;
@@ -231,15 +231,15 @@ ul.grid-container {
 
               a {
                 display: inline-block;
-                width: 100%; 
+                width: 100%;
                 height: 100%;
                 cursor: pointer;
-                
+
                 &:hover {
                   color: $rd-gold;
                 }
               }
-              
+
             }
           }
         }
@@ -247,3 +247,19 @@ ul.grid-container {
     } /* end .img-expanded */
   } /* end <li.grid-item> */
 } /* end .grid-container */
+
+// lab img gallery
+.lab-gallery-img {
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+  @include transition(opacity 0.5s);
+
+  &:first-child {
+    position: relative;
+    z-index: 0;
+  }
+}
+.lab-gallery-img-hide {
+  // display: none;
+}

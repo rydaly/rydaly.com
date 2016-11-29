@@ -3,27 +3,27 @@
 
 angular.module('rdExpander', [])
   .directive('rdExpandPreview', RdExpandPreview);
-  
+
 function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
   var rdExpandPreview = function($scope) {
-    var grid,      
+    var grid,
         expandCases = [
-          'EXPAND_ONLY', 
-          'COLLAPSE_ONLY', 
-          'FADE_ONLY', 
+          'EXPAND_ONLY',
+          'COLLAPSE_ONLY',
+          'FADE_ONLY',
           'COLLAPSE_AND_EXPAND',
           'COLLAPSE_AND_FILTER'
         ],
         curExpandCase,
-        
+
         tt = 0.35,
         gridItemHeight = 250,
         expandPadding = 10,
         smallBreakPoint = 520,
         mediumBreakPoint = 640,
         dEase = Quint.easeInOut,
-        
+
         prevExpanded = '',
         prevExpandedContent = '',
         curExpanded = '',
@@ -59,7 +59,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
           curExpandCase = expandCases[2];
         } else {
           // new row - COLLAPSE_AND_EXPAND
-          curExpandCase = expandCases[3]; 
+          curExpandCase = expandCases[3];
         }
       } else {
         // no expander open - EXPAND_ONLY
@@ -70,7 +70,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
       curExpanded = thisParent;
       curExpandedContent = expanded;
 
-      // do the expansion
+      // do the expansion and broadcast event
       handleExpand(thisEl, curExpandCase);
 
       // set previous expansion
@@ -103,20 +103,30 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
       TweenMax.to(thisEl, 0.3, { css:{ opacity: 0 }});
     };
 
+    $scope.toggleGallery = function() {
+      console.log('TOGGLE GALLERY');
+    };
+
     /* =============================================================== */
 
     function handleExpand(thisEl, expandCase) {
 
       var winWidth = $window.innerWidth,
           calcHeight;
-      
+
       $rootScope.isAutomaticScroll = true;
+
+      $scope.$broadcast('onLabExpand', {
+        curExpanded: curExpanded,
+        prevExpanded: prevExpanded,
+        expandCase: expandCase
+      });
 
       // get expand case based on screen size
       function getCalcHeightCase() {
         if(winWidth <= smallBreakPoint) {
           calcHeight = curExpandedContent[0].offsetHeight + expandPadding;
-        } 
+        }
         else if(winWidth > smallBreakPoint && winWidth <= mediumBreakPoint) {
           calcHeight = curExpandedContent[0].offsetHeight + gridItemHeight + expandPadding;
         }
@@ -140,12 +150,12 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
           // get height for curExpanded based on auto height of content and screen size
           getCalcHeightCase();
-          
+
           // immediately tween from 0 to auto
           TweenMax.from(curExpandedContent, tt, { css:{ height: 0 }, ease: dEase });
-          
+
           // tween curExpanded based on calculated height
-          TweenMax.to(curExpanded, tt, { css:{ height: calcHeight }, ease:dEase });         
+          TweenMax.to(curExpanded, tt, { css:{ height: calcHeight }, ease:dEase });
 
           break;
 
@@ -172,12 +182,12 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
         case 'FADE_ONLY' :
 
           // console.log('FADE_ONLY');
-          
+
           TweenMax.killDelayedCallsTo(setCollapse);
 
           curExpanded.addClass('is-expanded');
           prevExpanded.removeClass('is-expanded');
-          
+
           //set collapse
           TweenMax.delayedCall(tt+0.1, setCollapse, [ prevExpandedContent, prevExpanded ]);
 
@@ -188,10 +198,10 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
           // get height for curExpanded based on auto height of content and screen size
           getCalcHeightCase();
-          
+
           // set curExpanded based on calculated height
           TweenMax.set(curExpanded, { css:{ height: calcHeight } });
-          
+
           killVidPlayer(prevExpanded);
 
           break;
@@ -212,13 +222,13 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
           // get height for curExpanded based on auto height of content and screen size
           getCalcHeightCase();
-          
+
           // immediately tween from 0 to auto
           TweenMax.from(curExpandedContent, tt, { css:{ height: 0 }, ease: dEase, onComplete: delayScrollTo, onCompleteParams: [thisEl]  });
-          
+
           // tween curExpanded based on calculated height
-          TweenMax.to(curExpanded, tt, { css:{ height: calcHeight }, ease:dEase }); 
-          
+          TweenMax.to(curExpanded, tt, { css:{ height: calcHeight }, ease:dEase });
+
           killVidPlayer(prevExpanded);
 
           break;
@@ -251,9 +261,9 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
     }
 
     /* =============================================================== */
-    
+
     function killVidPlayer(prev) {
-      
+
       var vidEl = prev[0].getElementsByClassName('vid-lrg');
 
       // if there's a video in the prev expand, stop and reset
@@ -266,10 +276,10 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
     }
 
     /* =============================================================== */
-    
+
     function delayScrollTo(el) {
       $rootScope.isAutomaticScroll = true;
-      
+
       var elParent = angular.element(el.parentNode),
           winWidth = $window.innerWidth,
           topOffset = 0,
@@ -284,7 +294,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
       }
 
       elLoc = elParent[0].offsetTop + topOffset;
-      
+
       TweenMax.to($window, tt, {scrollTo:{y:elLoc}, ease:dEase, delay:tt, onComplete: function() {
         $timeout(function() {
           $rootScope.isAutomaticScroll = false;
@@ -292,7 +302,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
       }});
     }
   };
-  
+
   return {
     replace: false,
     restrict: 'E',

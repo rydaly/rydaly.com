@@ -4,7 +4,7 @@
 angular.module('rydaly')
   .controller('LabController', LabController);
 
-function LabController(LabItemsService, $window) {
+function LabController(LabItemsService, $window, $scope) {
   var labCtrl = this;
       labCtrl.filters = {};
       labCtrl.items = [];
@@ -20,7 +20,6 @@ function LabController(LabItemsService, $window) {
     for(i; i < numItems; i++) {
       data.items[i].itemIdx = i;
       labCtrl.items.push(data.items[i]);
-      console.log(typeof(data.items[i].imgHi));
     }
   });
 

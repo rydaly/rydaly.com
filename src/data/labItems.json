@@ -4,9 +4,13 @@
     {
       "title": "AIN Logo",
       "description": "Logo for Adventures in Nourishment, a natural botanicals brand.",
-      "imgHi": "assets/images/lab/img/ain_lrg.jpg",
-      "imgLow": "assets/images/lab/img/ain.jpg",
-      "gallery": ["assets/images/lab/img/ain_lrg.jpg", "assets/images/lab/img/ain.jpg"],
+      "imgHi": "assets/images/lab/img/ain/ain_01_lrg.jpg",
+      "imgLow": "assets/images/lab/img/ain/ain_01.jpg",
+      "gallery": [
+        "assets/images/lab/img/ain/ain_01_lrg.jpg",
+        "assets/images/lab/img/ain/ain_02_lrg.jpg",
+        "assets/images/lab/img/ain/ain_03_lrg.jpg",
+        "assets/images/lab/img/ain/ain_04_lrg.jpg"],
       "tag": [
         "Illustrator",
         "Logo"
