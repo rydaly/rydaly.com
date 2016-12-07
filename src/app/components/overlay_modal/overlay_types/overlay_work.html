@@ -79,4 +79,17 @@
   </a>
 </div>
 
+<!-- Show a source btn if we have one -->
+<div class="launch-container src-container" ng-if="itemSrcLink.length > 0">
+  <a class="launch-btn" href="{{ itemSrcLink }}" target="_blank">
+    <button class="lines-btn lines-btn-src">
+      Source
+      <span class="lines top"></span>
+      <span class="lines bottom"></span>
+      <span class="lines left"></span>
+      <span class="lines right"></span>
+    </button>
+  </a>
+</div>
+
 <div class="space"></div>

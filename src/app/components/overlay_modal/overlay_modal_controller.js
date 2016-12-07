@@ -22,6 +22,7 @@ function OverlayModalController($scope, $window, modals) {
     $scope.itemRoles = modals.params().itemRoles;
     $scope.itemCta = modals.params().itemCta;
     $scope.itemCtaText = modals.params().itemCtaText;
+    $scope.itemSrcLink = modals.params().itemSrcLink;
     $scope.smallScreen = $window.innerWidth < 640;
 
     // returns small images if small screen

@@ -81,7 +81,7 @@ div.rd-overlay {
           }
         }
       }
-      
+
       img {
         @include size(294px);
         @include position(absolute, 0 0 0 0);
@@ -218,6 +218,7 @@ div.rd-overlay > .overlay {
 
     p.description {
       margin-bottom: 3em;
+      text-align: left;
     }
     @include media($medium-screen) {
       ul.item-list {
@@ -304,6 +305,10 @@ div.rd-overlay > .overlay {
         background-color: lighten($base-background-color, 5%);
       }
     }
+  }
+
+  .src-container {
+    margin-top: 2em;
   }
 
   .space {

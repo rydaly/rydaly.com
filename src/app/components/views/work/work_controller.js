@@ -46,7 +46,8 @@ function WorkController(WorkItemsService, modals, $sce) {
         ytid: $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + item.ytid + ytQueryStr),
         itemRoles: item.role,
         itemCta: item.link,
-        itemCtaText: item.linkText
+        itemCtaText: item.linkText,
+        itemSrcLink: item.linkToSrc
       }
       // add more modal types here...
     );

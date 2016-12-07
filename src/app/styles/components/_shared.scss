@@ -16,6 +16,12 @@
       font-weight: 100;
     }
   }
+
+  &.lines-btn-src {
+    &:before {
+      content: '\f121';
+    }
+  }
 }
 
 /* Typography */
