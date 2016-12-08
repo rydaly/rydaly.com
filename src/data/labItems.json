@@ -2,6 +2,25 @@
   "items": [
 
     {
+      "title": "Super Plaid",
+      "description": "An experiment animating bars with GSAP and CSS blend modes.",
+      "imgHi": "assets/images/lab/img/superplaid_lrg.jpg",
+      "imgLow": "assets/images/lab/img/superplaid.jpg",
+      "embed": "<iframe height='600' scrolling='no' title='Super Plaid' src='//codepen.io/rydaly/embed/preview/mOXYzd/?height=600&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/rydaly/pen/mOXYzd/'>Super Plaid</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "tag": [
+        "GSAP",
+        "JavaScript",
+        "Animation"
+      ],
+      "role": [
+        "Concept",
+        "Design",
+        "Development",
+        "Motion Design"
+      ]
+    },
+
+    {
       "title": "Pulse Animation",
       "description": "A configurable, variable intensity pulse animation which pairs color intensity with motion intensity. This creates an effect suitable for, say, alerts on a map that vary in severity.",
       "imgHi": "assets/images/lab/img/pulse_anim_lrg.jpg",
@@ -121,7 +140,7 @@
       "imgHi": "assets/images/lab/img/rd_logo_svg_lrg.jpg",
       "imgLow": "assets/images/lab/img/rd_logo_svg.jpg",
       "tag": [
-        "Javascript",
+        "JavaScript",
         "SVG",
         "Animation"
       ],
@@ -313,7 +332,7 @@
       "imgLow": "assets/images/lab/img/bi.jpg",
       "tag": [
         "Animation",
-        "Javascript",
+        "JavaScript",
         "SVG"
       ],
       "role": [

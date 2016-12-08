@@ -1,6 +1,32 @@
 {
   "items": [
     {
+      "title": "Comments Are the Best",
+      "description": "I always find it entertaining reading through comments around the web, especially when the subject matter gets a little controversial. This novelty app is essentially a robot that vocalizes the musings and opinions of YouTube users, removing any emotion in the messages with its monotonous voices. It utilizes YouTube Player, YouTube Data and Speech Synthesis APIs to fetch and read back comments from videos. Videos or playlists can be retrieved by keyword search, channel search, manual id entry or video category. The original idea for this project was ultra simple but, ya know, things escalated quickly and I'm still trying to figure out if it's funny or just plain annoying =)",
+      "link": "assets/demos/catb/index.html",
+      "linkText": "Launch",
+      "linkToSrc": "http://google.com",
+      "imgLogo": "assets/images/work/img/logos/catb.png",
+      "imgLow": "assets/images/work/img/catb.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/catb/catb_01.jpg",
+        "assets/images/projects/catb/catb_02.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/catb/catb_01_lrg.jpg",
+        "assets/images/projects/catb/catb_02_lrg.jpg"
+      ],
+      "role": [
+        "Design",
+        "Development",
+        "JavaScript",
+        "jQuery",
+        "SASS"
+      ]
+    },
+
+    {
       "title": "The Wonderment",
       "blockquote": "In the Wonderment, kids participate in collaborative creative experiences with other kids across the globe and turn their shared imagination and interaction into a currency backed by brands and donors to support social good projects benefitting kids around the world. It’s a place where kids can find their creative voice, connect it to others and use it to make a difference.",
       "description": "I worked with the fine folks over at <a href=\"http://wondergiant.com/\">Wonder Giant</a> on this project and while the work I did is hidden from the public-facing side of the site, it's a great project so head on over and check it out!",

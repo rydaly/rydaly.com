@@ -5,7 +5,7 @@
    "name": "Design", "size": 1500,
    "children": [
     {
-     "name": "Creative Suite", "size": 1500,
+     "name": "Adobe CS", "size": 1500,
      "children": [
       {"name": "Photoshop", "size": 1500},
       {"name": "Illustrator", "size": 1500},
@@ -39,7 +39,9 @@
     {
      "name": "Tools", "size": 1500,
      "children": [
-        {"name": "Atom", "size": 1500}
+        {"name": "Atom", "size": 1500},
+        {"name": "Git", "size": 1500},
+        {"name": "SVN", "size": 1500}
       ]
     },
     {
@@ -56,8 +58,8 @@
       },
       { "name": "Libs", "size": 1500,
         "children": [
-          {"name": "D3", "size": 1500 },
           {"name": "jQuery", "size": 1500 },
+          {"name": "D3", "size": 1500 },
           {"name": "GSAP", "size": 1500 }
         ]
       },
