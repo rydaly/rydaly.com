@@ -5,7 +5,7 @@
       "description": "I always find it entertaining reading through comments around the web, especially when the subject matter gets a little controversial. This novelty app is essentially a robot that vocalizes the musings and opinions of YouTube users, removing any emotion in the messages with its monotonous voices. It utilizes YouTube Player, YouTube Data and Speech Synthesis APIs to fetch and read back comments from videos. Videos or playlists can be retrieved by keyword search, channel search, manual id entry or video category. The original idea for this project was ultra simple but, ya know, things escalated quickly and I'm still trying to figure out if it's funny or just plain annoying =)",
       "link": "assets/demos/catb/index.html",
       "linkText": "Launch",
-      "linkToSrc": "http://google.com",
+      "linkToSrc": "https://github.com/rydaly/catb",
       "imgLogo": "assets/images/work/img/logos/catb.png",
       "imgLow": "assets/images/work/img/catb.jpg",
 
