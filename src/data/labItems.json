@@ -2,11 +2,32 @@
   "items": [
 
     {
+      "title": "React SVG Logo Animation",
+      "description": "An animation experiment using React, GSAP, SVG and CSS mix-blend-mode.",
+      "imgHi": "assets/images/lab/img/hr_svg_lrg.jpg",
+      "imgLow": "assets/images/lab/img/hr_svg.jpg",
+      "embed": "<iframe height='500' scrolling='no' title='SVG Logo Animation' src='//codepen.io/rydaly/embed/preview/RoJBQX/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/rydaly/full/RoJBQX/'>SVG Logo Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "tag": [
+        "JavaScript",
+        "React",
+        "GSAP",
+        "Animation",
+        "SVG"
+      ],
+      "role": [
+        "Concept",
+        "Design",
+        "Development",
+        "Motion Design"
+      ]
+    },
+
+    {
       "title": "Super Plaid",
       "description": "An experiment animating bars with GSAP and CSS blend modes.",
       "imgHi": "assets/images/lab/img/superplaid_lrg.jpg",
       "imgLow": "assets/images/lab/img/superplaid.jpg",
-      "embed": "<iframe height='600' scrolling='no' title='Super Plaid' src='//codepen.io/rydaly/embed/preview/mOXYzd/?height=600&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/rydaly/pen/mOXYzd/'>Super Plaid</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "embed": "<iframe height='500' scrolling='no' title='Super Plaid' src='//codepen.io/rydaly/embed/preview/mOXYzd/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/rydaly/full/mOXYzd/'>Super Plaid</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
       "tag": [
         "GSAP",
         "JavaScript",
@@ -25,7 +46,7 @@
       "description": "A configurable, variable intensity pulse animation which pairs color intensity with motion intensity. This creates an effect suitable for, say, alerts on a map that vary in severity.",
       "imgHi": "assets/images/lab/img/pulse_anim_lrg.jpg",
       "imgLow": "assets/images/lab/img/pulse_anim.jpg",
-      "embed": "<iframe height='600' scrolling='no' title='Variable Intensity Pulse Animation' src='//codepen.io/rydaly/embed/preview/PGpZaN/?height=600&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/rydaly/pen/PGpZaN/'>Variable Intensity Pulse Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "embed": "<iframe height='500' scrolling='no' title='Variable Intensity Pulse Animation' src='//codepen.io/rydaly/embed/preview/PGpZaN/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/rydaly/full/PGpZaN/'>Variable Intensity Pulse Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
       "tag": [
         "SASS",
         "Animation"
@@ -42,7 +63,7 @@
       "description": "CSS gradients and blend-modes combined with some offset timing make for a nice loading spinner.",
       "imgHi": "assets/images/lab/img/blend_loader_lrg.jpg",
       "imgLow": "assets/images/lab/img/blend_loader.jpg",
-      "embed": "<iframe height='600' scrolling='no' title='Color Blend Loader Animation' src='//codepen.io/rydaly/embed/preview/PGpRzy/?height=600&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/rydaly/pen/PGpRzy/'>Color Blend Loader Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
+      "embed": "<iframe height='500' scrolling='no' title='Color Blend Loader Animation' src='//codepen.io/rydaly/embed/preview/PGpRzy/?height=500&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/rydaly/full/PGpRzy/'>Color Blend Loader Animation</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a>.</iframe>",
       "tag": [
         "LESS",
         "Animation"
