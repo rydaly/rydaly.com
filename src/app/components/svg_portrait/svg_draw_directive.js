@@ -1,17 +1,17 @@
 'use strict';
 /* global angular, TweenMax, Sine */
 
-angular.module('rydaly').directive('drawSvg', function($timeout) {
+angular.module('rydaly').directive('svgDraw', function($timeout) {
 
-  function drawSvgLink(scope, element) {
+  function svgDrawLink(scope, element) {
     var svgObj = angular.element(element),
         paths = [],
         i = 0,
-        j = 12,
+        j = 0,
         len = 0;
 
     paths = svgObj[0].getElementsByTagName("path");
-    len = paths.length;
+    len = j = paths.length;
 
     $timeout(function() {
       for(i; i < len; i++) {
@@ -41,6 +41,6 @@ angular.module('rydaly').directive('drawSvg', function($timeout) {
 
   return {
     restrict: 'A',
-    link: drawSvgLink
+    link: svgDrawLink
   };
 });

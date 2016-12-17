@@ -6,7 +6,7 @@ angular.module('rydaly')
 
   function RdSocial() {
 
-    function rdSocial($scope, $element) {
+    function rdSocialLink($scope) {
 
       $scope.socialItems = [
         {'name': 'Resumé',
@@ -39,7 +39,7 @@ angular.module('rydaly')
     return {
       replace: true,
       restrict: 'E',
-      templateUrl: 'app/views/partials/elements/rdSocial.html',
-      link: rdSocial
+      templateUrl: 'app/shared/social/social.html',
+      link: rdSocialLink
     };
   }

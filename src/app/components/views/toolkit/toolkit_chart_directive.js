@@ -1,10 +1,11 @@
 'use strict';
 /* global angular, d3 */
 
-angular.module('rydaly').directive('rdSkillsPage', function(SkillsEventService, $window, $timeout) {
+angular.module('rydaly')
+	.directive('rdSkillsPage', function(ToolkitEventService, $window, $timeout) {
 
 	// link function
-	function rdSkillsPage(scope, element, attrs) {
+	function rdSkillsPage() {
 	}
 
 	function handleEventBroadcast(msg, data) {
@@ -19,7 +20,7 @@ angular.module('rydaly').directive('rdSkillsPage', function(SkillsEventService, 
 				break;
 		}
 	}
-	
+
 	/* start d3 */
 	var link,
 		node,
@@ -236,8 +237,8 @@ angular.module('rydaly').directive('rdSkillsPage', function(SkillsEventService, 
 			if (rootNode && isImg) rootNode.classed("solo", true);
 		} else {
 			// add class to clicked and change color
-			if(d3.event) { 
-				d3.select(d3.event.target).classed("clicked", true); 
+			if(d3.event) {
+				d3.select(d3.event.target).classed("clicked", true);
 			}
 			d.children = d._children;
 			d._children = null;
@@ -340,9 +341,9 @@ angular.module('rydaly').directive('rdSkillsPage', function(SkillsEventService, 
 		replace: false,
 		restrict: 'E',
 		link: rdSkillsPage,
-		controller: function($scope, $attrs, SkillsEventService) {
+		controller: function($scope, $attrs, ToolkitEventService) {
 			$scope.$on('handleBroadcast', function() {
-				handleEventBroadcast(SkillsEventService.message, SkillsEventService.data);
+				handleEventBroadcast(ToolkitEventService.message, ToolkitEventService.data);
 			});
 		}
 	};

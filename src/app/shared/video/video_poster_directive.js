@@ -1,6 +1,12 @@
 'use strict';
 /* global angular */
 
+/**
+ *
+ *  sets image to be used for HTML5 video 'poster' attribute
+ *
+ */
+
 angular.module('rydaly')
   .directive('rdVidPoster', RdVidPoster);
 
