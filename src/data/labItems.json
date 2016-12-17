@@ -2,6 +2,23 @@
   "items": [
 
     {
+      "title": "Pure CSS Spinners",
+      "description": "Ongoing experiments in rotation",
+      "imgHi": "assets/images/lab/img/spinners_lrg.jpg",
+      "imgLow": "assets/images/lab/img/spinners.jpg",
+      "embed": "<iframe height='500' scrolling='no' title='Pure CSS Spinners' src='//codepen.io/rydaly/embed/preview/WoKWXZ/?height=500&theme-id=dark&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/rydaly/pen/WoKWXZ/'>Pure CSS Spinners</a> by Ryan (<a href='http://codepen.io/rydaly'>@rydaly</a>) on <a href='http://codepen.io'>CodePen</a></iframe>",
+      "tag": [
+        "Animation",
+        "CSS"
+      ],
+      "role": [
+        "Design",
+        "Development",
+        "Motion Design"
+      ]
+    },
+
+    {
       "title": "React SVG Logo Animation",
       "description": "An animation experiment using React, GSAP, SVG and CSS mix-blend-mode.",
       "imgHi": "assets/images/lab/img/hr_svg_lrg.jpg",
@@ -42,7 +59,7 @@
     },
 
     {
-      "title": "Pulse Animation",
+      "title": "Variable Intensity Pulse Animations",
       "description": "A configurable, variable intensity pulse animation which pairs color intensity with motion intensity. This creates an effect suitable for, say, alerts on a map that vary in severity.",
       "imgHi": "assets/images/lab/img/pulse_anim_lrg.jpg",
       "imgLow": "assets/images/lab/img/pulse_anim.jpg",
