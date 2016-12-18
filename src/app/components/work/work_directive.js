@@ -7,6 +7,6 @@ angular.module('rydaly')
       scope: true,
       controller: 'WorkController',
       controllerAs: 'workCtrl',
-      templateUrl: 'app/components/views/work/work_view.html'
+      templateUrl: 'app/components/work/work_view.html'
     };
   });

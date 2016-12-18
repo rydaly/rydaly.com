@@ -15,23 +15,23 @@
   .config( function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'app/components/views/hi/index.html',
+        templateUrl: 'app/components/hi/index.html',
         preload: true
       })
       .when('/contact', {
-        templateUrl: 'app/components/views/contact/index.html',
+        templateUrl: 'app/components/contact/index.html',
         preload: true
       })
       .when('/lab', {
-        templateUrl: 'app/components/views/lab/index.html',
+        templateUrl: 'app/components/lab/index.html',
         preload: true
       })
       .when('/toolkit', {
-        templateUrl: 'app/components/views/toolkit/index.html',
+        templateUrl: 'app/components/toolkit/index.html',
         preload: true
       })
       .when('/work', {
-        templateUrl: 'app/components/views/work/index.html',
+        templateUrl: 'app/components/work/index.html',
         preload: true
       })
       .when('/overlay', {

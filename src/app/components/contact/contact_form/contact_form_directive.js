@@ -7,6 +7,6 @@ angular.module('rydaly')
       scope: true,
       controller: 'ContactFormController',
       controllerAs: 'contactCtrl',
-      templateUrl: 'app/components/contact_form/contact_form.html'
+      templateUrl: 'app/components/contact/contact_form/contact_form.html'
     };
   });

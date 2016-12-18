@@ -5,8 +5,8 @@ angular.module('rydaly')
   .directive('overlaySimple', function() {
     return {
       scope: true,
-      controller: 'OverlayModalController',
+      controller: 'ModalController',
       controllerAs: 'overlayCtrl',
-      templateUrl: 'app/components/overlay_modal/overlay_types/overlay_simple.html'
+      templateUrl: 'app/shared/modals/overlay_types/overlay_simple.html'
     };
   });

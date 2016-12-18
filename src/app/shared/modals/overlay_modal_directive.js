@@ -4,6 +4,6 @@
 angular.module('rydaly')
   .directive('overlayModal', function() {
     return {
-      templateUrl: 'app/components/overlay_modal/overlay_modal.html'
+      templateUrl: 'app/shared/modals/overlay_modal.html'
     };
   });

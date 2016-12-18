@@ -7,6 +7,6 @@ angular.module('rydaly')
       scope: true,
       controller: 'LabController',
       controllerAs: 'labCtrl',
-      templateUrl: 'app/components/views/lab/lab_view.html'
+      templateUrl: 'app/components/lab/lab_view.html'
     };
   });

@@ -5,13 +5,11 @@ angular.module('rydaly')
   .directive('rdOverlay', RdOverlay);
 
 function RdOverlay($rootScope, modals, $document, $timeout) {
-  return (link);
-  // I bind the JavaScript events to the scope.
+  return link;
+
   function link(scope, element) {
     // get container so we can disable scrolling on the background element when open
     scope.container = angular.element($document[0].body);
-    // TODO :: get the modal also so we can set overflow hidden on close ( prevent double scroll bars )
-    // scope.overlayContain = angular.element(element);
 
     // define which modal window is being rendered. By convention,
     // the subview will be the same as the type emitted by the modals
@@ -21,8 +19,7 @@ function RdOverlay($rootScope, modals, $document, $timeout) {
     scope.modalClass = null;
 
     // If the user clicks directly on the backdrop (ie, the modals
-    // container), consider that an escape out of the modal, and reject
-    // it implicitly.
+    // container), consider that an escape out of the modal, and return
     element.on(
       "click",
       function handleClickEvent(event) {

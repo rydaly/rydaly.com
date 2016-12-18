@@ -26,25 +26,6 @@ function ModalsService($rootScope, $q) {
     modal.params = params;
     $rootScope.$emit("modals.open", type);
     return (modal.deferred.promise);
-
-    // switch (type) {
-    //   case 'overlay':
-    //     showOverlayModal(params);
-    //     break;
-    //   case 'simple':
-    //     showSimpleModal(params);
-    //     break;
-    //   default:
-    //     break;
-    // }
-    //
-    // function showOverlayModal() {
-    //   $location.path('/overlay');
-    // }
-    //
-    // function showSimpleModal() {
-    //   $location.path('/modal');
-    // }
   }
 
   // return the params associated with the current params.

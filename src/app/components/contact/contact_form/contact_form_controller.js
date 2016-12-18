@@ -28,7 +28,7 @@ function ContactFormController($scope, $http) {
   contactCtrl.sendMessage = function() {
     $http({
         method: 'POST',
-        url: 'http://rydaly.com/app/php/processContactForm.php',
+        url: 'http://rydaly.com/php/processContactForm.php',
         data: param(contactCtrl.formData),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -54,8 +54,8 @@ function ContactFormController($scope, $http) {
           contactCtrl.formData = {}; // empty form fields
         }
 
-      }, function(response) {
-        // var data = response.data;
+      }, function(error) {
+        console.warn('Error processing form :: ', error);
         contactCtrl.isError = true;
         contactCtrl.submissionMessage = "Uh oh, something went wrong. Please try again!";
       });

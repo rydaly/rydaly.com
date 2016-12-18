@@ -5,6 +5,6 @@ angular.module('rydaly')
   .directive('contactView', function() {
     return {
       scope: true,
-      templateUrl: 'app/components/views/contact/contact_view.html'
+      templateUrl: 'app/components/contact/contact_view.html'
     };
   });

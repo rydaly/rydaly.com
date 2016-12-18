@@ -7,6 +7,6 @@ angular.module('rydaly')
       scope: true,
       controller: 'HiController',
       controllerAs: 'hiCtrl',
-      templateUrl: 'app/components/views/hi/hi_view.html'
+      templateUrl: 'app/components/hi/hi_view.html'
     };
   });

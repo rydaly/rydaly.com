@@ -7,6 +7,6 @@ angular.module('rydaly')
       scope: true,
       controller: 'InstaFeedController',
       controllerAs: 'instaCtrl',
-      templateUrl: 'app/components/insta_feed/insta_feed.html'
+      templateUrl: 'app/shared/insta_feed/insta_feed.html'
     };
   });

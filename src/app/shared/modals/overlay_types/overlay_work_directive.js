@@ -5,8 +5,8 @@ angular.module('rydaly')
   .directive('overlayWork', function() {
     return {
       scope: true,
-      controller: 'OverlayModalController',
+      controller: 'ModalController',
       controllerAs: 'overlayCtrl',
-      templateUrl: 'app/components/overlay_modal/overlay_types/overlay_work.html'
+      templateUrl: 'app/shared/modals/overlay_types/overlay_work.html'
     };
   });

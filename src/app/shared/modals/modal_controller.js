@@ -3,9 +3,9 @@
 /* global angular */
 
 angular.module('rydaly')
-  .controller('OverlayModalController', OverlayModalController);
+  .controller('ModalController', ModalController);
 
-function OverlayModalController($scope, $window, modals) {
+function ModalController($scope, $window, modals) {
   if (modals.params().type === 'overlay') {
     // type: overlay
     $scope.title = modals.params().title;
