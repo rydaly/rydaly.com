@@ -4,33 +4,33 @@
 angular.module('rdExpander', [])
   .directive('rdExpandPreview', RdExpandPreview);
 
-function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
+function RdExpandPreview($window, $document, $timeout, $rootScope) {
 
   var rdExpandPreview = function($scope) {
-    var grid,
-        expandCases = [
+    var expandCases = [
           'EXPAND_ONLY',
           'COLLAPSE_ONLY',
           'FADE_ONLY',
           'COLLAPSE_AND_EXPAND',
           'COLLAPSE_AND_FILTER'
         ],
-        curExpandCase,
-
-        tt = 0.35,
-        gridItemHeight = 250,
-        expandPadding = 10,
-        smallBreakPoint = 520,
-        mediumBreakPoint = 640,
-        dEase = Quint.easeInOut,
-
+        curExpandCase = '',
         prevExpanded = '',
         prevExpandedContent = '',
         curExpanded = '',
-        curExpandedContent = '';
+        curExpandedContent = '',
 
-    $timeout(function() {
-      grid = $document[0].getElementById('grid-container');
+        // config
+        defaultDuration = 0.35,
+        defaultEase = Quint.easeInOut,
+        gridItemHeight = 250,
+        expandPadding = 10,
+        smallBreakPoint = 520,
+        mediumBreakPoint = 640;
+
+    // wait for $digest completion
+    $scope.$evalAsync(function() {
+      // grid = $document[0].getElementById('grid-container');
       init();
     });
 
@@ -48,7 +48,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
           expanded = thisParent[0].getElementsByClassName('img-expanded');
 
       // do nothing if clicked item is already expanded
-      if(angular.element(thisEl.parentNode).hasClass('is-expanded')) {
+      if(thisParent.hasClass('is-expanded')) {
         return;
       }
 
@@ -103,10 +103,6 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
       TweenMax.to(thisEl, 0.3, { css:{ opacity: 0 }});
     };
 
-    $scope.toggleGallery = function() {
-      console.log('TOGGLE GALLERY');
-    };
-
     /* =============================================================== */
 
     function handleExpand(thisEl, expandCase) {
@@ -152,10 +148,10 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
           getCalcHeightCase();
 
           // immediately tween from 0 to auto
-          TweenMax.from(curExpandedContent, tt, { css:{ height: 0 }, ease: dEase });
+          TweenMax.from(curExpandedContent, defaultDuration, { css:{ height: 0 }, ease: defaultEase });
 
           // tween curExpanded based on calculated height
-          TweenMax.to(curExpanded, tt, { css:{ height: calcHeight }, ease:dEase });
+          TweenMax.to(curExpanded, defaultDuration, { css:{ height: calcHeight }, ease:defaultEase });
 
           break;
 
@@ -165,8 +161,8 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
           prevExpanded.removeClass('is-expanded');
 
-          TweenMax.to(prevExpandedContent, tt, { css:{ height: 0 }, ease:dEase });
-          TweenMax.to(prevExpanded, tt, { css:{ height: gridItemHeight }, ease:dEase, onComplete: function() {
+          TweenMax.to(prevExpandedContent, defaultDuration, { css:{ height: 0 }, ease:defaultEase });
+          TweenMax.to(prevExpanded, defaultDuration, { css:{ height: gridItemHeight }, ease:defaultEase, onComplete: function() {
             $timeout(function() {
               $rootScope.isAutomaticScroll = false;
             }, 250);
@@ -189,7 +185,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
           prevExpanded.removeClass('is-expanded');
 
           //set collapse
-          TweenMax.delayedCall(tt+0.1, setCollapse, [ prevExpandedContent, prevExpanded ]);
+          TweenMax.delayedCall(defaultDuration+0.1, setCollapse, [ prevExpandedContent, prevExpanded ]);
 
           delayScrollTo(thisEl);
 
@@ -214,8 +210,8 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
           prevExpanded.removeClass('is-expanded');
 
           // animate collapse
-          TweenMax.to(prevExpandedContent, tt, { css:{ height: 0 }, ease:dEase });
-          TweenMax.to(prevExpanded, tt, { css:{ height: gridItemHeight }, ease:dEase });
+          TweenMax.to(prevExpandedContent, defaultDuration, { css:{ height: 0 }, ease:defaultEase });
+          TweenMax.to(prevExpanded, defaultDuration, { css:{ height: gridItemHeight }, ease:defaultEase });
 
           // set height to auto
           TweenMax.set(curExpandedContent, { css:{ height: 'auto' } });
@@ -224,10 +220,10 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
           getCalcHeightCase();
 
           // immediately tween from 0 to auto
-          TweenMax.from(curExpandedContent, tt, { css:{ height: 0 }, ease: dEase, onComplete: delayScrollTo, onCompleteParams: [thisEl]  });
+          TweenMax.from(curExpandedContent, defaultDuration, { css:{ height: 0 }, ease: defaultEase, onComplete: delayScrollTo, onCompleteParams: [thisEl]  });
 
           // tween curExpanded based on calculated height
-          TweenMax.to(curExpanded, tt, { css:{ height: calcHeight }, ease:dEase });
+          TweenMax.to(curExpanded, defaultDuration, { css:{ height: calcHeight }, ease:defaultEase });
 
           killVidPlayer(prevExpanded);
 
@@ -239,9 +235,9 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
           prevExpanded.removeClass('is-expanded');
 
-          TweenMax.to(prevExpandedContent, tt, { css:{ height: 0 }, ease:dEase });
-          TweenMax.to(prevExpanded, tt, { css:{ height: gridItemHeight }, ease:dEase });
-          TweenMax.to($window, tt, {scrollTo:{y:90}, ease:dEase, delay:tt, autoKill:false, onComplete: function() {
+          TweenMax.to(prevExpandedContent, defaultDuration, { css:{ height: 0 }, ease:defaultEase });
+          TweenMax.to(prevExpanded, defaultDuration, { css:{ height: gridItemHeight }, ease:defaultEase });
+          TweenMax.to($window, defaultDuration, {scrollTo:{y:90}, ease:defaultEase, delay:defaultDuration, autoKill:false, onComplete: function() {
             $timeout(function() {
               $rootScope.isAutomaticScroll = false;
             }, 250);
@@ -295,7 +291,7 @@ function RdExpandPreview($window, $document, $location, $timeout, $rootScope) {
 
       elLoc = elParent[0].offsetTop + topOffset;
 
-      TweenMax.to($window, tt, {scrollTo:{y:elLoc}, ease:dEase, delay:tt, onComplete: function() {
+      TweenMax.to($window, defaultDuration, {scrollTo:{y:elLoc}, ease:defaultEase, delay:defaultDuration, onComplete: function() {
         $timeout(function() {
           $rootScope.isAutomaticScroll = false;
         }, 250);

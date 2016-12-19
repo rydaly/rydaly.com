@@ -2,36 +2,36 @@
 
 <div class="item-logo-container">
   <div class="loading"></div>
-  <img class="item-logo-img" ng-if="imgLogo.length > 0" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ imgLogo }}">
+  <img class="item-logo-img" ng-if="modalsData.imgLogo.length > 0" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ modalsData.imgLogo }}">
 </div>
 <div class="title-contain">
-  <h1 class="page-title">{{ title }}</h1>
+  <h1 class="page-title">{{ modalsData.title }}</h1>
 </div>
 
 <div class="project-details">
-  <blockquote ng-if="blockquote.length > 0" class="">{{ blockquote }}</blockquote>
-  <p class="description" ng-bind-html="description"></p>
+  <blockquote ng-if="modalsData.blockquote.length > 0" class="">{{ modalsData.blockquote }}</blockquote>
+  <p class="description" ng-bind-html="modalsData.description"></p>
   <p class="label">Roles &amp; Tech:</p>
 
   <ul class="item-list">
-    <li ng-repeat="role in itemRoles">{{ role }}</li>
+    <li ng-repeat="role in modalsData.itemRoles">{{ role }}</li>
   </ul>
 </div>
 
 <!-- display video if we have one -->
-<div class="video" ng-if="hasVideo">
+<div class="video" ng-if="modalsData.hasVideo">
   <div class="video-wrapper">
-    <iframe width="1000" height="563" ng-src="{{ ytid }}" frameborder="0" allowfullscreen></iframe>
+    <iframe width="1000" height="563" ng-src="{{ modalsData.ytid }}" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <!-- If we have sub-items -->
-<div ng-if="subItems">
-  <div class="sub-item" ng-repeat="subItem in subItems">
+<div ng-if="modalsData.subItems">
+  <div class="sub-item" ng-repeat="subItem in modalsData.subItems">
     <h4>{{ subItem.title }}</h4>
     <p>{{ subItem.description }}</p>
 
-    <div class="project-img-container" ng-repeat="img in getSize(subItem)">
+    <div class="project-img-container" ng-repeat="img in getImages(subItem)">
       <div class="loading"></div>
       <img class="project-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img }}">
     </div>
@@ -49,15 +49,15 @@
 </div>
 
 <!-- If we don't have sub-items -->
-<div class="project-img-container" ng-if="!subItems" ng-repeat="img in getSize()">
+<div class="project-img-container" ng-if="!modalsData.subItems" ng-repeat="img in getImages()">
 
   <div class="loading"></div>
 
   <!-- Normal images -->
-  <img ng-if="!pngSeq" class="project-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img }}">
+  <img ng-if="!modalsData.pngSeq" class="project-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img }}">
 
   <!-- Animated sequence -->
-  <div ng-if="pngSeq">
+  <div ng-if="modalsData.pngSeq">
     <h4 class="anim-png-title">{{ img.title }}</h4>
     <canvas ng-if="!smallScreen" rd-png-seq="{{ img.seqSrc }}" timeline-delay="125" class="anim-png" width="{{ img.dimensions.width }}" height="{{ img.dimensions.height }}"></canvas>
     <img class="anim-png-fallback" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img.backup }}">
@@ -67,10 +67,10 @@
 </div>
 
 <!-- Show a launch btn if we have one -->
-<div class="launch-container" ng-if="itemCta.length > 0">
-  <a class="launch-btn" href="{{ itemCta }}" target="_blank">
+<div class="launch-container" ng-if="modalsData.itemCta.length > 0">
+  <a class="launch-btn" href="{{ modalsData.itemCta }}" target="_blank">
     <button class="lines-btn">
-      {{ itemCtaText }}
+      {{ modalsData.itemCtaText }}
       <span class="lines top"></span>
       <span class="lines bottom"></span>
       <span class="lines left"></span>
@@ -80,8 +80,8 @@
 </div>
 
 <!-- Show a source btn if we have one -->
-<div class="launch-container src-container" ng-if="itemSrcLink.length > 0">
-  <a class="launch-btn" href="{{ itemSrcLink }}" target="_blank">
+<div class="launch-container src-container" ng-if="modalsData.itemSrcLink.length > 0">
+  <a class="launch-btn" href="{{ modalsData.itemSrcLink }}" target="_blank">
     <button class="lines-btn lines-btn-src">
       Source
       <span class="lines top"></span>

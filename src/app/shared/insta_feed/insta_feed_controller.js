@@ -13,7 +13,6 @@ angular
 function InstaFeedController(InstagramAPI) {
   var instaCtrl = this;
 
-  // instaCtrl.layout = 'grid';
   instaCtrl.data = {};
   instaCtrl.items = [];
 

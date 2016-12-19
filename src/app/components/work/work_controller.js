@@ -49,15 +49,12 @@ function WorkController(WorkItemsService, modals, $sce) {
         itemCtaText: item.linkText,
         itemSrcLink: item.linkToSrc
       }
-      // add more modal types here...
     );
 
     promise.then(
       function handleResolve(response) {
-        // console.log( "Alert resolved." );
       },
       function handleReject(error) {
-        // console.warn( "Alert rejected!" );
       }
     );
   };

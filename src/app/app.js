@@ -42,12 +42,10 @@
       });
   })
 
-  .run(function($window, $rootScope, $route, $templateCache, $http, $location) {
+  .run(function($window, $document, $rootScope, $route, $templateCache, $http, $location) {
     var initialLoad = true;
 
-    // console.log(navItems);
-
-    FastClick.attach(document.body);
+    FastClick.attach($document[0].body);
     $rootScope.isAutomaticScroll = false;
 
     // redirect to root if loaded on overlay

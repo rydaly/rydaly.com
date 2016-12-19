@@ -24,15 +24,12 @@ function HiController($window, modals) {
       "simple", {
         content: item
       }
-      // add more modal types here...
     );
 
     promise.then(
       function handleResolve(response) {
-        console.log("Modal resolved :: ", response);
       },
       function handleReject(error) {
-        console.warn("Modal rejected :: ", error);
       }
     );
   }
