@@ -2,25 +2,23 @@
 /* global angular, d3 */
 
 angular.module('rydaly')
-  .directive('rdSkillsPage', function(ToolkitEventService, $window, $timeout) {
+  .directive('rdToolkitChart', function(ToolkitEventService, $window, $timeout) {
 
-    // link function
-    function rdSkillsPage() {}
+    function toolkitChartLink(scope) {
+      scope.handleEventBroadcast = function(msg, data) {
+        switch (msg) {
+          case 'initd3':
+            initD3(data);
+            explodeD3();
+            break;
 
-    function handleEventBroadcast(msg, data) {
-      switch (msg) {
-        case 'initd3':
-          initd3(data);
-          exploded3();
-          break;
-
-        case 'explode':
-          exploded3();
-          break;
-      }
+          case 'explode':
+            explodeD3();
+            break;
+        }
+      };
     }
 
-    /* start d3 */
     var link,
       node,
       nodeEnter,
@@ -34,7 +32,7 @@ angular.module('rydaly')
       baseRadius = 6;
     // explodeBtn = document.getElementById('explode');
 
-    function initd3(data) {
+    var initD3 = function(data) {
       force = d3.layout.force()
         .on("tick", tick)
         .gravity(0.175)
@@ -53,13 +51,13 @@ angular.module('rydaly')
       circs = vis.selectAll("circle");
       root = data;
 
-      updated3();
-      resized3();
+      updateD3();
+      resizeD3();
 
-      d3.select(window).on("resize", resized3);
+      d3.select(window).on("resize", resizeD3);
 
       $timeout(function() {
-        collapsed3();
+        collapseD3();
         d3.select(".skills-container svg")
           .transition()
           .duration(500)
@@ -67,7 +65,7 @@ angular.module('rydaly')
       }, 500);
     }
 
-    function exploded3() {
+    var explodeD3 = function() {
       if (root.children) {
         for (var i = 0; i < root.children.length; i++) {
           // console.log(root.children[i]);
@@ -76,7 +74,7 @@ angular.module('rydaly')
       }
     }
 
-    function collapsed3() {
+    var collapseD3 = function() {
       if (root.children) {
         for (var i = 0; i < root.children.length; i++) {
           // console.log(root.children[i]);
@@ -85,7 +83,7 @@ angular.module('rydaly')
       }
     }
 
-    function resized3() {
+    var resizeD3 = function() {
       var width = $window.innerWidth,
         height = $window.innerHeight;
       vis.attr("width", width).attr("height", height);
@@ -94,7 +92,7 @@ angular.module('rydaly')
         .resume();
     }
 
-    function updated3() {
+    var updateD3 = function() {
       var nodes = flatten(root),
         links = d3.layout.tree().links(nodes);
 
@@ -196,24 +194,24 @@ angular.module('rydaly')
       node.exit().remove();
     }
 
-    function toggleAll(d) {
+    var toggleAll = function(d) {
       if (d.children) {
         for (var i = 0; i < d.children.length; i++) {
           toggleAll(d.children[i]);
         }
         toggle(d);
-        updated3();
+        updateD3();
       } else if (d._children) {
         for (var j = 0; j < d._children.length; j++) {
           toggleAll(d._children[j]);
         }
         toggle(d);
-        updated3();
+        updateD3();
       }
     }
 
     // Toggle children.
-    function toggle(d) {
+    var toggle = function(d) {
       var rootNode, isImg;
       if (d3.event) {
         // console.log('root clicked');
@@ -243,7 +241,7 @@ angular.module('rydaly')
       }
     }
 
-    function tick() {
+    var tick = function() {
       link.attr("x1", function(d) {
           return d.source.x;
         })
@@ -276,7 +274,7 @@ angular.module('rydaly')
     var padding = 25, // separation between circles
       radius = 20;
 
-    function collide(alpha) {
+    var collide = function(alpha) {
       var quadtree = d3.geom.quadtree(flatten(root));
       return function(d) {
         var rb = 2 * radius + padding,
@@ -302,22 +300,22 @@ angular.module('rydaly')
       };
     }
 
-    function color(d) {
+    var color = function(d) {
       // green, blue, red
       return d._children ? "#6b8f38" : d.children ? "#4a5b63" : "#CC675B";
     }
 
     // Toggle children on click.
-    function click(d) {
+    var click = function(d) {
       if (!d3.event.defaultPrevented) {
         // TODO :: hide explode btn here
         toggle(d);
-        updated3();
+        updateD3();
       }
     }
 
     // Returns a list of all nodes under the root.
-    function flatten(root) {
+    var flatten = function(root) {
       var nodes = [],
         i = 0;
 
@@ -337,11 +335,8 @@ angular.module('rydaly')
     return {
       replace: false,
       restrict: 'E',
-      link: rdSkillsPage,
-      controller: function($scope, $attrs, ToolkitEventService) {
-        $scope.$on('handleBroadcast', function() {
-          handleEventBroadcast(ToolkitEventService.message, ToolkitEventService.data);
-        });
-      }
+      link: toolkitChartLink,
+      controller: 'ToolkitChartController',
+      controllerAs: 'toolkitChartCtrl'
     };
   });

@@ -4,10 +4,8 @@
 angular.module('rydaly')
   .controller('ToolkitController', ToolkitController);
 
-// TODO :: rename all 'skills' to 'toolkit'
 function ToolkitController(ToolkitService, ToolkitEventService, $timeout) {
   var toolkitCtrl = this;
-      // toolkitCtrl.test = 'ToolkitController';
       toolkitCtrl.isCollapsed = true;
 
   ToolkitService.success(function(data) {
