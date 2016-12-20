@@ -3,7 +3,7 @@
 
 /**
  *
- *  sets image to be used for HTML5 video 'poster' attribute
+ *  Sets image to be used for HTML5 video 'poster' attribute
  *
  */
 

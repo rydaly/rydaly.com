@@ -1,6 +1,6 @@
-.skills-container {
+.toolkit-container {
   @include perspective(0px);
-  
+
   .page-notifications {
     text-align: center;
     padding-bottom: 1.2em;
@@ -69,7 +69,7 @@
     }
   }
   image {
-    width: 60px; 
+    width: 60px;
     height: 60px;
     @include transform(rotateY(180deg) translate(0px, 0px) scale(1));
     @include transform-style(preserve-3d);

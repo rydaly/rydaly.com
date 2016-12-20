@@ -12,13 +12,15 @@ function RdNavScroll($window, $document, $interval, $timeout, $rootScope) {
     var navEl,
       didScroll,
       lastScrollTop = 0,
-      navbarHeight = 60, // TODO :: get this based on div height
+      navbarHeight = 0,
       delta = 10;
 
-    $timeout(initScroll, 250);
+    // timeout hack
+    $timeout(initScroll, 500);
 
     function initScroll() {
       navEl = angular.element($document[0].getElementById('main-nav'));
+      navbarHeight = navEl[0].offsetHeight;
 
       angular.element($window).bind('scroll', function() {
         didScroll = true;

@@ -45,7 +45,7 @@ angular.module('rydaly')
           return d.target._children ? 100 : 50;
         });
 
-      vis = d3.select("section.skills-container").append("svg:svg");
+      vis = d3.select("section.toolkit-container").append("svg:svg");
       link = vis.selectAll("line.link");
       node = vis.selectAll("g.node");
       circs = vis.selectAll("circle");
@@ -58,7 +58,7 @@ angular.module('rydaly')
 
       $timeout(function() {
         collapseD3();
-        d3.select(".skills-container svg")
+        d3.select(".toolkit-container svg")
           .transition()
           .duration(500)
           .style("opacity", 1);
@@ -308,7 +308,6 @@ angular.module('rydaly')
     // Toggle children on click.
     var click = function(d) {
       if (!d3.event.defaultPrevented) {
-        // TODO :: hide explode btn here
         toggle(d);
         updateD3();
       }
