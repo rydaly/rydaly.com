@@ -12,7 +12,7 @@
   <div class="insta-item" ng-repeat="item in instaCtrl.items">
     <a href="{{ item.link }}" target="_blank">
       <div class="img-responsive" ng-if="item.isImage === true" ng-style="{'background-image': 'url({{ item.url }})'}"></div>
-      <video class="img-responsive" autoplay loop ng-if="item.isImage === false">
+      <video class="img-responsive" autoplay loop ng-if="item.isImage === false" muted>
         <source ng-src="{{ item.url | trusted }}" type="video/mp4" width="500px">
       </video>
     </a>

@@ -3,6 +3,8 @@
   @include border-hover-effect();
 
   &.lines-btn-codepen {
+    margin-bottom: 1em;
+
     &:before {
       content: '\f1cb';
       font-weight: 100;
