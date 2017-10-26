@@ -1,6 +1,125 @@
 {
   "items": [
     {
+      "title": "Fancy Tiger Crafts",
+      "description": "Fancy Tiger is a shop in Denver specializing in craft supplies and classes for the modern crafter. Since 2006 they've gone from a tiny storefront in south Denver to a large store in the heart of the city with a full-blown e-commerce presence. As their business continues to grow, so must their web store. I teamed up with a designer to revamp the design and improve all aspects of user experience. The site is built on Shopify so the majority of my work here utilizes Javascript, Liquid and SASS to craft solutions within some pretty tight boundaries. Moving forward, my thought is that Fancy Tiger is outgrowing Shopify and a platform change is necessary, but we do our best with what we inherit.",
+      "link": "https://fancytigercrafts.com/",
+      "linkText": "Launch",
+      "linkToSrc": "",
+      "imgLogo": "assets/images/work/img/logos/fancy.png",
+      "imgLow": "assets/images/work/img/fancy.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/fancytiger/fancytiger_01.jpg",
+        "assets/images/projects/fancytiger/fancytiger_02.jpg",
+        "assets/images/projects/fancytiger/fancytiger_03.jpg",
+        "assets/images/projects/fancytiger/fancytiger_04.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/fancytiger/fancytiger_01_lrg.jpg",
+        "assets/images/projects/fancytiger/fancytiger_02_lrg.jpg",
+        "assets/images/projects/fancytiger/fancytiger_03_lrg.jpg",
+        "assets/images/projects/fancytiger/fancytiger_04_lrg.jpg"
+      ],
+      "role": [
+        "Development",
+        "JavaScript",
+        "jQuery",
+        "SASS",
+        "Shopify",
+        "Liquid"
+      ]
+    },
+    {
+      "title": "One Floor Up",
+      "description": "One Floor Up is a video and motion graphics production company in Denver who sorely needed an updated web presence. I teamed up with <a href=\"http://wondergiant.com/\">Wonder Giant</a> to build them a fresh experience. Their shiny new site is built on Wordpress so this project was a nice mix of Javascript, PHP and SASS. The biggest challenge here was creating the UX for the unconventional layouts and navigation. Nothing a little flex-box and javascript can't solve!",
+      "link": "http://onefloorupdenver.com/",
+      "linkText": "Launch",
+      "linkToSrc": "",
+      "imgLogo": "assets/images/work/img/logos/ofu.png",
+      "imgLow": "assets/images/work/img/ofu.jpg",
+
+      "imgsLow": [
+        "assets/images/projects/ofu/ofu_01.jpg",
+        "assets/images/projects/ofu/ofu_02.jpg",
+        "assets/images/projects/ofu/ofu_03.jpg",
+        "assets/images/projects/ofu/ofu_04.jpg",
+        "assets/images/projects/ofu/ofu_05.jpg"
+      ],
+      "imgsHi": [
+        "assets/images/projects/ofu/ofu_01_lrg.jpg",
+        "assets/images/projects/ofu/ofu_02_lrg.jpg",
+        "assets/images/projects/ofu/ofu_03_lrg.jpg",
+        "assets/images/projects/ofu/ofu_04_lrg.jpg",
+        "assets/images/projects/ofu/ofu_05_lrg.jpg"
+      ],
+      "role": [
+        "Development",
+        "JavaScript",
+        "PHP",
+        "WordPress",
+        "SASS"
+      ]
+    },
+    {
+      "title": "Arbonne",
+      "description": "I worked with Arbonne for the better part of 2016 helping them develop modern ways to communicate with customers and sell their products.",
+      "link": "",
+      "linkText": "",
+      "linkToSrc": "",
+      "imgLogo": "assets/images/work/img/logos/arbonne.png",
+      "imgLow": "assets/images/work/img/arbonne.jpg",
+      "role": [
+        "Development",
+        "JavaScript",
+        "React",
+        "Node",
+        "SASS"
+      ],
+      "subItems": {
+        "sub1": {
+          "title": "Arbonne Screen",
+          "description": "This touchscreen app leverages Arbonne's API to showcase the company and its vast array of products in a fun, interactive way. This particular iteration was deployed on a large screen in a Taiwanese airport.",
+          "imgsLow": [
+            "assets/images/projects/arbonne/arb_screen_01.jpg",
+            "assets/images/projects/arbonne/arb_screen_02.jpg",
+            "assets/images/projects/arbonne/arb_screen_03.jpg",
+            "assets/images/projects/arbonne/arb_screen_04.jpg"
+          ],
+          "imgsHi": [
+            "assets/images/projects/arbonne/arb_screen_01_lrg.jpg",
+            "assets/images/projects/arbonne/arb_screen_02_lrg.jpg",
+            "assets/images/projects/arbonne/arb_screen_03_lrg.jpg",
+            "assets/images/projects/arbonne/arb_screen_04_lrg.jpg"
+          ]
+        },
+        "sub2": {
+          "title": "React Shopping Cart",
+          "description": "A fully functional shopping cart proof-of-concept built using React, Redux and Arbonne's own API.",
+          "imgsLow": [
+            "assets/images/projects/arbonne/arb_cart_01.jpg",
+            "assets/images/projects/arbonne/arb_cart_02.jpg",
+            "assets/images/projects/arbonne/arb_cart_03.jpg"
+          ],
+          "imgsHi": [
+            "assets/images/projects/arbonne/arb_cart_01_lrg.jpg",
+            "assets/images/projects/arbonne/arb_cart_02_lrg.jpg",
+            "assets/images/projects/arbonne/arb_cart_03_lrg.jpg"
+          ]
+        },
+        "sub3": {
+          "title": "Arbot",
+          "description": "'Arbot' is a Facebook Messenger bot built on Node and Express using the Messenger Platform Send API and wit.ai. Once a link is established between a users Arbonne account and their Facebook account, the bot can suggest recommended items, fetch order info and even process orders without leaving Messenger.",
+          "imgsLow": [
+            "assets/images/projects/arbonne/arb_bot_01.jpg"
+          ],
+          "imgsHi": [
+            "assets/images/projects/arbonne/arb_bot_01_lrg.jpg"
+          ]
+        }
+      }
+    },
+    {
       "title": "Comments Are the Best",
       "description": "I always find it entertaining reading through comments around the web, especially when the subject matter gets a little controversial. This novelty app is essentially a robot that vocalizes the musings and opinions of YouTube users, removing any emotion in the messages with its monotonous voices. It utilizes YouTube Player, YouTube Data and Speech Synthesis APIs to fetch and read back comments from videos. Videos or playlists can be retrieved by keyword search, channel search, manual id entry or video category. The original idea for this project was ultra simple but, ya know, things escalated quickly and I'm still trying to figure out if it's funny or just plain annoying =)",
       "link": "assets/demos/catb/index.html",
@@ -64,7 +183,7 @@
     },
     {
       "title": "Insight",
-      "description": "AIMS (Advanced Intelligence Managment System) is a risk-analysis tool that allows companies to visualize threats to their assets in real time. Using data gathered about incidents all over the world - everything from armed robberies to earthquakes - users can easily visualize which of these events might cause problems. They are then able to make logisitcal adjustments in order to maximize efficiency of assets. AIMS is built on ExtJS, is fully customizable with an administrative tool and currently has 3 different themes.",
+      "description": "AIMS (Advanced Intelligence Management System) is a risk-analysis tool that allows companies to visualize threats to their assets in real time. Using data gathered about incidents all over the world - everything from armed robberies to earthquakes - users can easily visualize which of these events might cause problems. They are then able to make logistical adjustments in order to maximize efficiency of assets. AIMS is built on ExtJS, is fully customizable with an administrative tool and currently has 3 different themes.",
       "link": "",
       "linkText": "",
       "imgLogo": "assets/images/work/img/logos/insight.png",
@@ -307,7 +426,7 @@
 
     {
       "title": "Blackberry",
-      "description": "Blackberry was my first long-term project as a professinal. Looking back, it's clear now that the work I did here fortified my passion for interactive media.",
+      "description": "Blackberry was my first long-term project as a professional. Looking back, it's clear now that the work I did here fortified my passion for interactive media.",
       "imgLogo": "assets/images/work/img/logos/bb.png",
       "imgLow": "assets/images/work/img/bb.jpg",
       "ytid": "7OCOnKL6Rcw",
@@ -347,7 +466,7 @@
         },
         "sub3": {
           "title": "Heart & Head Rich Media",
-          "description": "An expample of the typical drama and elegance we were striving for.",
+          "description": "An example of the typical drama and elegance we were striving for.",
           "imgsLow": [
             "assets/images/projects/bb/bb_bold_02.jpg",
             "assets/images/projects/bb/bb_heart_head.jpg"
