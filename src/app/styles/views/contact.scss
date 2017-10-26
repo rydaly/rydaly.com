@@ -55,9 +55,9 @@
       }
 
       i {
-        margin-right: 15px;
-        margin-left: -10px;
-        @include transition(all 0.3s 0s $ease-out-sine, color 0.3s 0s $ease-out-quart);
+        margin-right: 10px;
+        margin-left: -5px;
+        @include transition(transform 0.3s $ease-out-sine, color 0.3s $ease-out-quart);
       }
 
       &:hover {

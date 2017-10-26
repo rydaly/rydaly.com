@@ -21,7 +21,6 @@
       display: block;
       border-top-left-radius: 0;
       border-bottom-right-radius: 0;
-      @include transition(all, 0.2s ease-in-out);
     }
   }
 
@@ -30,7 +29,7 @@
     width: 100%;
     padding-top: 3.5em;
     z-index: 1;
-    
+
     img.glco {
       width: 250px;
       height: auto;
@@ -38,7 +37,7 @@
     }
 
     div {
-      
+
       p {
         @include small-caps($base-background-color);
         font-family: $sans-serif-2;

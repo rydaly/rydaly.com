@@ -1,11 +1,11 @@
 /* Work Items Hover Effect */
 @mixin work-hover-effect () {
-   @include transition(all 0.3s $ease-in-out-quart);
+   @include transition(opacity 0.3s $ease-in-out-quart, background-color 0.3s $ease-in-out-quart);
    -webkit-backface-visibility: hidden;
    -webkit-transform: translateZ(0);
 
   .lines {
-    @include transition(all 0.5s $ease-in-out-quart);
+    @include transition(opacity 0.1s  0.25s $ease-in-out-quart, width 0.35s $ease-in-out-quart, height 0.35s $ease-in-out-quart);
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
   }
@@ -26,6 +26,10 @@
   }
 
   &:hover {
+    .lines {
+      @include transition(opacity 0.1s $ease-in-out-quart, width 0.35s $ease-in-out-quart, height 0.35s $ease-in-out-quart);
+    }
+
     &:after {
       content: '';
       opacity: 1;
@@ -45,17 +49,17 @@
   outline: none;
   cursor: pointer;
   color: $color;
-  background: white;
+  background-color: white;
   border: none;
-  @include transition(all 0.3s $ease-in-quart);
+  @include transition(color 0.3s $ease-in-quart, background-color 0.3s $ease-in-quart);
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
 
   .lines {
     position: absolute;
-    background: $color-hover;
+    background-color: $color-hover;
     box-sizing: content-box;
-    @include transition(all 0.3s $ease-in-out-quart);
+    @include transition(width 0.3s $ease-in-out-quart, height 0.3s $ease-in-out-quart);
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
 
@@ -96,7 +100,7 @@
       display: inline-block;
       margin-right: 10px;
       margin-left: -5px;
-      @include transition(all 0.3s $ease-in-out-quart);
+      @include transition(color 0.3s $ease-in-out-quart, transform 0.3s $ease-in-out-quart);
       -webkit-backface-visibility: hidden;
       -webkit-transform: translateZ(0);
     }
@@ -146,10 +150,9 @@
   outline: none;
   width: 40px;
   height: 40px;
-  background: $light-gray;
+  background-color: $light-gray;
   cursor: pointer;
   z-index: 999999;
-  @include transition(all, 0.25s ease-in-out);
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
 
@@ -158,59 +161,59 @@
     @include position(absolute, 0 0 0 50%);
     @include transform(rotate(45deg));
     @include size(0.15em 2em);
-    background: $rd-gold;
+    background-color: $rd-gold;
     content: '';
     display: block;
     margin: 0 0 0 -1px;
-    @include transition(all, 0.25s ease-in-out);
+    @include transition(background-color 0.25s ease-in-out, transform 0.25s ease-in-out);
     -webkit-backface-visibility: hidden;
   }
 
   &:hover:after,
   &:hover:before {
-    background: $rd-red;
-    @include transition(all, 0.25s ease-in-out);
+    background-color: $rd-red;
   }
 
   &:hover:after {
     @include transform(rotate(135deg));
-    @include transition(all, 0.25s ease-in-out);
   }
 
   &:hover:before {
     @include transform(rotate(-135deg));
-    @include transition(all, 0.25s ease-in-out);
   }
 
   &:before {
     @include transform(rotate(-45deg));
-    @include transition(all, 0.25s ease-in-out);
-    -webkit-backface-visibility: hidden;
   }
   @include media($medium-screen) {
-    background: transparent;
+    background-color: transparent;
   }
 }
 /* Inset Border Lines Hover Effect */
 @mixin inset-border-hover-effect ( $color-hover: $rd-medium-blue, $color-outer-hover: $rd-medium-blue, $border-size: 1px) {
   border: none;
-  @include transition(all 0.3s $ease-in-quart);
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
 
   .lines {
     position: absolute;
-    background: $color-hover;
+    background-color: $color-hover;
     box-sizing: content-box;
     z-index: 1;
-    @include transition(all 0.3s $ease-in-out-quart);
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
+
+    @include transition(
+      opacity 0.1s 0.25s $ease-in-out-quart,
+      background-color 0.1s 0.25s $ease-in-out-quart,
+      width 0.35s $ease-in-out-quart,
+      height 0.35s $ease-in-out-quart
+    );
     // inner
     &.top {
       top: $border-size;
       left: $border-size;
-      height: $border-size * 4;
+      height: $border-size * 1;
       width: 0;
       opacity: 0;
     }
@@ -218,7 +221,7 @@
     &.bottom {
       bottom: $border-size;
       right: $border-size;
-      height: $border-size * 4;
+      height: $border-size * 1;
       width: 0;
       opacity: 0;
     }
@@ -227,7 +230,7 @@
       bottom: $border-size;
       left: $border-size;
       height: 0;
-      width: $border-size * 4;
+      width: $border-size * 1;
       opacity: 0;
     }
 
@@ -235,7 +238,7 @@
       top: $border-size;
       right: $border-size;
       height: 0;
-      width: $border-size * 4;
+      width: $border-size * 1;
       opacity: 0;
     }
     // outer
@@ -274,28 +277,40 @@
 
   &:hover {
     color: $color-hover;
-    @include transition(all 0.3s $ease-in-out-quart);
+
+    .lines {
+      @include transition(
+        opacity 0.1s $ease-in-out-quart,
+        width 0.35s $ease-in-out-quart,
+        height 0.35s $ease-in-out-quart,
+        background-color 0.35s $ease-in-out-quart,
+        top 0.35s $ease-in-out-quart,
+        right 0.35s $ease-in-out-quart,
+        bottom 0.35s $ease-in-out-quart,
+        left 0.35s $ease-in-out-quart
+      );
+    }
     // inner
     .top {
-      width: calc(100% - #{$border-size} * 4);
+      width: calc(100% - #{$border-size} * 1);
       padding-right: $border-size;
       opacity: 1;
     }
 
     .bottom {
-      width: calc(100% - #{$border-size} * 4);
+      width: calc(100% - #{$border-size} * 1);
       padding-right: $border-size;
       opacity: 1;
     }
 
     .left {
-      height: calc(100% - #{$border-size} * 4);
+      height: calc(100% - #{$border-size} * 1);
       padding-top: $border-size;
       opacity: 1;
     }
 
     .right {
-      height: calc(100% - #{$border-size} * 4);
+      height: calc(100% - #{$border-size} * 1);
       padding-top: $border-size;
       opacity: 1;
     }

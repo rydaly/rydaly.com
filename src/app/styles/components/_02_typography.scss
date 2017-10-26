@@ -54,7 +54,7 @@ body {
     margin: $base-spacing 0;
   }
 
-  p {
+  p, .resume li {
     font-family: $body-font;
     color: $base-font-color;
     font-size: 1.1em;

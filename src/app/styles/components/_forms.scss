@@ -4,7 +4,7 @@ $base-form-border: 1px solid $light-gray;
 $base-form-border-color: $base-background-color;
 $base-form-border-radius: 0;
 $base-form-bg-color: lighten($base-background-color, 3%);
-$base-form-bg-color-focus: lighten($rd-gold, 20%);
+$base-form-bg-color-focus: lighten($rd-green, 45%);
 $base-duration: 0.3s;
 $base-timing: $ease-in-out-sine;
 
@@ -25,7 +25,6 @@ label {
   @include small-caps($rd-medium-blue);
   display: block;
   font-size: 0.8em;
-  // text-transform: uppercase;
   text-align: left;
   margin-bottom: $small-spacing / 2;
 }
@@ -43,24 +42,17 @@ select[multiple] {
   background-color: $base-form-bg-color;
   border: none;
   border-top: 1px solid $light-gray;
-  // box-shadow: 0 0 10px transparentize($rd-medium-blue, 0.95);
   color: $rd-medium-blue;
   font-family: $body-font;
   font-size: $base-form-font-size;
   margin-bottom: $small-spacing;
   padding: $base-spacing / 3;
-  @include transition(all $base-duration $base-timing);
   width: 100%;
-
-  &:hover {
-    // border-color: shade($base-form-border-color, 20%);
-  }
+  @include transition(background-color $base-duration $base-timing, border-color $base-duration $base-timing);
 
   &:focus {
     background-color: $base-form-bg-color-focus;
-    border-top: 1px solid $rd-gold;
-    // border-color: $action-color;
-    // box-shadow: $form-box-shadow-focus;
+    border-top: 1px solid $rd-green;
     outline: none;
   }
 

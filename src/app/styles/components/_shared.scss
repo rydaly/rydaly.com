@@ -2,6 +2,12 @@
 .lines-btn {
   @include border-hover-effect();
 
+  &.lines-btn--download {
+    &:before {
+      content: '\f0ed';
+    }
+  }
+
   &.lines-btn-codepen {
     margin-bottom: 1em;
 
