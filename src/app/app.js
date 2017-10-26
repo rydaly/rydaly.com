@@ -30,6 +30,10 @@
         templateUrl: 'app/components/toolkit/index.html',
         preload: true
       })
+      .when('/resume', {
+        templateUrl: 'app/components/resume/index.html',
+        preload: true
+      })
       .when('/work', {
         templateUrl: 'app/components/work/index.html',
         preload: true
