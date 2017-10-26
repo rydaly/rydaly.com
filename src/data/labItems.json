@@ -2,6 +2,24 @@
   "items": [
 
     {
+      "title": "D3 Tree",
+      "description": "An interactive node tree built with D3.js",
+      "link": "assets/demos/d3_tree/index.html",
+      "linkText": "Launch",
+      "imgHi": "assets/images/lab/img/d3tree_lrg.jpg",
+      "imgLow": "assets/images/lab/img/d3tree.jpg",
+      "tag": [
+        "JavaScript",
+        "CSS",
+        "D3"
+      ],
+      "role": [
+        "Design",
+        "Development"
+      ]
+    },
+
+    {
       "title": "Pure CSS Spinners",
       "description": "Ongoing experiments in rotation",
       "imgHi": "assets/images/lab/img/spinners_lrg.jpg",

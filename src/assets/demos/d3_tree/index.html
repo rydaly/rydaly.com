@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>D3 Tree</title>
+    <meta name="description" content="Node Tree created with D3.js">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="container">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- <div class="content">
+      <div class="primary">
+        <section class="container toolkit-container">
+        </section>
+      </div>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.9/d3.min.js"></script>
+    <script type="text/javascript">
+
+      function init() {
+        // get scripts
+        var element = document.createElement("script");
+        element.src = "main.js";
+        document.body.appendChild(element);
+      }
+
+      if (window.addEventListener) window.addEventListener("load", init, false);
+      else if (window.attachEvent) window.attachEvent("onload", init);
+      else window.onload = init;
+
+    </script>
+
+  </body>
+
+</html>

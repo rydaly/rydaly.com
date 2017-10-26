@@ -2,11 +2,16 @@
   "name": "",
   "size": 0,
   "class": "root",
-  "img": "assets/svg/skillsRoot.svg",
+  "img": "../../svg/skillsRoot.svg",
   "children": [{
       "name": "Design",
       "size": 1500,
-      "children": [{
+      "children": [
+        {
+          "name": "Sketch",
+          "size": 1500
+        },
+        {
           "name": "Adobe CS",
           "size": 1500,
           "children": [{
