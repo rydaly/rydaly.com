@@ -9,10 +9,6 @@ angular.module('rydaly')
     function rdSocialLink($scope) {
 
       $scope.socialItems = [
-        {'name': 'Resumé',
-         'link': 'assets/pdf/RyanDaly_Resume.pdf',
-         'icon': 'fa fa-file-text'
-        },
         {'name': 'Instagram',
          'link': 'http://instagram.com/ry.daly',
          'icon': 'fa fa-instagram'

@@ -46,6 +46,9 @@
     margin-bottom: 1rem;
     text-align: left;
     padding: 0 1rem;
+    font-size: 2.3rem;
+    font-weight: 600;
+
     @include media($medium-screen) {
       text-align: left;
       margin-bottom: 2rem;

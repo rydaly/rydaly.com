@@ -58,7 +58,7 @@
 
   <!-- Animated sequence -->
   <div ng-if="modalsData.pngSeq">
-    <h4 class="anim-png-title">{{ img.title }}</h4>
+    <h4 class="anim-png-title" ng-if="img.title">{{ img.title }}</h4>
     <canvas ng-if="!smallScreen" rd-png-seq="{{ img.seqSrc }}" timeline-delay="125" class="anim-png" width="{{ img.dimensions.width }}" height="{{ img.dimensions.height }}"></canvas>
     <img class="anim-png-fallback" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img.backup }}">
     <p class="anim-png-caption">{{ img.caption }}</p>
