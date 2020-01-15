@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,800&display=swap');
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $brand-font-family;
+}
+
+// light - 300
+// regular - 400
+// medium - 500
+// bold - 700
+
+.text-uppercase {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.text-title {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: $brand-white;
+}
+
+.lead {
+  font-size: 120%;
+}
+
+.impact {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+a {
+  color: $brand-gray-dark;
+  text-decoration: none;
+  transition: 0.2s color ease;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten($brand-gray-dark, 10%);
+  }
+}
+
+.content--header {
+  h5 {
+    font-size: 1rem;
+  }
+  h2.text-title {
+    font-size: 1.975rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+}

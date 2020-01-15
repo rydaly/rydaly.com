@@ -1,0 +1,55 @@
+@import './mixins';
+@import './variables';
+
+@import './base';
+@import './buttons';
+@import './footer';
+@import './forms';
+@import './graphics';
+@import './header';
+@import './layout';
+@import './loading';
+@import './logo-grid';
+@import './project-detail';
+@import './projects';
+@import './resume';
+@import './typography';
+
+// ROUTER TRANSITIONS
+.fade-enter-active,
+.fade-leave-active {
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+
+.fade-enter-active {
+  transition-delay: 0.2s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.hidden-mobile {
+  @include mobile {
+    display: none;
+  }
+  @include mobile-large {
+    display: none;
+  }
+}
+
+.hidden-dt {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+// Backgrounds
+.bg-gray {
+  background-color: $brand-gray-light;
+}

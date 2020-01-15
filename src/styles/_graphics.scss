@@ -1,0 +1,58 @@
+.icon-link {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.2s background-color ease;
+
+  &.right {
+    position: absolute;
+    right: 0.5rem;
+    top: 7rem;
+    background-color: rgba($brand-gray-dark, 0.5);
+
+    @include desktop {
+      top: 0;
+      right: 1rem;
+
+      &:hover {
+        background-color: rgba($brand-gray-dark, 1);
+      }
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  margin-top: 9px;
+
+  &.icon--linkedin {
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/linkedin.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.portrait {
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: 110%;
+  border-radius: 50%;
+  margin: 1.75rem 0 2rem;
+
+  @include desktop {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: -175px;
+    top: 75px;
+    width: 150px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+#root,
+body,
+html {
+  margin: 0;
+  font-family: $brand-font-family;
+  color: $brand-gray-dark;
+}
+
+p a {
+  color: rgba($brand-highlight, 0.8);
+
+  &:hover {
+    color: rgba($brand-highlight, 1);
+  }
+}
+
+br {
+  content: '';
+  margin-top: 1rem;
+  display: block;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 101vh;
+}
+
+.pad-section-default {
+  padding: 5rem 1rem 4rem !important;
+}
+
+.bio p {
+  margin-bottom: 2rem;
+}
+
+.hide {
+  opacity: 0;
+  transition: 350ms opacity ease;
+}
+
+.show {
+  opacity: 1;
+  transition: 350ms opacity ease;
+}

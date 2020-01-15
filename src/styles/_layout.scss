@@ -1,0 +1,77 @@
+#about,
+#contact,
+#home,
+#project-view,
+#resume,
+#work {
+  flex: 1 0 auto;
+  background-color: transparent;
+
+  .content {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .content__inner {
+    position: relative;
+
+    .row {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.content--hero {
+  margin-bottom: 4rem;
+
+  .content__inner {
+    margin: 0 0 2rem 0;
+  }
+}
+
+#home {
+  .content--hero {
+    padding: 2rem 1rem 3rem;
+  }
+  .content--header {
+    padding: 2rem 1rem;
+
+    br {
+      margin-top: 0;
+    }
+  }
+}
+
+.content--header {
+  margin: 2rem 0;
+
+  .text-title {
+    & + p {
+      max-width: 560px;
+    }
+  }
+}
+
+#contact,
+#resume,
+#work,
+#about {
+  .content__inner {
+    max-width: $wideContentWidth;
+    margin: 2rem 0;
+  }
+}
+
+#about,
+#resume,
+#contact {
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,76 @@
+// CONTACT FORM
+
+.contact-form {
+  margin-top: 2rem;
+
+  input[type='email'],
+  input[type='text'],
+  select,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ececec;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: transparent;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    outline: none;
+    transition: 0.2s background-color ease, 0.2s border ease;
+
+    &:focus {
+      background-color: rgba($brand-highlight, 0.01);
+      border-color: $brand-highlight;
+    }
+  }
+
+  textarea {
+    height: 200px;
+  }
+
+  label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+.display-msg {
+  // display: none;
+  opacity: 0;
+  border: 1px solid rgba(green, 0.5);
+  background-color: rgba(green, 0.05);
+  border-radius: 25px;
+  margin-top: 2rem;
+  padding: 10px;
+  transition: 350ms opacity ease;
+
+  &.error {
+    opacity: 1;
+    border: 1px solid rgba(red, 0.25);
+    background-color: rgba(red, 0.05);
+  }
+
+  p {
+    margin: 0;
+    text-align: center;
+  }
+
+  &.show {
+    // display: block;
+    opacity: 1;
+  }
+}
+
+textarea,
+input,
+input:matches([type='password'], [type='search']),
+input.text,
+input[type='text'],
+input[type='email'],
+input[type='button'],
+input[type='submit'],
+.input-checkbox {
+  -webkit-appearance: none !important;
+}
