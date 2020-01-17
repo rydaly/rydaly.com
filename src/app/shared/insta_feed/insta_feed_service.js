@@ -4,9 +4,9 @@
 
 angular.module('rydaly')
   .factory('InstagramAPI', function($http, $q, $cacheFactory) {
-    var instaCache = $cacheFactory('Insta'),
-      token = '180011549.6f35121.f94d95e2594e4d3bb2af153722b1b7e5',
-      clientId = '6f3512140d3a4d2097be830bf3acfd58';
+    var instaCache = $cacheFactory("Insta"),
+      token = "180011549.6f35121.5248952d88594802aae02056922808ae",
+      clientId = "6f3512140d3a4d2097be830bf3acfd58";
 
     return {
       numImages: 16,
