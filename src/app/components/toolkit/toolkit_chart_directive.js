@@ -1,5 +1,5 @@
 'use strict';
-/* global angular, d3 */
+/* global d3 */
 
 angular.module('rydaly')
   .directive('rdToolkitChart', function(ToolkitEventService, $window, $timeout) {

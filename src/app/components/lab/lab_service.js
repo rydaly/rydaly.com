@@ -1,7 +1,5 @@
 'use strict';
 
-/* global angular */
-
 angular.module('rydaly')
   .factory('LabItemsService', function($http) {
     var url = 'data/labItems.json';

@@ -1,7 +1,5 @@
 'use strict';
 
-/* global angular */
-
 angular.module('rydaly')
   .factory('ToolkitEventService', function($rootScope) {
     var toolkitEventService = {};

@@ -15,6 +15,7 @@
     "angular/controller-as-vm": [0],
     "angular/controller-as": 0,
     "no-console": 0,
-    "angular/log": 0
+    "angular/log": 0,
+    "no-unused-vars": [2, { "args": "none" }]
   }
 }

@@ -1,5 +1,4 @@
 'use strict';
-/* global angular */
 
 angular.module('rydaly')
   .controller('LabController', LabController);
@@ -28,15 +27,15 @@ function LabController(LabItemsService, $window, $sce) {
   }(); // run immediately
 
   labCtrl.isVideo = function(item) {
-    return item.hasOwnProperty('video');
+    return angular.isDefined(item.video);
   };
 
   labCtrl.isGallery = function(item) {
-    return item.hasOwnProperty('gallery');
+    return angular.isDefined(item.gallery);
   };
 
   labCtrl.isEmbed = function(item) {
-    return item.hasOwnProperty('embed');
+    return angular.isDefined(item.embed);
   };
 
   labCtrl.getEmbed = function(item) {
@@ -44,7 +43,7 @@ function LabController(LabItemsService, $window, $sce) {
   };
 
   labCtrl.hasLink = function(item) {
-    return item.hasOwnProperty('link');
+    return angular.isDefined(item.link);
   };
 
   labCtrl.getPoster = function(item) {
