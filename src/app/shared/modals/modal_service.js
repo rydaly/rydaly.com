@@ -1,7 +1,5 @@
 'use strict';
 
-/* global angular */
-
 angular.module('rydaly')
   .service('modals', ModalsService);
 

@@ -1,7 +1,5 @@
 'use strict';
 
-/* global angular */
-
 angular.module('rydaly')
   .factory('InstagramAPI', function($http, $q, $cacheFactory) {
     var instaCache = $cacheFactory("Insta"),

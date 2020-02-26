@@ -1,18 +1,22 @@
-'use strict';
+"use strict";
 /* global d3 */
 
-angular.module('rydaly')
-  .directive('rdToolkitChart', function(ToolkitEventService, $window, $timeout) {
-
+angular
+  .module("rydaly")
+  .directive("rdToolkitChart", function(
+    ToolkitEventService,
+    $window,
+    $timeout
+  ) {
     function toolkitChartLink(scope) {
       scope.handleEventBroadcast = function(msg, data) {
         switch (msg) {
-          case 'initd3':
+          case "initd3":
             initD3(data);
             explodeD3();
             break;
 
-          case 'explode':
+          case "explode":
             explodeD3();
             break;
         }
@@ -22,8 +26,8 @@ angular.module('rydaly')
     var link,
       node,
       nodeEnter,
-      circs,
-      labels,
+      circs, // eslint-disable-line
+      labels, // eslint-disable-line
       root,
       rootSvg,
       force,
@@ -33,7 +37,8 @@ angular.module('rydaly')
     // explodeBtn = document.getElementById('explode');
 
     var initD3 = function(data) {
-      force = d3.layout.force()
+      force = d3.layout
+        .force()
         .on("tick", tick)
         .gravity(0.175)
         .chargeDistance(600)
@@ -63,7 +68,7 @@ angular.module('rydaly')
           .duration(500)
           .style("opacity", 1);
       }, 500);
-    }
+    };
 
     var explodeD3 = function() {
       if (root.children) {
@@ -72,7 +77,7 @@ angular.module('rydaly')
           toggleAll(root.children[i]);
         }
       }
-    }
+    };
 
     var collapseD3 = function() {
       if (root.children) {
@@ -81,16 +86,17 @@ angular.module('rydaly')
           toggleAll(root.children[i]);
         }
       }
-    }
+    };
 
     var resizeD3 = function() {
       var width = $window.innerWidth,
         height = $window.innerHeight;
       vis.attr("width", width).attr("height", height);
-      force.size([width, height])
+      force
+        .size([width, height])
         .chargeDistance(width / 2)
         .resume();
-    }
+    };
 
     var updateD3 = function() {
       var nodes = flatten(root),
@@ -111,7 +117,9 @@ angular.module('rydaly')
       link.exit().remove();
 
       // Enter any new links.
-      link.enter().insert("svg:line", "g.node")
+      link
+        .enter()
+        .insert("svg:line", "g.node")
         .attr("class", "link")
         .attr("x1", function(d) {
           return d.source.x;
@@ -131,7 +139,9 @@ angular.module('rydaly')
         return d.id;
       });
 
-      nodeEnter = node.enter().append("svg:g")
+      nodeEnter = node
+        .enter()
+        .append("svg:g")
         .attr("class", "node")
         .attr("transform", function(d) {
           return "translate(" + d.x + "," + d.y + ")";
@@ -139,7 +149,8 @@ angular.module('rydaly')
         .style("cursor", "pointer")
         .call(force.drag);
 
-      nodeEnter.append("svg:circle")
+      nodeEnter
+        .append("svg:circle")
         // .attr("r", function(d) { return d.children ? 5 : Math.sqrt(d.size) / 10; })
         .attr("class", function(d) {
           return d.class ? d.class : "";
@@ -148,14 +159,18 @@ angular.module('rydaly')
       // .attr("cx", function(d) { return d.x; })
       // .attr("cy", function(d) { return d.y; });
 
-      circs = vis.selectAll("circle")
+      circs = vis
+        .selectAll("circle")
         .style("fill", color)
         .transition()
         .attr("r", function(d) {
-          return d.children ? baseRadius + d.children.length : Math.sqrt(d.size) / baseRadius;
+          return d.children
+            ? baseRadius + d.children.length
+            : Math.sqrt(d.size) / baseRadius;
         });
 
-      rootSvg = nodeEnter.append("svg:image")
+      rootSvg = nodeEnter
+        .append("svg:image")
         .attr("xlink:href", function(d) {
           return d.img ? d.img : null;
         })
@@ -171,11 +186,14 @@ angular.module('rydaly')
         .attr("height", 60);
 
       // remove empty image tags since only the root should have it
-      rootSvg.filter(function(d) {
-        return d.img === null;
-      }).remove();
+      rootSvg
+        .filter(function(d) {
+          return d.img === null;
+        })
+        .remove();
 
-      nodeEnter.append("svg:text")
+      nodeEnter
+        .append("svg:text")
         .attr("class", "node-label")
         .attr("text-anchor", "middle")
         // .attr("dx", 0)
@@ -183,7 +201,8 @@ angular.module('rydaly')
           return d.name;
         });
 
-      labels = vis.selectAll(".node-label")
+      labels = vis
+        .selectAll(".node-label")
         .transition()
         .attr("dy", function(d) {
           var rad = Math.sqrt(d.size) / baseRadius;
@@ -192,7 +211,7 @@ angular.module('rydaly')
 
       // Exit any old nodes.
       node.exit().remove();
-    }
+    };
 
     var toggleAll = function(d) {
       if (d.children) {
@@ -208,7 +227,7 @@ angular.module('rydaly')
         toggle(d);
         updateD3();
       }
-    }
+    };
 
     // Toggle children.
     var toggle = function(d) {
@@ -223,8 +242,7 @@ angular.module('rydaly')
       }
 
       // set all circles not clicked | resets color
-      d3.selectAll("circle")
-        .classed("clicked", false);
+      d3.selectAll("circle").classed("clicked", false);
 
       if (d.children) {
         d._children = d.children;
@@ -239,10 +257,11 @@ angular.module('rydaly')
         d._children = null;
         if (rootNode && isImg) rootNode.classed("solo", false);
       }
-    }
+    };
 
     var tick = function() {
-      link.attr("x1", function(d) {
+      link
+        .attr("x1", function(d) {
           return d.source.x;
         })
         .attr("y1", function(d) {
@@ -255,10 +274,9 @@ angular.module('rydaly')
           return d.target.y;
         });
 
-      vis.selectAll("g.node")
-        .attr("transform", function(d) {
-          return "translate(" + d.x + "," + d.y + ")";
-        });
+      vis.selectAll("g.node").attr("transform", function(d) {
+        return "translate(" + d.x + "," + d.y + ")";
+      });
       // vis.selectAll("circle")
       //     .attr("cx", function (d) { return d.x; })
       //     .attr("cy", function (d) { return d.y; });
@@ -269,7 +287,7 @@ angular.module('rydaly')
 
       vis.selectAll("g.node").each(collide(0.5));
       // vis.selectAll(".node-label").each(collide(0.5));
-    }
+    };
 
     var padding = 25, // separation between circles
       radius = 20;
@@ -283,12 +301,12 @@ angular.module('rydaly')
           ny1 = d.y - rb,
           ny2 = d.y + rb;
         quadtree.visit(function(quad, x1, y1, x2, y2) {
-          if (quad.point && (quad.point !== d)) {
+          if (quad.point && quad.point !== d) {
             var x = d.x - quad.point.x,
               y = d.y - quad.point.y,
               l = Math.sqrt(x * x + y * y);
             if (l < rb) {
-              l = (l - rb) / l * alpha;
+              l = ((l - rb) / l) * alpha;
               d.x -= x *= l;
               d.y -= y *= l;
               quad.point.x += x;
@@ -298,12 +316,12 @@ angular.module('rydaly')
           return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
         });
       };
-    }
+    };
 
     var color = function(d) {
       // green, blue, red
       return d._children ? "#6b8f38" : d.children ? "#4a5b63" : "#CC675B";
-    }
+    };
 
     // Toggle children on click.
     var click = function(d) {
@@ -311,7 +329,7 @@ angular.module('rydaly')
         toggle(d);
         updateD3();
       }
-    }
+    };
 
     // Returns a list of all nodes under the root.
     var flatten = function(root) {
@@ -319,9 +337,10 @@ angular.module('rydaly')
         i = 0;
 
       function recurse(node) {
-        if (node.children) node.size = node.children.reduce(function(p, v) {
-          return p + recurse(v);
-        }, 0);
+        if (node.children)
+          node.size = node.children.reduce(function(p, v) {
+            return p + recurse(v);
+          }, 0);
         if (!node.id) node.id = ++i;
         nodes.push(node);
         return node.size;
@@ -329,13 +348,13 @@ angular.module('rydaly')
 
       root.size = recurse(root);
       return nodes;
-    }
+    };
 
     return {
       replace: false,
-      restrict: 'E',
+      restrict: "E",
       link: toolkitChartLink,
-      controller: 'ToolkitChartController',
-      controllerAs: 'toolkitChartCtrl'
+      controller: "ToolkitChartController",
+      controllerAs: "toolkitChartCtrl"
     };
   });

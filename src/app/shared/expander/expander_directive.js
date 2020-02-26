@@ -1,5 +1,5 @@
 'use strict';
-/* global angular, TweenMax, Quint */
+/* global TweenMax, Quint */
 
 angular.module('rdExpander', [])
   .directive('rdExpandPreview', RdExpandPreview);

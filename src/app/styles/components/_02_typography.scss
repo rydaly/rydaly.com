@@ -52,6 +52,11 @@ body {
     border-right: none;
     border-top: none;
     margin: $base-spacing 0;
+
+    &.hr-100 {
+      width: 100%;
+      margin-bottom: $base-spacing * 4;
+    }
   }
 
   p, .resume li {

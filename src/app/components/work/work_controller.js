@@ -1,7 +1,5 @@
 'use strict';
 
-/* global angular */
-
 angular.module('rydaly')
   .controller('WorkController', WorkController);
 
@@ -24,32 +22,35 @@ function WorkController(WorkItemsService, modals, $sce) {
   });
 
   workCtrl.hasVideo = function(item) {
-    return item.hasOwnProperty('ytid');
+    // console.log(item);
+    return angular.isDefined(item.ytid);
   };
 
   // I open a modal.
   workCtrl.showModal = function(item) {
     // The .open() method returns a promise that will be either
     // resolved or rejected when the modal window is closed.
-    var promise = modals.open(
-      "overlay", {
-        title: item.title,
-        description: $sce.trustAsHtml(item.description),
-        blockquote: item.blockquote,
-        imgLogo: item.imgLogo,
-        subItems: item.subItems,
-        itemImagesHi: item.imgsHi,
-        itemImagesLow: item.imgsLow,
-        pngSeq: item.hasOwnProperty('imgsSeq'),
-        imgsSeq: item.imgsSeq,
-        hasVideo: item.hasOwnProperty('ytid'),
-        ytid: $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + item.ytid + ytQueryStr),
-        itemRoles: item.role,
-        itemCta: item.link,
-        itemCtaText: item.linkText,
-        itemSrcLink: item.linkToSrc
-      }
-    );
+    var promise = modals.open("overlay", {
+      title: item.title,
+      description: $sce.trustAsHtml(item.description),
+      blockquote: item.blockquote,
+      imgLogo: item.imgLogo,
+      subItems: item.subItems,
+      itemImagesHi: item.imgsHi,
+      itemImagesLow: item.imgsLow,
+      pngSeq: angular.isDefined(item.imgsSeq),
+      imgsSeq: item.imgsSeq,
+      hasVideo: angular.isDefined(item.ytid),
+      hasDevicePreview: item.hasDevicePreview,
+      ytid: $sce.trustAsResourceUrl(
+        "https://www.youtube.com/embed/" + item.ytid + ytQueryStr
+      ),
+      itemRoles: item.role,
+      itemCta: item.link,
+      itemCtaText: item.linkText,
+      itemSrcLink: item.linkToSrc,
+      multipleLinks: typeof item.link === 'object'
+    });
 
     promise.then(
       function handleResolve(response) {

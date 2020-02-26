@@ -1,5 +1,5 @@
 'use strict';
-/* global angular, TweenMax */
+/* global TweenMax */
 
 angular.module('rydaly')
   .directive('rdPngSeq', function($timeout) {
@@ -16,11 +16,11 @@ angular.module('rydaly')
         fallbackEl.remove();
 
         var i = 0;
-        var run_time = 0;
+        // var run_time = 0;
 
-        for (var j = 0; j < timeline.length - 1; ++j) {
-          run_time += timeline[j].delay;
-        }
+        // for (var j = 0; j < timeline.length - 1; ++j) {
+        //   run_time += timeline[j].delay;
+        // }
 
         var f = function() {
           var frame = i++ % timeline.length;
@@ -28,7 +28,7 @@ angular.module('rydaly')
           var blits = timeline[frame].blit;
           var ctx = domEl.getContext('2d');
 
-          for (j = 0; j < blits.length; ++j) {
+          for (var j = 0; j < blits.length; ++j) {
             var blit = blits[j];
             var sx = blit[0];
             var sy = blit[1];

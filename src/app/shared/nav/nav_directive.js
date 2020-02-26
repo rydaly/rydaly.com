@@ -1,5 +1,4 @@
 'use strict';
-/* global angular */
 
 var menuIsOpen = false;
 

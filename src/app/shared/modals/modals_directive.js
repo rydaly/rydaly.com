@@ -1,5 +1,5 @@
 'use strict';
-/* global angular, TweenMax */
+/* global TweenMax */
 
 angular.module('rydaly')
   .directive('rdOverlay', RdOverlay);

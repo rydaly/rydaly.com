@@ -1,5 +1,4 @@
 'use strict';
-/* global angular */
 
 angular.module( 'rydaly' )
   .controller( 'NavController', NavController );

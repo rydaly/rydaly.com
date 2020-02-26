@@ -34,6 +34,8 @@
     <div class="project-img-container" ng-repeat="img in getImages(subItem)">
       <div class="loading"></div>
       <img class="project-img" src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" rd-defer="{{ img }}">
+
+      <div ng-if="subItem.hasDevicePreview && $index === 0"><hr class="hr-100"></div>
     </div>
 
     <a class="launch-btn" ng-if="subItem.link" href="{{ subItem.link }}" target="_blank">
@@ -64,10 +66,25 @@
     <p class="anim-png-caption">{{ img.caption }}</p>
   </div>
 
+  <div ng-if="modalsData.hasDevicePreview && $index === 0"><hr class="hr-100"></div>
+
 </div>
 
-<!-- Show a launch btn if we have one -->
-<div class="launch-container" ng-if="modalsData.itemCta.length > 0">
+<!-- Handle multiple launch btns -->
+<div class="launch-container launch-container--multi" ng-if="modalsData.multipleLinks" ng-repeat="link in modalsData.itemCta">
+  <a class="launch-btn" href="{{ modalsData.itemCta[$index] }}" target="_blank">
+    <button class="lines-btn">
+      {{ modalsData.itemCtaText[$index] }}
+      <span class="lines top"></span>
+      <span class="lines bottom"></span>
+      <span class="lines left"></span>
+      <span class="lines right"></span>
+    </button>
+  </a>
+</div>
+
+<!-- Handle single launch btn -->
+<div class="launch-container" ng-if="!modalsData.multipleLinks && modalsData.itemCta.length > 0">
   <a class="launch-btn" href="{{ modalsData.itemCta }}" target="_blank">
     <button class="lines-btn">
       {{ modalsData.itemCtaText }}

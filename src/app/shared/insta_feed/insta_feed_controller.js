@@ -1,5 +1,4 @@
 'use strict';
-/* global angular */
 
 angular
   .module('rydaly')
@@ -23,7 +22,7 @@ function InstaFeedController(InstagramAPI) {
         numImages = InstagramAPI.numImages;
 
       for (i = 0; i < numImages; i++) {
-        if (data[i].hasOwnProperty('videos')) {
+        if (angular.isDefined(data[i].videos)) {
           instaCtrl.items.push({
             url: data[i].videos.low_resolution.url,
             link: data[i].link,

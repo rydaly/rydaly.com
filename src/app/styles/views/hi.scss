@@ -38,6 +38,7 @@
     }
   }
 }
+
 $insta-item-size: 14em;
 
 .insta-outer {
@@ -48,22 +49,21 @@ $insta-item-size: 14em;
 }
 
 .insta-container {
-  margin: 4em 0;
-  @include clearfix;
-  @include span-columns(12);
+  display: flex;
+  flex-wrap: wrap;
 
-  .launch-btn {
-    display: block;
+  h4, .launch-btn {
+    width: 100%;
     margin-bottom: 2.5em;
   }
 
   div.insta-item {
-    @include span-columns(6);
+    width: 50%;
     border: 1px solid $base-background-color;
     height: $insta-item-size;
     overflow: hidden;
     @include media($medium-screen) {
-       @include span-columns(3);
+      width: 25%;
     }
 
     .img-responsive {
@@ -75,12 +75,10 @@ $insta-item-size: 14em;
       background-size: cover;
     }
 
-    video {
-      min-height: 120% !important;
-      min-width: 120% !important;
-      margin-top: 50%;
-      margin-left: 50%;
-      @include transform(translate(-50%, -50%));
+    video.img-responsive {
+      width: 100%;
+      height: unset;
+      min-height: 100%;
     }
   }
 }
