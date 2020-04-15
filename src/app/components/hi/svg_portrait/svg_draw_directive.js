@@ -1,5 +1,5 @@
 'use strict';
-/* global angular, TweenMax, Sine */
+/* global TweenMax, Sine */
 
 angular.module('rydaly').directive('svgDraw', function($timeout) {
 

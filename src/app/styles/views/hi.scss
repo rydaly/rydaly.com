@@ -5,7 +5,7 @@
   margin: 3.5em auto 2.5em;
 
   svg {
-    @include transform( translateX(-10px) );
+    @include transform(translateX(-10px));
 
     path {
       stroke-width: 2px;
@@ -39,8 +39,6 @@
   }
 }
 
-$insta-item-size: 14em;
-
 .insta-outer {
   text-align: center;
   max-width: 1000px;
@@ -51,8 +49,10 @@ $insta-item-size: 14em;
 .insta-container {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 0 0.6em;
 
-  h4, .launch-btn {
+  h4,
+  .launch-btn {
     width: 100%;
     margin-bottom: 2.5em;
   }
@@ -60,25 +60,48 @@ $insta-item-size: 14em;
   div.insta-item {
     width: 50%;
     border: 1px solid $base-background-color;
-    height: $insta-item-size;
+    height: 9em;
     overflow: hidden;
-    @include media($medium-screen) {
-      width: 25%;
-    }
 
     .img-responsive {
-      height: $insta-item-size;
+      height: 9em;
       min-height: 100%;
       width: auto;
       outline: none;
       text-align: center;
       background-size: cover;
+      background-position: 50%;
     }
 
     video.img-responsive {
       width: 100%;
       height: unset;
       min-height: 100%;
+    }
+
+    @include media($small-screen) {
+      height: 17em;
+
+      .img-responsive {
+        height: 17em;
+      }
+    }
+
+    @include media($medium-screen) {
+      width: 25%;
+      height: 12em;
+
+      .img-responsive {
+        height: 12em;
+      }
+    }
+
+    @include media($large-screen) {
+      height: 14em;
+
+      .img-responsive {
+        height: 14em;
+      }
     }
   }
 }

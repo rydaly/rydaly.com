@@ -75,10 +75,12 @@
           "linkText": "Launch",
           "linkToSrc": "",
           "imgsLow": [
-            "assets/images/projects/sia/sia_org_01.png"
+            "assets/images/projects/sia/sia_org_01.png",
+            "assets/images/projects/sia/sia_org_02.jpg"
           ],
           "imgsHi": [
-            "assets/images/projects/sia/sia_org_01_lrg.png"
+            "assets/images/projects/sia/sia_org_01_lrg.png",
+            "assets/images/projects/sia/sia_org_02_lrg.jpg"
           ]
         },
         "sub2": {
@@ -185,8 +187,8 @@
       ]
     },
     {
-      "title": "Malt",
-      "description": "",
+      "title": "Malt Map",
+      "description": "While not involved in the overall redesign of this site, I was brought on to create an interactive map showing MALT's land aquisition over time. The map features a scrubbable playhead and detail views that don't impede map navigation.",
       "link": "https://malt.org/where-we-work/",
       "linkText": "Launch",
       "linkToSrc": "",

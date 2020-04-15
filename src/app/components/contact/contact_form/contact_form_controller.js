@@ -1,5 +1,4 @@
 'use strict';
-/* global angular */
 
 angular.module('rydaly')
   .controller('ContactFormController', ContactFormController);
@@ -18,7 +17,7 @@ function ContactFormController($scope, $http) {
       d;
 
     for (d in data) {
-      if (data.hasOwnProperty(d))
+      if (angular.isDefined(data.d))
         returnString += d + '=' + data[d] + '&';
     }
 
@@ -28,7 +27,7 @@ function ContactFormController($scope, $http) {
   contactCtrl.sendMessage = function() {
     $http({
         method: 'POST',
-        url: 'http://rydaly.com/php/processContactForm.php',
+        url: 'https://rydaly.com/php/processContactForm.php',
         data: param(contactCtrl.formData),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
