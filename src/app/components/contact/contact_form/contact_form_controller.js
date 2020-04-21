@@ -1,39 +1,37 @@
-'use strict';
+"use strict";
 
-angular.module('rydaly')
-  .controller('ContactFormController', ContactFormController);
+angular
+  .module("rydaly")
+  .controller("ContactFormController", ContactFormController);
 
 function ContactFormController($scope, $http) {
-
   var contactCtrl = this;
   contactCtrl.formData = {};
-  contactCtrl.errorName = '';
+  contactCtrl.errorName = "";
   contactCtrl.submission = false;
   contactCtrl.isError = false;
 
-  var param = function(data) {
-
-    var returnString = '',
+  var param = function (data) {
+    var returnString = "",
       d;
 
     for (d in data) {
-      if (angular.isDefined(data.d))
-        returnString += d + '=' + data[d] + '&';
+      if (data.hasOwnProperty(d)) returnString += d + "=" + data[d] + "&";
     }
 
     return returnString.slice(0, returnString.length - 1);
   };
 
-  contactCtrl.sendMessage = function() {
+  contactCtrl.sendMessage = function () {
     $http({
-        method: 'POST',
-        url: 'https://rydaly.com/php/processContactForm.php',
-        data: param(contactCtrl.formData),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-        }
-      })
-      .then(function(response) {
+      method: "POST",
+      url: "https://rydaly.com/php/processContactForm.php",
+      data: param(contactCtrl.formData),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      }
+    }).then(
+      function (response) {
         var data = response.data;
 
         if (!data.success) {
@@ -52,11 +50,13 @@ function ContactFormController($scope, $http) {
           contactCtrl.submission = true; // show success message
           contactCtrl.formData = {}; // empty form fields
         }
-
-      }, function(error) {
-        console.warn('Error processing form :: ', error);
+      },
+      function (error) {
+        console.warn("Error processing form :: ", error);
         contactCtrl.isError = true;
-        contactCtrl.submissionMessage = "Uh oh, something went wrong. Please try again!";
-      });
-  }
+        contactCtrl.submissionMessage =
+          "Uh oh, something went wrong. Please try again!";
+      }
+    );
+  };
 }

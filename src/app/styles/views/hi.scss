@@ -21,7 +21,7 @@
   margin: 0 auto;
 
   p {
-    padding: 0 1em;
+    padding: 0 1rem;
     text-align: left;
 
     span {
@@ -32,9 +32,58 @@
   }
 
   .cheers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto 1rem;
+    border-bottom: 1px solid $rd-gold;
+    width: 105px;
+    height: 105px;
+    opacity: 1;
+
+    img,
+    h4 {
+      transition: transform 0.2s ease-out;
+    }
+
     img {
       width: 50px;
       height: auto;
+      margin-top: -10px;
+      transform-origin: 50% 100%;
+    }
+
+    h4 {
+      color: $rd-gold;
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin: 0;
+      margin-top: 5px;
+      margin-left: 5px;
+      transform-origin: 50% 0;
+      transition-delay: 0.05s;
+      // transition-duration: 0.35s;
+    }
+  }
+
+  h1 {
+    color: $rd-gold;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 6rem;
+    padding-bottom: 8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+
+  .cheers-link:hover {
+    img, h4 {
+      transform: scale(1.2, 1.2);
+    }
+
+    h1 {
+      color: $rd-gold;
     }
   }
 }
@@ -49,7 +98,7 @@
 .insta-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 0.6em;
+  margin: 0 0 1.2rem;
 
   h4,
   .launch-btn {

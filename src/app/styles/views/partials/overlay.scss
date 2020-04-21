@@ -13,7 +13,7 @@ body {
 }
 
 div.rd-overlay {
-  @include position( fixed, 0px 0px 0px 0px );
+  @include position(fixed, 0px 0px 0px 0px);
   width: 100%;
   background: $base-background-color;
   z-index: -1;
@@ -118,7 +118,6 @@ div.rd-overlay {
           }
         }
       }
-
     }
   }
 }
@@ -142,24 +141,16 @@ div.rd-overlay > .overlay {
 
   h4 {
     @include small-caps($rd-medium-blue);
-    // font-weight: 900;
     font-size: 1.5em;
     @include media($medium-screen) {
-      // font-weight: 100;
       font-size: 2em;
     }
   }
 
   .sub-item {
-    margin-top: 10em;
-
     a.launch-btn {
-      display: none;
-      @include media($large-screen) {
-        display: block;
-      }
-
       button {
+        margin-top: 4em;
         background-color: lighten($base-background-color, 5%);
       }
     }
@@ -180,7 +171,7 @@ div.rd-overlay > .overlay {
       color: $rd-medium-blue;
       display: inline-block;
       @include media($medium-screen) {
-         @include symbol-surround( '\f0d9', '\f0da');
+        @include symbol-surround("\f0d9", "\f0da");
 
         &:after,
         &:before {
@@ -300,6 +291,7 @@ div.rd-overlay > .overlay {
   .launch-container {
     a.launch-btn {
       button {
+        margin-top: 4em;
         background-color: lighten($base-background-color, 5%);
       }
     }

@@ -49,7 +49,8 @@ function WorkController(WorkItemsService, modals, $sce) {
       itemCta: item.link,
       itemCtaText: item.linkText,
       itemSrcLink: item.linkToSrc,
-      multipleLinks: typeof item.link === 'object'
+      multipleLinks: false
+      // multipleLinks: angular.isObject(item.link)
     });
 
     promise.then(

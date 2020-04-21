@@ -1,4 +1,5 @@
 /* Buttons */
+
 .lines-btn {
   @include border-hover-effect();
 
@@ -181,4 +182,9 @@ div.loading {
       color: $rd-red;
     }
   }
+}
+
+/* Separators */
+.sub-item-hr {
+  margin-top: 6em;
 }
