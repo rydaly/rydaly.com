@@ -1,16 +1,19 @@
 <template>
-  <div v-bind:class="[`project project--${project.post_title.replace(/\W+/g, '').toLowerCase()}`]">
-    <router-link :to="{ path: 'project/' + project.ID }" class="project-link">
+  <div v-bind:class="[`project project--${project.title.replace(/\W+/g, '').toLowerCase()}`]">
+    <router-link :to="{ path: 'project/' + project._id }" class="project-link">
       <div class="half">
-        <h5 class="text-uppercase">{{ project.acf.category }}</h5>
-        <h2 class="text-title">{{ project.post_title }}</h2>
-        <p v-html="widont(project.acf.short_description)"></p>
-        <router-link
+        <h5 class="text-uppercase">{{ project.title }}</h5>
+        <h2 class="text-title">{{ project.title }}</h2>
+        <p v-html="widont(project.description)"></p>
+        <div v-for="(img, i) in project.images" v-bind:key="i">
+          <img :src="'https://rydaly.com/' + img.path" :alt="img.meta.title">
+        </div>
+        <!-- <router-link
           :to="{ path: 'project/' + project.ID }"
           class="btn"
-        >{{ project.acf.button_text }}</router-link>
+        >{{ project.acf.button_text }}</router-link> -->
       </div>
-      <div class="half project-preview">
+      <!-- <div class="half project-preview">
         <img v-if="project.acf.preview_image" v-lazy="project.acf.preview_image" />
         <div class="overlay">
           <img
@@ -40,7 +43,7 @@
             />
           </video>
         </div>
-      </div>
+      </div> -->
     </router-link>
   </div>
 </template>

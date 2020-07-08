@@ -2,10 +2,12 @@
 export default {
   methods: {
     getOption: function(val) {
-      return this.$root.optionsData.acf[val];
+      // return val;
+      return this.$root.optionsData[val];
     },
     getHtmlOption: function(val) {
-      return this.$root.optionsData.acf[val].replace(/(\r\n|\n|\r)/g,'<br />');
+      // return val;
+      return this.$root.optionsData[val].replace(/(\r\n|\n|\r)/g,'<br />');
     }
   }
 };

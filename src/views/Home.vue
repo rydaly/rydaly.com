@@ -3,38 +3,19 @@
     <div class="content content--hero bg-gray">
       <div class="content__inner">
         <h3 class="text-uppercase text-center">
-          {{ getOption('hp_hero_label') }}
+          {{ getOption('title') }}
         </h3>
-        <h1 class="text-title text-center">{{ getOption('hp_hero_name') }}</h1>
-        <p class="lead text-center" v-html="widont(getOption('hp_hero_description'))"></p>
+        <h1 class="text-title text-center">{{ getOption('title') }}</h1>
+        <p class="lead text-center" v-html="widont(getOption('description'))"></p>
       </div>
     </div>
 
-    <div class="content content--header">
-      <h5 class="text-uppercase text-center">
-        {{ getOption('hp_sub_label') }}
-      </h5>
-      <h2 class="text-title text-center">{{ getOption('hp_sub_title') }}</h2>
-      <p class="text-center" v-html="widont(getOption('hp_sub_description'))"></p>
-    </div>
-
     <projects></projects>
-
-    <logos></logos>
-
-    <div class="content pad-section-default">
-      <h2>{{ getOption('contact_section_header') }}</h2>
-      <p class="text-center">{{ getOption('contact_section_text') }}</p>
-      <router-link to="/contact" class="btn btn--small btn--dark">
-        <span>{{ getOption('contact_section_button_text') }}</span>
-      </router-link>
-    </div>
   </div>
 </template>
 
 <script>
 import GetOption from '../mixins/GetOption';
-import LogoGrid from '../components/LogoGrid.vue';
 import Projects from '../components/Projects.vue';
 import { TweenLite } from 'gsap';
 import Widont from "../mixins/Widont";
@@ -43,7 +24,6 @@ export default {
   name: 'Home',
   components: {
     projects: Projects,
-    logos: LogoGrid
   },
   mixins: [GetOption, Widont],
   mounted() {

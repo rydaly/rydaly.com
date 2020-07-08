@@ -3,7 +3,7 @@
     <div class="projects">
       <project
         v-for="item in this.$root.projectsData"
-        v-bind:key="item.ID"
+        v-bind:key="item._id"
         v-bind:project="item"
         ></project>
     </div>
@@ -16,7 +16,7 @@ import project from "./Project.vue";
 export default {
   name: "Projects",
   created() {
-    // console.log(this.$root.projectsData);
+    console.log(this.$root.projectsData);
   },
   components: {
     project
