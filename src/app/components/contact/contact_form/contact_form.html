@@ -1,14 +1,16 @@
-<form>
-  <label for="name"><i class="fa fa-user"></i> Name</label>
-  <input type="text" name="name" ng-model="contactCtrl.formData.name" ng-class="{ 'error' : contactCtrl.errorName }">
+<!-- https://docs.google.com/forms/d/e/1FAIpQLSe5doHIMxTwcOyHXdEO9X82pCidMGjmbjYpM-bYWE28TEFlmQ/viewform?usp=pp_url&entry.1175724924=changeme&entry.1209588789=changeme@gmail.com&entry.993297357=changeme -->
 
-  <label for="email"><i class="fa fa-at"></i> E-mail</label>
-  <input type="email" name="email" ng-model="contactCtrl.formData.email" ng-class="{ 'error' : contactCtrl.errorEmail }">
+<form name="contactForm">
+  <label for="ctName"><i class="fa fa-user"></i> Name</label>
+  <input type="text" name="ctName" ng-model="contactCtrl.formData.name.val" ng-class="{ 'error' : contactForm.ctName.$invalid && !contactForm.ctName.$pristine }" required>
 
-  <label for="message"><i class="fa fa-pencil"></i> Message</label>
-  <textarea name="message" ng-class="{ 'error' : contactCtrl.errorTextarea }" ng-model="contactCtrl.formData.message" cols="30" rows="10"></textarea>
+  <label for="ctEmail"><i class="fa fa-at"></i> Email</label>
+  <input type="email" name="ctEmail" ng-model="contactCtrl.formData.email.val" ng-class="{ 'error' : contactForm.ctEmail.$invalid && !contactForm.ctEmail.$pristine }" required>
 
-  <button class="lines-btn" ng-click="contactCtrl.sendMessage()">
+  <label for="ctMsg"><i class="fa fa-pencil"></i> Message</label>
+  <textarea name="ctMsg" ng-model="contactCtrl.formData.msg.val" ng-class="{ 'error' : contactForm.ctMsg.$invalid && !contactForm.ctMsg.$pristine }" cols="30" rows="10" required></textarea>
+
+  <button class="lines-btn" ng-click="contactCtrl.sendMessage(contactForm.$valid)">
     <i class="fa fa-paper-plane-o"></i> Send!
     <span class="lines top"></span>
     <span class="lines bottom"></span>

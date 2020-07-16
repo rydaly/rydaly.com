@@ -17,6 +17,7 @@ function InstaFeedController(InstagramAPI) {
 
   InstagramAPI.allCached()
     .then(function(response) {
+      console.log(response);
       var i,
         data = response.data,
         numImages = InstagramAPI.numImages;

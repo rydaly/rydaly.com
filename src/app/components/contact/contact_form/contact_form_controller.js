@@ -6,57 +6,79 @@ angular
 
 function ContactFormController($scope, $http) {
   var contactCtrl = this;
-  contactCtrl.formData = {};
-  contactCtrl.errorName = "";
+  contactCtrl.formData = {
+    name: {
+      id: 1175724924,
+      val: "",
+    },
+    email: {
+      id: 1209588789,
+      val: "",
+    },
+    msg: {
+      id: 993297357,
+      val: "",
+    },
+  };
   contactCtrl.submission = false;
   contactCtrl.isError = false;
 
   var param = function (data) {
-    var returnString = "",
-      d;
+    var returnString = "";
+    angular.forEach(data, function (value, key) {
+      returnString += "&entry." + value.id + "=" + value.val;
+    });
 
-    for (d in data) {
-      if (data.hasOwnProperty(d)) returnString += d + "=" + data[d] + "&";
-    }
-
-    return returnString.slice(0, returnString.length - 1);
+    return returnString;
   };
 
-  contactCtrl.sendMessage = function () {
-    $http({
-      method: "POST",
-      url: "https://rydaly.com/php/processContactForm.php",
-      data: param(contactCtrl.formData),
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-      }
-    }).then(
-      function (response) {
-        var data = response.data;
+  contactCtrl.sendMessage = function (isValid) {
+    if (isValid) {
+      $http({
+        method: "POST",
+        url:
+          "https://docs.google.com/forms/d/e/1FAIpQLSe5doHIMxTwcOyHXdEO9X82pCidMGjmbjYpM-bYWE28TEFlmQ/formResponse?" +
+          param(contactCtrl.formData),
+      }).then(
+        function (response) {
+          var status = response.status;
 
-        if (!data.success) {
-          contactCtrl.errorName = data.errors.name;
-          contactCtrl.errorEmail = data.errors.email;
-          contactCtrl.errorTextarea = data.errors.message;
-          contactCtrl.submissionMessage = data.messageError;
+          if (status === 200) {
+            contactCtrl.submissionMessage =
+              "Hey, thanks for reaching out! I'll get back to you soon.";
+            contactCtrl.isError = false;
+            contactCtrl.submission = true; // show success message
+            contactCtrl.formData = {
+              // empty form fields
+              name: {
+                id: 1175724924,
+                val: "",
+              },
+              email: {
+                id: 1209588789,
+                val: "",
+              },
+              msg: {
+                id: 993297357,
+                val: "",
+              },
+            };
+            $scope.contactForm.$setPristine(true); // reset form
+          } else {
+            contactCtrl.submissionMessage =
+              "Uh oh, something's wrong. Please check the fields in red.";
+            contactCtrl.isError = true;
+            contactCtrl.submission = true; // show error message
+          }
+        },
+        function (error) {
+          console.warn("Error processing form :: ", error);
           contactCtrl.isError = true;
+          contactCtrl.submissionMessage =
+            "Uh oh, something went wrong. Please try again!";
           contactCtrl.submission = true; // show error message
-        } else {
-          contactCtrl.errorName = null;
-          contactCtrl.errorEmail = null;
-          contactCtrl.errorTextarea = null;
-          contactCtrl.submissionMessage = data.messageSuccess;
-          contactCtrl.isError = false;
-          contactCtrl.submission = true; // show success message
-          contactCtrl.formData = {}; // empty form fields
         }
-      },
-      function (error) {
-        console.warn("Error processing form :: ", error);
-        contactCtrl.isError = true;
-        contactCtrl.submissionMessage =
-          "Uh oh, something went wrong. Please try again!";
-      }
-    );
+      );
+    }
   };
 }

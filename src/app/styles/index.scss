@@ -49,7 +49,7 @@ body {
     div.page {
       @include outer-container();
       text-align: center;
-      min-height: 750px;
+      min-height: 500px;
       padding: 0 0.5rem;
 
       section.container {
