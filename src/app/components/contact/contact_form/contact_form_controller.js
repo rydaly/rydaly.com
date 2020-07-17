@@ -41,9 +41,7 @@ function ContactFormController($scope, $http) {
           param(contactCtrl.formData),
       }).then(
         function (response) {
-          var status = response.status;
-
-          if (status === 200) {
+          if (response.status === 200) {
             contactCtrl.submissionMessage =
               "Hey, thanks for reaching out! I'll get back to you soon.";
             contactCtrl.isError = false;
@@ -72,11 +70,33 @@ function ContactFormController($scope, $http) {
           }
         },
         function (error) {
-          console.warn("Error processing form :: ", error);
-          contactCtrl.isError = true;
-          contactCtrl.submissionMessage =
-            "Uh oh, something went wrong. Please try again!";
-          contactCtrl.submission = true; // show error message
+          if (error.status === -1) {
+            contactCtrl.submissionMessage =
+              "Hey, thanks for reaching out! I'll get back to you soon.";
+            contactCtrl.isError = false;
+            contactCtrl.submission = true; // show success message
+            contactCtrl.formData = {
+              // empty form fields
+              name: {
+                id: 1175724924,
+                val: "",
+              },
+              email: {
+                id: 1209588789,
+                val: "",
+              },
+              msg: {
+                id: 993297357,
+                val: "",
+              },
+            };
+            $scope.contactForm.$setPristine(true); // reset form
+          } else {
+            contactCtrl.isError = true;
+            contactCtrl.submissionMessage =
+              "Uh oh, something went wrong. Please try again!";
+            contactCtrl.submission = true; // show error message
+          }
         }
       );
     }
