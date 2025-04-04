@@ -8,6 +8,8 @@
   $navbar-height: 60px;
   $horizontal-bar-mode: $large-screen;
 
+  display: flex;
+  justify-content: center;
   position: fixed;
   background-color: transparentize($base-background-color, 0.05);
   min-height: $navbar-height;
@@ -36,7 +38,6 @@
   // Mobile view
   .mobile-logo {
     display: inline;
-    float: left;
     max-height: $navbar-height;
     padding-left: $navbar-padding;
 
@@ -45,28 +46,24 @@
     }
 
     img {
-      width: 30px; height: 30px;
+      width: 30px;
+      height: 30px;
       margin-top: 15px;
       opacity: 1;
     }
-
-    @include media($horizontal-bar-mode) {
-      display: none;
-    }
   }
 
-  $button-width: 75px;                    // The width of the button area
-  $button-height: 30px;                   // The height of the button area
-  $bar-thickness: 2px;                    // The thickness of the button bars
-  $button-pad: 20px;                      // The left/right padding between button area and bars.
-  $button-bar-space: 8px;                 // The spacing between button bars
-  $button-transistion-duration: 0.2s;     // The transition duration
+  $button-width: 75px; // The width of the button area
+  $button-height: 30px; // The height of the button area
+  $bar-thickness: 2px; // The thickness of the button bars
+  $button-pad: 20px; // The left/right padding between button area and bars.
+  $button-bar-space: 8px; // The spacing between button bars
+  $button-transition-duration: 0.2s; // The transition duration
 
   .hamburger {
     display: block;
     position: relative;
     overflow: hidden;
-    margin: 0;
     padding: 0;
     width: $button-width;
     height: $button-height;
@@ -78,13 +75,13 @@
     cursor: pointer;
     background-color: $base-background-color;
     margin: 15px 0;
-    float: right;
+    margin-left: auto;
     padding-right: $navbar-padding;
     @include appearance(none);
-    @include transition(background 0s $button-transistion-duration);
+    @include transition(background 0s $button-transition-duration);
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
-    @include media ($horizontal-bar-mode) {
+    @include media($horizontal-bar-mode) {
       display: none;
     }
 
@@ -101,7 +98,7 @@
     right: $button-pad;
     height: $bar-thickness;
     background: $rd-dark-blue;
-    @include transition(background $button-transistion-duration);
+    @include transition(background $button-transition-duration);
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
   }
@@ -120,8 +117,8 @@
   .hamburger span:before {
     top: -$bar-thickness - $button-bar-space;
     @include transition(
-      top $button-transistion-duration $button-transistion-duration,
-      transform $button-transistion-duration 0s
+      top $button-transition-duration $button-transition-duration,
+      transform $button-transition-duration 0s
     );
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
@@ -130,8 +127,9 @@
   .hamburger span:after {
     bottom: -$bar-thickness - $button-bar-space;
     @include transition(
-      bottom, $button-transistion-duration $button-transistion-duration,
-      transform $button-transistion-duration 0s
+      bottom,
+      $button-transition-duration $button-transition-duration,
+      transform $button-transition-duration 0s
     );
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateZ(0);
@@ -157,14 +155,14 @@
 
   .hamburger.active span:before {
     @include transition(
-      top $button-transistion-duration 0s,
-      transform $button-transistion-duration $button-transistion-duration
+      top $button-transition-duration 0s,
+      transform $button-transition-duration $button-transition-duration
     );
   }
   .hamburger.active span:after {
     @include transition(
-      bottom $button-transistion-duration 0s,
-      transform $button-transistion-duration $button-transistion-duration
+      bottom $button-transition-duration 0s,
+      transform $button-transition-duration $button-transition-duration
     );
   }
 
@@ -173,14 +171,13 @@
   .centered-navigation-mobile-menu {
     color: $navbar-color;
     display: block;
-    float: right;
     line-height: $navbar-height;
     margin: 0;
     padding-right: $navbar-padding;
     text-decoration: none;
     text-transform: uppercase;
 
-    @include media ($horizontal-bar-mode) {
+    @include media($horizontal-bar-mode) {
       display: none;
     }
   }
@@ -189,10 +186,32 @@
   .centered-navigation-wrapper {
     @include outer-container;
     @include clearfix;
+
     position: relative;
     z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
 
     @include media($horizontal-bar-mode) {
+    }
+
+    nav {
+      @include media($horizontal-bar-mode) {
+        // margin-left: auto;
+        width: 100%;
+        display: block;
+
+        .centered-navigation-menu {
+          width: 100%;
+          display: flex;
+
+          .nav-logo {
+            margin-right: auto;
+          }
+        }
+      }
     }
   }
 
@@ -201,8 +220,9 @@
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     position: fixed;
     top: -9999px;
-    // top: $navbar-height;
-    right: 0; bottom: 0; left: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: inline-block;
     vertical-align: middle;
     background: transparent;
@@ -213,7 +233,6 @@
     visibility: hidden;
     border-top: 2px solid $rd-gold;
 
-
     // Mobile menu opened
     &.show {
       top: $navbar-height;
@@ -221,7 +240,10 @@
       visibility: visible;
       opacity: 1;
       background: transparentize($base-background-color, 0.05);
-      @include transition(opacity 0.3s $ease-out-sine, background 0.3s $ease-out-sine);
+      @include transition(
+        opacity 0.3s $ease-out-sine,
+        background 0.3s $ease-out-sine
+      );
 
       li.navbar-item {
         opacity: 0;
@@ -236,7 +258,7 @@
         @include keyframes(show_nav) {
           from {
             opacity: 0;
-            line-height: $navbar-height*1.5;
+            line-height: $navbar-height * 1.5;
           }
           to {
             opacity: 1;
@@ -255,7 +277,8 @@
       width: 100%;
       bottom: $navbar-height;
       text-align: center;
-      padding: 0; margin: 0;
+      padding: 0;
+      margin: 0;
       list-style: none;
       opacity: 0;
 
@@ -287,7 +310,11 @@
 
     // Mobile menu closed
     &.hide {
-      @include transition(visibility 0s 0.3s, background 0.3s $ease-in-sine, opacity 0.3s $ease-in-sine);
+      @include transition(
+        visibility 0s 0.3s,
+        background 0.3s $ease-in-sine,
+        opacity 0.3s $ease-in-sine
+      );
     }
 
     // Mobile menu items
@@ -311,24 +338,25 @@
 
         @include fill-parent();
         @include transition(none);
-        @include transition(background 0.3s $ease-out-sine, color 0.3s $ease-out-sine);
+        @include transition(transform 0.2s $ease-out-sine);
 
         &:hover {
-          color: $navbar-color-hover;
-          background-color: $navbar-bg-color-hover;
+          transform: scale(1.1);
         }
       } // end mobile menu links
 
       // mobile menu active item
       &.active {
         a {
-          @include symbol-surround('\f0d9', '\f0da');
-          &:before, &:after {
+          @include symbol-surround("\f0d9", "\f0da");
+          &:before,
+          &:after {
             @include transition(color 0.8s $ease-in-out-sine);
           }
           &:focus,
           &:hover {
-            &:before, &:after {
+            &:before,
+            &:after {
               color: $navbar-color-hover;
             }
           }
@@ -337,12 +365,13 @@
     } // end mobile menu items
 
     // Full screen menu
-    @include media ($horizontal-bar-mode) {
+    @include media($horizontal-bar-mode) {
       visibility: visible;
       opacity: 1;
       position: relative;
       top: 0;
-      display: block;
+      display: flex;
+      align-items: center;
       text-align: center;
       background: transparent;
       padding: 0;
@@ -353,28 +382,37 @@
       li.navbar-item {
         display: inline;
         line-height: $navbar-height;
-        float: left;
-        width: 20%;
+        width: 200px;
         font-size: 0.9em;
 
         // Full menu links
         a {
           height: $navbar-height;
-          &:hover {
-            color: $navbar-color-hover;
-            background-color: $navbar-bg-color-hover;
+
+          &:before,
+          &:after {
+            content: "";
+            display: none;
           }
         }
 
         // Full menu active item
-        &.active {
+        &.active:not(.nav-logo) {
           a {
-            color: $navbar-color-hover;
-            background-color: $navbar-bg-color-hover;
+            &:before,
+            &:after {
+              content: "" !important;
+              display: none !important;
+            }
+          }
+        }
 
-            &:before, &:after {
-              content: '';
-              display: none;
+        &.nav-logo {
+          a {
+            &:before,
+            &:after {
+              content: "" !important;
+              display: none !important;
             }
           }
         }
@@ -406,8 +444,23 @@
   // nav logo
   ul li.nav-logo.navbar-item {
     display: none;
+
+    @include media($large-screen) {
+      display: block;
+    }
   }
-  ul li.nav-logo.navbar-item, .mobile-logo-wrapper {
+
+  // mobile logo
+  .mobile-logo-wrapper {
+    display: inline;
+
+    @include media($large-screen) {
+      display: none;
+    }
+  }
+
+  ul li.nav-logo.navbar-item,
+  .mobile-logo-wrapper {
     line-height: 0;
 
     a {
@@ -419,7 +472,9 @@
       }
     }
 
-    &.active, &:focus, &:hover {
+    &.active,
+    &:focus,
+    &:hover {
       a {
         background-color: transparent;
 
@@ -432,14 +487,11 @@
         }
       }
     }
-
-    @include media($large-screen) {
-      display: inline;
-    }
   }
 
   .nav-logo img {
-    width: 30px; height: 30px;
+    width: 30px;
+    height: 30px;
     margin-top: 15px;
     opacity: 1;
   }

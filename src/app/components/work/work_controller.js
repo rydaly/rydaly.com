@@ -1,16 +1,15 @@
-'use strict';
+"use strict";
 
-angular.module('rydaly')
-  .controller('WorkController', WorkController);
+angular.module("rydaly").controller("WorkController", WorkController);
 
-function WorkController(WorkItemsService, modals, $sce) {
+function WorkController(WorkItemsService, modals, $sce, $timeout, $window) {
   var workCtrl = this;
   workCtrl.items = [];
   workCtrl.filters = {};
 
-  var ytQueryStr = '?vq=hd1080&modestbranding=1&rel=0&showinfo=0&color=white';
+  var ytQueryStr = "?vq=hd1080&modestbranding=1&rel=0&showinfo=0&color=white";
 
-  WorkItemsService.success(function(data) {
+  WorkItemsService.success(function (data) {
     var i = 0,
       numItems = data.items.length;
 
@@ -21,13 +20,13 @@ function WorkController(WorkItemsService, modals, $sce) {
     }
   });
 
-  workCtrl.hasVideo = function(item) {
+  workCtrl.hasVideo = function (item) {
     // console.log(item);
     return angular.isDefined(item.ytid);
   };
 
   // I open a modal.
-  workCtrl.showModal = function(item) {
+  workCtrl.showModal = function (item) {
     // The .open() method returns a promise that will be either
     // resolved or rejected when the modal window is closed.
     var promise = modals.open("overlay", {
@@ -54,10 +53,20 @@ function WorkController(WorkItemsService, modals, $sce) {
     });
 
     promise.then(
-      function handleResolve(response) {
-      },
-      function handleReject(error) {
-      }
+      function handleResolve(response) {},
+      function handleReject(error) {}
     );
+
+    // $timeout(function () {
+    //   if ($window.history && $window.history.pushState) {
+    //     $window.history.pushState("forward", null, "./#/work/#modal");
+
+    //     $window.addEventListener("popstate", function () {
+    //       if (document.querySelector(".overlay-close")) {
+    //         document.querySelector(".overlay-close").click();
+    //       }
+    //     });
+    //   }
+    // });
   };
 }

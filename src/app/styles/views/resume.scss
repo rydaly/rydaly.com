@@ -1,6 +1,8 @@
 .resume {
   max-width: 1000px;
   margin: 5rem auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .resume-section {
@@ -85,9 +87,14 @@
   }
 }
 
-.resume-section--half {
+.resume-section--full {
+  flex-basis: 100%;
   width: 100%;
-  float: none;
+}
+
+.resume-section--half {
+  flex-basis: 100%;
+  width: 100%;
 
   article {
     margin: 2rem 0;
@@ -115,7 +122,7 @@
 
   @include media($large-screen) {
     width: 50%;
-    float: left;
+    flex-basis: 50%;
     border-bottom: none;
     margin-bottom: 1rem;
   }

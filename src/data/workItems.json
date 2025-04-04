@@ -1,8 +1,59 @@
 {
   "items": [
     {
+      "title": "BCFM",
+      "description": "I teamed up with <a href=\"https://christinewebsterdesigns.com/\">Christine Webster</a> to breath new life into bcfm.org in a major re-branding. The site utilizes custom blocks to fit the theme and allow BCFM staff to easily create new pages.",
+      "link": "https://bcfm.org",
+      "linkText": "Launch",
+      "linkToSrc": "",
+      "imgLogo": "assets/images/work/img/logos/bcfm.png",
+      "imgLow": "assets/images/work/img/bcfm.jpg",
+      "hasDevicePreview": true,
+      "imgsLow": [
+        "assets/images/projects/bcfm/bcfm_01.png"
+      ],
+      "imgsHi": [
+        "assets/images/projects/bcfm/bcfm_01_lrg.png"
+      ],
+      "role": ["Dev", "JavaScript", "CSS", "WordPress", "PHP"]
+    },
+    {
+      "title": "Colorado Dept of Agriculture",
+      "description": "I helped out Socha with the development of this site for the Colorado Agricultural Future Loan project. The site is built on WordPress, utilizes flexible content components and features a custom loan calculator.",
+      "link": "https://coloradoagloans.com/",
+      "linkText": "Launch",
+      "linkToSrc": "",
+      "imgLogo": "assets/images/work/img/logos/cafl.png",
+      "imgLow": "assets/images/work/img/cafl.jpg",
+      "hasDevicePreview": true,
+      "imgsLow": [
+        "assets/images/projects/cafl/cafl_01.png"
+      ],
+      "imgsHi": [
+        "assets/images/projects/cafl/cafl_01_lrg.png"
+      ],
+      "role": ["Dev", "JavaScript", "CSS", "WordPress", "PHP"]
+    },
+    {
+      "title": "Hotel Maxwell Anderson",
+      "description": "Working with <a href=\"https://barnettbrandco.com/\">Barnett Brand Co,</a> we handled the re-branding and fresh new site for Hotel Maxwell Anderson, formerly known as the Hotel Denver.",
+      "link": "https://maxwellandersonhotel.com/",
+      "linkText": "Launch",
+      "linkToSrc": "",
+      "imgLogo": "assets/images/work/img/logos/ma.png",
+      "imgLow": "assets/images/work/img/ma.jpg",
+      "hasDevicePreview": true,
+      "imgsLow": [
+        "assets/images/projects/ma/ma_01.png"
+      ],
+      "imgsHi": [
+        "assets/images/projects/ma/ma_01_lrg.png"
+      ],
+      "role": ["Dev", "JavaScript", "CSS", "WordPress", "PHP"]
+    },
+    {
       "title": "Remerg",
-      "description": "I teamed up with <a href=\"https://www.canucreative.com/\">Canu Creative</a> to breath new life into remerg.com, a site dedicated to providing resources to those re-entering society after incarceration. With thousands of resources, categorization and UX solutions were carefully considered to make navigating said resources as easy as possible. Key problems that were solved include migration & standarization of thousands of resources and enabling the oraganization to easily manage all aspects of the site.",
+      "description": "I teamed up with <a href=\"https://christinewebsterdesigns.com/\">Christine Webster</a> to breath new life into remerg.com, a site dedicated to providing resources to those re-entering society after incarceration. With thousands of resources, categorization and UX solutions were carefully considered to make navigating said resources as easy as possible. Key problems that were solved include migration & standardization of thousands of resources and enabling the organization to easily manage all aspects of the site. This ongoing project features a custom translator, an interactive map for finding resources and an AI chatbot.",
       "link": "https://remerg.com",
       "linkText": "Launch",
       "linkToSrc": "",
@@ -23,11 +74,11 @@
         "assets/images/projects/remerg/remerg_04_lrg.jpg",
         "assets/images/projects/remerg/remerg_05_lrg.jpg"
       ],
-      "role": ["Development", "JavaScript", "CSS", "WordPress", "PHP", "Data Migration"]
+      "role": ["Dev", "JavaScript", "CSS", "WordPress", "PHP", "Data Migration"]
     },
     {
       "title": "Silent Book Club",
-      "description": "With design help from <a href=\"https://www.canucreative.com/\">Canu Creative</a>, Silent Book Club's branding was updated and their website refreshed. The biggest challenge on this project was the interactive chapter map built with Leaflet and data-sourced by a Google spreadsheet (gasp!) which the client can edit at will.",
+      "description": "With design help from <a href=\"https://christinewebsterdesigns.com/\">Christine Webster</a>, Silent Book Club's branding was updated and their website refreshed. The biggest challenge on this project was the interactive chapter map built with Leaflet and data-sourced by a Google spreadsheet (gasp!) which the client can edit at will.",
       "link": "https://silentbook.club/pages/chapter-map",
       "linkText": "Launch",
       "linkToSrc": "",
@@ -45,7 +96,7 @@
         "assets/images/projects/sbc/sbc_03_lrg.jpg"
       ],
       "role": [
-        "Development",
+        "Dev",
         "JavaScript",
         "CSS",
         "Shopify",
@@ -59,7 +110,7 @@
       "imgLogo": "assets/images/work/img/logos/sia.png",
       "imgLow": "assets/images/work/img/sia.jpg",
       "role": [
-        "Development",
+        "Dev",
         "JavaScript",
         "CSS",
         "WordPress",
@@ -124,7 +175,7 @@
         "assets/images/projects/ofu/ofu_05_lrg.jpg"
       ],
       "role": [
-        "Development",
+        "Dev",
         "JavaScript",
         "PHP",
         "WordPress",
@@ -133,7 +184,7 @@
     },
     {
       "title": "Malt Map",
-      "description": "While not involved in the overall redesign of this site, I was brought on to create an interactive map showing MALT's land aquisition over time. The map features a scrubbable playhead and detail views that don't impede map navigation.",
+      "description": "While not involved in the overall redesign of this site, I was brought on to create an interactive map showing MALT's land acquisition over time. The map features a scrubbable play head and detail views that don't impede map navigation.",
       "link": "https://malt.org/where-we-work/",
       "linkText": "Launch",
       "linkToSrc": "",
@@ -143,7 +194,7 @@
       "imgsLow": ["assets/images/projects/malt/malt_01.png"],
       "imgsHi": ["assets/images/projects/malt/malt_lrg_01.png"],
       "role": [
-        "Development",
+        "Dev",
         "JavaScript",
         "Leaflet",
         "CSS"
@@ -171,7 +222,7 @@
         "assets/images/projects/fancytiger/fancytiger_04_lrg.jpg"
       ],
       "role": [
-        "Development",
+        "Dev",
         "JavaScript",
         "jQuery",
         "CSS",
@@ -188,7 +239,7 @@
       "imgLogo": "assets/images/work/img/logos/arbonne.png",
       "imgLow": "assets/images/work/img/arbonne.jpg",
       "role": [
-        "Development",
+        "Dev",
         "JavaScript",
         "React",
         "Node",
@@ -317,9 +368,9 @@
     },
     {
       "title": "Fogged Clarity",
-      "description": "I co-founded the arts review Fogged Clarity in 2009 and it's become a mainstay in both my creative and technical development. As a venue for visual art, music, interviews, fiction and poetry it has provided me with a way to continually improve my chops across the board. Design, development, audio & video editing, podcasting and brand development are just a few of the things I handle on a regular basis. It has been the unmoving rock that I use to learn new things, test new technologies and keep myself honest. Fogged Clarity is built on WordPress using a custom theme that turns the CMS into an issue-based publication and allows editors to do as much as possible without my help.",
-      "link": "http://foggedclarity.com",
-      "linkText": "Launch",
+      "description": "I co-founded the now defunct arts review Fogged Clarity in 2009 and it was a mainstay in both my creative and technical development. As a venue for visual art, music, interviews, fiction and poetry it provided me with a way to continually improve my chops across the board. Design, development, audio & video editing, podcasting and brand development are just a few of the things I handled on a regular basis. I used the platform to learn new things, test new technologies and push my boundaries. Fogged Clarity was built on WordPress using a custom theme that turned the CMS into an issue-based publication and allowed editors to do as much as possible without my help.",
+      "link": false,
+      "linkText": false,
       "imgLogo": "assets/images/work/img/logos/fc.png",
       "imgLow": "assets/images/work/img/fc.jpg",
 
@@ -339,7 +390,7 @@
         "Co-founder",
         "Concept",
         "Design",
-        "Development",
+        "Dev",
         "WordPress",
         "PHP"
       ]
@@ -360,7 +411,7 @@
         "assets/images/projects/acura/acura_dummy_lrg.jpg"
       ],
       "role": [
-        "Development",
+        "Dev",
         "Motion Design",
         "Interaction",
         "JavaScript"
@@ -374,7 +425,7 @@
       "imgLow": "assets/images/work/img/moto.jpg",
       "ytid": "qE22MbP_fyI",
       "role": [
-        "Development",
+        "Dev",
         "Motion Design",
         "Interaction",
         "ActionScript",
@@ -418,7 +469,7 @@
 
     {
       "title": "Divvy Bike Share Data Viz",
-      "description": "Divvy is Chicago's bike sharing service. While at Razorfish, we put together a team to create an entry for the 'Divvy Data Challenge.' I ended up swamped with client work and was unable to continue with the official submission, but afterwards I continued building my idea. This demo shows incoming and outgoing data from Divvy stations over a period of 24 hours. I utilized Leaflet and d3.js for the data projection and GSAP for animation. I've narrowed down the data set to a single day (July 4th, 2013) for the purposes of demonstration and performance. Clear patterns emerge showing that some stations have disproportionate incoming or outgoing traffic.",
+      "description": "Divvy is Chicago's bike sharing service. While at Razorfish, we put together a team to create an entry for the 'Divvy Data Challenge.' This demo shows incoming and outgoing data from Divvy stations over a period of 24 hours. I utilized Leaflet and d3.js for the data projection and GSAP for animation. I've narrowed down the data set to a single day (July 4th, 2013) for the purposes of demonstration and performance. Clear patterns emerge showing that some stations have disproportionate incoming or outgoing traffic.",
       "link": "assets/demos/divvy/index.html",
       "linkText": "Launch",
       "imgLogo": "assets/images/work/img/logos/divvy.png",
@@ -434,33 +485,10 @@
         "Concept",
         "Design",
         "Motion Design",
-        "Development",
+        "Dev",
         "JavaScript",
         "D3.js",
         "GSAP"
-      ]
-    },
-
-    {
-      "title": "rydaly.com v1",
-      "description": "Version one of my site, recently retired. I wanted to keep it ultra-fast and simple, so much of the work I did here is under the hood, hand-coded and lean.",
-      "link": "assets/demos/rydaly_v1/index.html",
-      "linkText": "Launch",
-      "imgLogo": "assets/images/work/img/logos/rd.png",
-      "imgLow": "assets/images/work/img/rd.jpg",
-
-      "imgsLow": [
-        "assets/images/projects/rd/rd_1.jpg"
-      ],
-      "imgsHi": [
-        "assets/images/projects/rd/rd_1_lrg.jpg"
-      ],
-      "role": [
-        "Concept",
-        "Design",
-        "Development",
-        "Motion Design",
-        "JavaScript"
       ]
     },
 
@@ -471,7 +499,7 @@
       "imgLow": "assets/images/work/img/samsung.jpg",
       "ytid": "gr0WyVrH7uk",
       "role": [
-        "Development",
+        "Dev",
         "Motion Design",
         "Interaction",
         "ActionScript",
@@ -510,7 +538,7 @@
       "imgLow": "assets/images/work/img/bb.jpg",
       "ytid": "7OCOnKL6Rcw",
       "role": [
-        "Development",
+        "Dev",
         "Motion Design",
         "Interaction",
         "ActionScript",
@@ -532,7 +560,7 @@
           ]
         },
         "sub2": {
-          "title": "Blackberry Brand Botiques",
+          "title": "Blackberry Brand Boutiques",
           "description": "Hosted on sites like Best Buy and Walmart, these units were in constant need of updating and maintenance. A good example of why building something right the first time really helps in the long run.",
           "imgsLow": [
             "assets/images/projects/bb/bb_botique_01.jpg",
@@ -556,30 +584,6 @@
           ]
         }
       }
-    },
-
-    {
-      "title": "Cambodia Law & Policy Journal",
-      "description": "CLPJ is a niche law journal targeted at those interested in the prosecution of Khmer Rouge war criminals in Cambodia. I was honored to have been asked to create a venue for them to share progress on these on-going issues in Cambodia. They needed a venue where they could publish their quarterly journal and publish a blog with absolutely no help from me. The journal is built on WordPress with a custom theme.",
-      "link": "http://cambodialpj.org/",
-      "linkText": "Launch",
-      "imgLogo": "assets/images/work/img/logos/clpj.png",
-      "imgLow": "assets/images/work/img/clpj.jpg",
-      "imgsLow": [
-        "assets/images/projects/clpj/clpj_01.png",
-        "assets/images/projects/clpj/clpj_02.jpg"
-      ],
-      "imgsHi": [
-        "assets/images/projects/clpj/clpj_01_lrg.png",
-        "assets/images/projects/clpj/clpj_02_lrg.jpg"
-      ],
-      "role": [
-        "Concept",
-        "Design",
-        "Development",
-        "WordPress",
-        "PHP"
-      ]
     }
 
   ]

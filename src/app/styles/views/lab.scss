@@ -121,7 +121,6 @@ ul.grid-container {
         .expanded-details,
         .expanded-img {
           width: 50%;
-          float: left;
           height: 100%;
           overflow: hidden;
           position: relative;
@@ -165,13 +164,11 @@ ul.grid-container {
         .expanded-details {
           padding: 0 0.5em;
           width: 100%;
-          float: none;
           text-align: center;
           @include media($medium-screen) {
             padding: 0 0 0 2em;
             text-align: left;
             width: 50%;
-            float: left;
           }
           @include media($large-screen) {
             width: 48%;

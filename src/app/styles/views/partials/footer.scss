@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  height: 24em;
+  height: 28em;
   color: $base-background-color;
   text-align: center;
   background: url("../../assets/images/rd_bg.png") repeat;
@@ -11,13 +11,21 @@
   .cover {
     @include position(absolute, 0px 0px 0px 0px);
     height: 100%;
-    @include linear-gradient(0deg, transparentize(black, 0.5), transparentize($rd-dark-blue, 0.9));
+    @include linear-gradient(
+      0deg,
+      transparentize(black, 0.5),
+      transparentize($rd-dark-blue, 0.9)
+    );
     z-index: 0;
 
     &:after {
-      @include linear-gradient(90deg, transparentize($rd-dark-blue, 0.9), transparentize(black, 0.5));
+      @include linear-gradient(
+        90deg,
+        transparentize($rd-dark-blue, 0.9),
+        transparentize(black, 0.5)
+      );
       @include position(absolute, 0px 0px 0px 0px);
-      content: '';
+      content: "";
       display: block;
       border-top-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -37,7 +45,6 @@
     }
 
     div {
-
       p {
         @include small-caps($base-background-color);
         font-family: $sans-serif-2;
@@ -48,7 +55,7 @@
           margin-top: 1em;
 
           &:after {
-            content: '';
+            content: "";
             display: block;
             width: 25px;
             height: 1px;
@@ -58,8 +65,10 @@
           }
         }
 
-        span, img, i {
-          opacity: 0.3;
+        span,
+        img,
+        i {
+          opacity: 0.6;
         }
       }
 
@@ -69,7 +78,7 @@
         height: auto;
         vertical-align: text-bottom;
         margin-right: 7px;
-        opacity: 0.2;
+        opacity: 0.5;
 
         &.icon-right {
           margin-right: 0;
@@ -82,7 +91,7 @@
         margin-right: 4px;
 
         &.fa {
-          opacity: 0.2;
+          opacity: 0.5;
         }
 
         &.fa-right {
@@ -91,11 +100,34 @@
         }
       }
 
+      .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2em 0 0;
+
+        a:not(:last-of-type) {
+          margin-right: 1em;
+        }
+
+        a,
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+
+        svg {
+          path {
+            fill: rgba($light-gray, 0.5);
+          }
+        }
+      }
+
       .fine-print {
         margin-top: 4em;
         // font-weight: 100;
         font-size: 0.5em;
-        opacity: 0.2;
+        opacity: 0.5;
 
         a {
           color: $light-gray;

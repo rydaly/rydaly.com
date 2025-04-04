@@ -9,16 +9,16 @@ function ContactFormController($scope, $http) {
   contactCtrl.formData = {
     name: {
       id: 1175724924,
-      val: "",
+      val: ""
     },
     email: {
       id: 1209588789,
-      val: "",
+      val: ""
     },
     msg: {
       id: 993297357,
-      val: "",
-    },
+      val: ""
+    }
   };
   contactCtrl.submission = false;
   contactCtrl.isError = false;
@@ -38,7 +38,7 @@ function ContactFormController($scope, $http) {
         method: "POST",
         url:
           "https://docs.google.com/forms/d/e/1FAIpQLSe5doHIMxTwcOyHXdEO9X82pCidMGjmbjYpM-bYWE28TEFlmQ/formResponse?" +
-          param(contactCtrl.formData),
+          param(contactCtrl.formData)
       }).then(
         function (response) {
           if (response.status === 200) {
@@ -50,16 +50,16 @@ function ContactFormController($scope, $http) {
               // empty form fields
               name: {
                 id: 1175724924,
-                val: "",
+                val: ""
               },
               email: {
                 id: 1209588789,
-                val: "",
+                val: ""
               },
               msg: {
                 id: 993297357,
-                val: "",
-              },
+                val: ""
+              }
             };
             $scope.contactForm.$setPristine(true); // reset form
           } else {
@@ -79,16 +79,16 @@ function ContactFormController($scope, $http) {
               // empty form fields
               name: {
                 id: 1175724924,
-                val: "",
+                val: ""
               },
               email: {
                 id: 1209588789,
-                val: "",
+                val: ""
               },
               msg: {
                 id: 993297357,
-                val: "",
-              },
+                val: ""
+              }
             };
             $scope.contactForm.$setPristine(true); // reset form
           } else {
